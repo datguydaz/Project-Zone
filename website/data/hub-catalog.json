@@ -87,7 +87,7 @@
       "number": 2,
       "title": "Emerald AI Integration",
       "description": "Bridge HQ FPS Weapons damage into Emerald AI and Emerald damage into the player, then validate detection, pursuit, combat, and death reactions.",
-      "status": "in_progress",
+      "status": "completed",
       "scope": [
         "HQ FPS to Emerald damage adapter",
         "Emerald to HQ FPS damage adapter",
@@ -102,7 +102,7 @@
         { "id": "m2-r3", "title": "Enemy detection and pursuit", "completed": true, "verification": "playtest_confirmed" },
         { "id": "m2-r4", "title": "Melee and ranged combat validation", "completed": true, "verification": "playtest_confirmed" },
         { "id": "m2-r5", "title": "Death and hit reaction testing", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m2-r6", "title": "Package compatibility validation", "completed": false, "verification": "unverified" }
+        { "id": "m2-r6", "title": "Package compatibility validation", "completed": true, "verification": "playtest_confirmed" }
       ],
       "blockers": []
     },
@@ -183,10 +183,20 @@
   ],
   "activity": [
     {
+      "id": "act-m2-package-compat",
+      "kind": "milestone",
+      "title": "Milestone 2 completed — package compatibility signed off",
+      "summary": "HQ FPS Weapons 2.0 and Emerald AI adapters verified together on Unity 6 URP. Issue #13 closed; Milestone 2 complete. Melee hostile remains optional scene follow-up.",
+      "date": "2026-10-29T14:17:00.000Z",
+      "milestoneId": "m2-emerald-ai-integration",
+      "url": "https://github.com/datguydaz/Project-Zone/issues/13",
+      "public": true
+    },
+    {
       "id": "act-death-hit-reactions",
       "kind": "feature",
       "title": "Death and hit reactions verified",
-      "summary": "Play Mode confirmed AI hit reactions, AI death, HQ player death, and post-death damage ignore. Issue #12 closed. Remaining M2 item: package compatibility (#13).",
+      "summary": "Play Mode confirmed AI hit reactions, AI death, HQ player death, and post-death damage ignore. Issue #12 closed.",
       "date": "2026-10-29T14:12:00.000Z",
       "milestoneId": "m2-emerald-ai-integration",
       "url": "https://github.com/datguydaz/Project-Zone/issues/12",

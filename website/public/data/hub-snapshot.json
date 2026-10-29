@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T14:13:07.983Z",
-  "syncedAt": "2026-10-29T14:13:07.983Z",
-  "lastSyncAttemptAt": "2026-10-29T14:13:07.983Z",
+  "generatedAt": "2026-10-29T14:18:34.961Z",
+  "syncedAt": "2026-10-29T14:18:34.961Z",
+  "lastSyncAttemptAt": "2026-10-29T14:18:34.961Z",
   "syncStatus": "ok",
   "syncError": null,
   "syncSource": "github_api",
@@ -99,7 +99,7 @@
       "number": 2,
       "title": "Emerald AI Integration",
       "description": "HQ↔Emerald damage adapters, detection/pursuit, combat validation, death/hit reactions, package compatibility.",
-      "status": "in_progress",
+      "status": "completed",
       "githubMilestoneNumber": 2,
       "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/2",
       "scope": [
@@ -139,11 +139,11 @@
         {
           "id": "m2-r6",
           "title": "Package compatibility validation",
-          "completed": false
+          "completed": true
         }
       ],
       "blockers": [],
-      "lastUpdated": "2026-10-29T14:12:51Z",
+      "lastUpdated": "2026-10-29T14:17:37Z",
       "issueIds": [
         13,
         12,
@@ -152,11 +152,11 @@
         9,
         8
       ],
-      "progressPercent": 83,
+      "progressPercent": 100,
       "progressMode": "issue_based",
       "progressVerified": true,
-      "openCount": 1,
-      "closedCount": 5,
+      "openCount": 0,
+      "closedCount": 6,
       "blockedCount": 0
     },
     {
@@ -714,8 +714,8 @@
       "id": 6091680702,
       "number": 13,
       "title": "Package compatibility validation",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "documentation",
         "milestone",
@@ -725,8 +725,8 @@
       "milestoneId": "m2-emerald-ai-integration",
       "milestoneTitle": "Emerald AI Integration",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/13",
-      "updatedAt": "2026-10-29T02:48:48Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T14:17:27Z",
+      "closedAt": "2026-10-29T14:17:27Z",
       "isPublic": true
     },
     {
@@ -955,10 +955,19 @@
   ],
   "activity": [
     {
+      "id": "act-m2-package-compat",
+      "kind": "milestone",
+      "title": "Milestone 2 completed — package compatibility signed off",
+      "summary": "HQ FPS Weapons 2.0 and Emerald AI adapters verified together on Unity 6 URP. Issue #13 closed; Milestone 2 complete. Melee hostile remains optional scene follow-up.",
+      "date": "2026-10-29T14:17:00.000Z",
+      "milestoneId": "m2-emerald-ai-integration",
+      "url": "https://github.com/datguydaz/Project-Zone/issues/13"
+    },
+    {
       "id": "act-death-hit-reactions",
       "kind": "feature",
       "title": "Death and hit reactions verified",
-      "summary": "Play Mode confirmed AI hit reactions, AI death, HQ player death, and post-death damage ignore. Issue #12 closed. Remaining M2 item: package compatibility (#13).",
+      "summary": "Play Mode confirmed AI hit reactions, AI death, HQ player death, and post-death damage ignore. Issue #12 closed.",
       "date": "2026-10-29T14:12:00.000Z",
       "milestoneId": "m2-emerald-ai-integration",
       "url": "https://github.com/datguydaz/Project-Zone/issues/12"

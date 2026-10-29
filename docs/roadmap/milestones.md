@@ -16,13 +16,13 @@ Authoritative **live** progress comes from GitHub Milestones + Issues after sync
 
 ## Milestone 2 — Emerald AI Integration
 
-- **Status:** In Progress
+- **Status:** Completed (developer confirmed)
 - HQ FPS to Emerald damage adapter — verified in play mode (#8)
 - Emerald to HQ FPS damage adapter — verified in play mode (#9)
 - Enemy detection and pursuit — verified in play mode (#10)
 - Melee and ranged combat validation — ranged verified in play mode (#11); melee deferred until a melee hostile is in the test scene
 - Death and hit reaction testing — verified in play mode (#12)
-- Package compatibility validation — harness + report ready, awaiting Play Mode PASS log (#13)
+- Package compatibility validation — verified in play mode (#13)
 
 ## Milestone 3 — The Outskirts
 

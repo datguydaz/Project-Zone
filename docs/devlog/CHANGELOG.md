@@ -2,6 +2,15 @@
 
 Only verified work belongs here. Do not invent activity.
 
+## 2026-10-29 — Package compatibility signed off; M2 complete
+
+**Kind:** feature / milestone  
+**Milestone:** M2 Emerald AI Integration  
+**Issue:** #13  
+**Public:** yes
+
+Play Mode `PackageCompatibilityValidator` reported PASS on Unity 6000.6.7f1 URP with HQ FPS Weapons 2.0 and Emerald AI adapters present. Issue #13 and Milestone 2 closed. M2 console validators default off to keep later milestones quiet.
+
 ## 2026-10-29 — Death and hit reactions verified
 
 **Kind:** feature  
@@ -9,7 +18,7 @@ Only verified work belongs here. Do not invent activity.
 **Issue:** #12  
 **Public:** yes
 
-Play Mode confirmed AI hit reactions, AI death to 0 HP, HQ player death, and post-death AI damage ignore on `PZ_DamageAdapterTest`. Issue #12 closed. Remaining M2 item: package compatibility (#13).
+Play Mode confirmed AI hit reactions, AI death to 0 HP, HQ player death, and post-death AI damage ignore on `PZ_DamageAdapterTest`. Issue #12 closed.
 
 ## 2026-10-29 — Ranged combat validation verified
 

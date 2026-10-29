@@ -7,7 +7,7 @@ namespace ProjectZone
     /// <summary>
     /// Wires Milestone 2 combat adapters in the integration test scene
     /// and waits for the HQ player spawned by the scene game mode.
-    /// Issues: #8–#12 adapters/validation harnesses.
+    /// Validation checklists default off after M2 sign-off — re-enable toggles only when retesting.
     /// </summary>
     [DefaultExecutionOrder(-50)]
     public sealed class DamageAdapterTestSetup : MonoBehaviour
@@ -15,17 +15,23 @@ namespace ProjectZone
         private const string LegacyPlayerName = "Example Player";
         private const string DemoCameraName = "Main Camera";
 
+        [Header("Adapters (keep on)")]
+        [Tooltip("Log Emerald target registration / AI relation diagnostics.")]
         [SerializeField]
-        private bool _logDetectionDiagnostics = true;
+        private bool _logDetectionDiagnostics = false;
 
+        [Header("Completed M2 validators (off by default)")]
+        [Tooltip("Issue #11 combat checklist. Leave off after milestone sign-off to avoid console spam.")]
         [SerializeField]
-        private bool _enableCombatValidation = true;
+        private bool _enableCombatValidation = false;
 
+        [Tooltip("Issue #12 death/hit checklist + temporary immortality gate. Leave off after sign-off.")]
         [SerializeField]
-        private bool _enableDeathHitValidation = true;
+        private bool _enableDeathHitValidation = false;
 
+        [Tooltip("Issue #13 one-shot package compatibility report. Leave off after sign-off.")]
         [SerializeField]
-        private bool _enablePackageCompatibilityValidation = true;
+        private bool _enablePackageCompatibilityValidation = false;
 
         private IEnumerator Start()
         {

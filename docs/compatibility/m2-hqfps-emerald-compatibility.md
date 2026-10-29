@@ -1,7 +1,7 @@
 # M2 Package Compatibility — HQ FPS Weapons 2.0 × Emerald AI
 
 **Issue:** [#13](https://github.com/datguydaz/Project-Zone/issues/13)  
-**Status:** Awaiting Play Mode confirmation of the console sign-off log  
+**Status:** Signed off (Play Mode PASS, 2026-10-29)  
 **Scene:** `Assets/_ProjectZone/Scenes/PZ_DamageAdapterTest.unity`
 
 ## Stack under test
@@ -53,7 +53,10 @@ No Emerald or Polymind source changes are required for the verified combat loop.
 ## Sign-off procedure
 
 1. Open `PZ_DamageAdapterTest`.
-2. Enter Play Mode.
-3. Confirm Console shows `[ProjectZone][Compat] Package compatibility sign-off … Status: PASS`.
-4. Spot-check: player can still damage an AI and take ranged damage (smoke of #11/#12 adapters).
-5. Close #13 after that confirmation.
+2. On `DamageAdapterTestSetup`, temporarily enable **Package Compatibility Validation** (and other validators only if retesting).
+3. Enter Play Mode.
+4. Confirm Console shows `[ProjectZone][Compat] Package compatibility sign-off … Status: PASS`.
+5. Spot-check: player can still damage an AI and take ranged damage (smoke of #11/#12 adapters).
+6. Disable validators again after retest so later milestones stay quiet.
+
+**Completed:** Play Mode PASS confirmed 2026-10-29; issue #13 and Milestone 2 closed.
