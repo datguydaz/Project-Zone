@@ -12,7 +12,7 @@ const filters: Array<{ id: "all" | MilestoneStatus; label: string }> = [
   { id: "all", label: "All" },
   { id: "in_progress", label: "In Progress" },
   { id: "completed", label: "Completed" },
-  { id: "not_started", label: "Not Started" },
+  { id: "not_started", label: "Planned" },
   { id: "blocked", label: "Blocked" },
 ];
 

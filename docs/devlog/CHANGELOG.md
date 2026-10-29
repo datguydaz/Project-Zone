@@ -2,6 +2,15 @@
 
 Only verified work belongs here. Do not invent activity.
 
+## 2026-10-29 — Enemy detection and pursuit verified
+
+**Kind:** feature  
+**Milestone:** M2 Emerald AI Integration  
+**Issue:** #10  
+**Public:** yes
+
+`EmeraldHqPlayerTargetAdapter` verified in Play Mode on `PZ_DamageAdapterTest`. HQ player registers as Emerald combat target; AIs report Enemy relation and pursue. TargetPositionModifier TransformSource assignment fixed (configure while inactive). Issue #10 closed.
+
 ## 2026-03-26 — Damage bridge playtest confirmed
 
 **Kind:** feature  

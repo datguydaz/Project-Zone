@@ -142,7 +142,7 @@ export function statusLabel(status: MilestoneStatus | TaskStatus): string {
     case "in_progress":
       return "In Progress";
     case "not_started":
-      return "Not Started";
+      return "Planned";
     case "blocked":
       return "Blocked";
     case "open":

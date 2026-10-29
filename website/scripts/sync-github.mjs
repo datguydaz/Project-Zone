@@ -214,21 +214,25 @@ function planningProgress(requirements) {
   };
 }
 
+/**
+ * Hub status must NOT treat "has open issues" as active development.
+ * Planned milestones keep open tracking issues before work starts.
+ *
+ * - completed: GitHub milestone closed, or every linked public issue closed
+ * - blocked: only blocked issues remain (no open work items)
+ * - in_progress: at least one linked issue is completed AND work remains
+ * - not_started (Planned): zero completed linked issues yet
+ */
 function remoteMilestoneStatus(remote, linkedIssues) {
   if (remote.state === "closed") return "completed";
-  if (
-    linkedIssues.some((issue) => issue.status === "blocked") &&
-    linkedIssues.every((issue) => issue.status !== "open")
-  ) {
-    return "blocked";
-  }
-  if (linkedIssues.some((issue) => issue.status === "open" || issue.status === "blocked")) {
-    return "in_progress";
-  }
-  if (linkedIssues.length > 0 && linkedIssues.every((issue) => issue.status === "completed")) {
-    return "completed";
-  }
-  if (remote.open_issues > 0) return "in_progress";
+
+  const open = linkedIssues.filter((issue) => issue.status === "open").length;
+  const closed = linkedIssues.filter((issue) => issue.status === "completed").length;
+  const blocked = linkedIssues.filter((issue) => issue.status === "blocked").length;
+
+  if (linkedIssues.length > 0 && closed === linkedIssues.length) return "completed";
+  if (blocked > 0 && open === 0 && closed === 0) return "blocked";
+  if (closed > 0 && (open > 0 || blocked > 0)) return "in_progress";
   return "not_started";
 }
 

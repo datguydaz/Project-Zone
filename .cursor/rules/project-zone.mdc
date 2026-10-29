@@ -9,21 +9,26 @@ PROJECT ZONE is an independent Unity 6 URP game. These rules stay active for the
 
 ## Isolation
 
-- Work only inside this workspace. Do not read, modify, import, or reuse code, assets, configs, saves, or repos from any other project unless the user explicitly approves that path.
-- Do not modify another Unity or Unreal project, files outside this workspace, or global Unity, Cursor, or system settings.
+- Work only inside this workspace and the PROJECT ZONE Git repository.
+- Do not read, modify, import, or reuse code, assets, configs, saves, or repos from any other project unless the user explicitly approves that path.
+- Do not modify another Unity or Unreal project, files outside this workspace, or global Unity, Cursor, Git, or system settings without approval.
 - Do not attach this project to an unrelated Git remote, branch, or config. Do not assume architecture from previous projects.
+- Preserve third-party assets and their original source. Prefer adapters over editing vendor source.
 - If an action could affect another project, stop and ask.
 
 ## Standards
 
 - Engine: Unity 6, URP, C#. HQ FPS Weapons 2.0 is the FPS framework. Emerald AI 2026 is the NPC framework.
-- Keep custom game code in `Assets/_ProjectZone/`. Prefer adapters over editing third-party source. Do not duplicate systems those frameworks already provide.
-- Do not invent package APIs. Do not add multiplayer packages or networking until approved. Keep 1–4 player co-op possible later.
-- Inspect before changing. Do not delete or overwrite existing files until their purpose is verified. No destructive Git operations without approval.
+- Keep custom game code in `Assets/_ProjectZone/`. Prefer adapters and event-driven interfaces.
+- Audit existing systems before implementing new ones. Do not duplicate inventory, combat, health, or AI systems those frameworks already provide.
+- Do not invent package APIs. Do not add multiplayer/networking packages until approved. Keep 1–4 player co-op possible later without overengineering.
+- Avoid unnecessary dependencies. Keep systems modular and testable.
+- Inspect before changing. Do not delete or overwrite existing files until their purpose is verified.
+- Never claim functionality as tested unless it was actually tested or the user confirmed it in Play Mode.
 
 ## Rollback
 
-Before a major change, create a Git commit or a project backup inside this workspace so the change can be reverted.
+Before a major change, create a Git commit or a project backup inside this workspace so the change can be reverted. No destructive Git operations without approval.
 
 ## Report after every development task
 
@@ -32,24 +37,26 @@ Before a major change, create a Git commit or a project backup inside this works
 3. What was actually tested.
 4. Compile errors or warnings found.
 5. Remaining issues or risks.
-6. Recommended next step.
+6. Recommended next step / Unity verification steps when gameplay is involved.
 
 Never claim a test passed without running it or watching the user run it. If Unity needs a manual click, give the exact menu path and say it was not performed here.
 
-## Development hub workflow
+## Mandatory GitHub and Development Hub tracking
 
-The public-facing development hub lives only under `website/`. Planning data lives in `website/data/hub-catalog.json`. Tracking docs live under `docs/roadmap/` and `docs/devlog/`. Do not move Unity gameplay code for hub work.
-
-GitHub Issues and Milestones are the authoritative live tracking source after sync. Local catalog data is planning-only and must never be presented as live GitHub-verified progress.
+GitHub Issues and Milestones are the authoritative source for verified progress after sync.
+The Development Hub (`website/`, https://datguydaz.github.io/Project-Zone/) mirrors sanitized GitHub state via Actions — never invent live completion percentages.
 
 After every completed / approved development task:
 
-1. Identify the associated milestone and GitHub issue (do not invent issue numbers).
-2. Report implementation details, files touched, tests performed, and unresolved problems.
-3. Update local roadmap docs when the milestone scope changed: `docs/roadmap/milestones.md`.
-4. Propose any required GitHub issue/milestone changes for user approval. Do **not** close issues automatically; close only after verified completion and user approval when remote changes are involved.
-5. Update `docs/devlog/CHANGELOG.md` and public catalog/devlog entries for meaningful completed work. Do not fabricate activity.
-6. If catalog requirements changed, update `website/data/hub-catalog.json` and regenerate the planning snapshot with `npm run catalog:build` in `website/`. Live website progress becomes authoritative only after the approved GitHub sync workflow succeeds (`website/scripts/sync-github.mjs`).
-7. Do not push, publish GitHub Pages, change repository visibility, or execute remote issue/milestone creation without explicit approval.
+1. Identify the associated milestone and GitHub issue (do not invent issue numbers; do not create duplicate issues/milestones).
+2. Implement, compile, and test where possible.
+3. Report implementation details, files touched, tests performed, and unresolved problems.
+4. Update local roadmap docs when milestone scope changed: `docs/roadmap/milestones.md`.
+5. Update `docs/devlog/CHANGELOG.md` and catalog/devlog entries for meaningful completed work. Do not fabricate activity.
+6. For routine verified issue updates (comments, labels, closing after user confirmation), use existing repository permissions. Ask before destructive Git ops, visibility changes, publishing sensitive data, or significant scope changes.
+7. Do **not** close issues solely because code was committed. Leave gameplay-critical issues open until the user confirms Play Mode success.
+8. Keep the hub synchronized through the approved workflow (`website/scripts/sync-github.mjs` / Actions). Do not pretend sync succeeded if auth/API access is unavailable.
+9. Hub milestone status rules: Planned = zero completed linked issues; In Progress = at least one completed issue with remaining work; Completed = milestone closed or all linked issues closed. Open tracking issues alone do not mean In Progress.
+10. Do not push, publish Pages, or change repository visibility without explicit approval (unless the user already authorized that specific action).
 
-If GitHub authentication or API access is unavailable, say so clearly. Do not pretend synchronization succeeded.
+Work milestones in order. Do not begin the next milestone without user approval.

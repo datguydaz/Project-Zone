@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T02:49:15.056Z",
-  "syncedAt": "2026-10-29T02:49:15.056Z",
-  "lastSyncAttemptAt": "2026-10-29T02:49:15.056Z",
+  "generatedAt": "2026-10-29T03:06:09.218Z",
+  "syncedAt": "2026-10-29T03:06:09.218Z",
+  "lastSyncAttemptAt": "2026-10-29T03:06:09.218Z",
   "syncStatus": "ok",
   "syncError": null,
   "syncSource": "github_api",
@@ -12,7 +12,7 @@
     "name": "Project-Zone",
     "url": "https://github.com/datguydaz/Project-Zone",
     "defaultBranch": "main",
-    "visibility": "private"
+    "visibility": "public"
   },
   "project": {
     "title": "PROJECT ZONE",
@@ -124,7 +124,7 @@
         {
           "id": "m2-r3",
           "title": "Enemy detection and pursuit",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m2-r4",
@@ -143,7 +143,7 @@
         }
       ],
       "blockers": [],
-      "lastUpdated": "2026-10-29T02:48:49Z",
+      "lastUpdated": "2026-10-29T03:05:56Z",
       "issueIds": [
         13,
         12,
@@ -152,11 +152,11 @@
         9,
         8
       ],
-      "progressPercent": 33,
+      "progressPercent": 50,
       "progressMode": "issue_based",
       "progressVerified": true,
-      "openCount": 4,
-      "closedCount": 2,
+      "openCount": 3,
+      "closedCount": 3,
       "blockedCount": 0
     },
     {
@@ -164,7 +164,7 @@
       "number": 3,
       "title": "The Outskirts",
       "description": "First playable region: settlement, checkpoint, industrial building, underground entrance, NPCs, atmosphere.",
-      "status": "in_progress",
+      "status": "not_started",
       "githubMilestoneNumber": 3,
       "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/3",
       "scope": [
@@ -236,7 +236,7 @@
       "number": 4,
       "title": "Inventory & Persistence",
       "description": "Loot, backpack UI, stash, transfers, save/load, persistent equipment.",
-      "status": "in_progress",
+      "status": "not_started",
       "githubMilestoneNumber": 4,
       "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/4",
       "scope": [
@@ -301,7 +301,7 @@
       "number": 5,
       "title": "Death & Contracts",
       "description": "Hybrid death, recoverable caches, currency, contracts, rewards, expedition loop.",
-      "status": "in_progress",
+      "status": "not_started",
       "githubMilestoneNumber": 5,
       "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/5",
       "scope": [
@@ -771,8 +771,8 @@
       "id": 6091680216,
       "number": 10,
       "title": "Enemy detection and pursuit",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "gameplay",
@@ -782,8 +782,8 @@
       "milestoneId": "m2-emerald-ai-integration",
       "milestoneTitle": "Emerald AI Integration",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/10",
-      "updatedAt": "2026-10-29T02:48:46Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T03:05:56Z",
+      "closedAt": "2026-10-29T03:05:56Z",
       "isPublic": true
     },
     {
@@ -955,6 +955,15 @@
   ],
   "activity": [
     {
+      "id": "act-detection-adapter",
+      "kind": "feature",
+      "title": "Enemy detection and pursuit verified",
+      "summary": "EmeraldHqPlayerTargetAdapter confirmed in Play Mode. HQ player is detected and pursued by Emerald AI. Issue #10 closed.",
+      "date": "2026-10-29T03:05:00.000Z",
+      "milestoneId": "m2-emerald-ai-integration",
+      "url": "https://github.com/datguydaz/Project-Zone/issues/10"
+    },
+    {
       "id": "act-m1-complete",
       "kind": "milestone",
       "title": "Milestone 1 completed",
@@ -974,6 +983,16 @@
     }
   ],
   "devlog": [
+    {
+      "id": "log-2026-10-29-detection",
+      "date": "2026-10-29",
+      "title": "Enemy detection and pursuit verified",
+      "kind": "feature",
+      "body": "Issue #10 closed after Play Mode confirmation. Emerald AIs detect and pursue the HQ FPS player via EmeraldHqPlayerTargetAdapter.",
+      "milestoneId": "m2-emerald-ai-integration",
+      "public": true,
+      "screenshots": []
+    },
     {
       "id": "log-2026-03-25-m1",
       "date": "2026-03-25",
@@ -996,8 +1015,8 @@
     }
   ],
   "publicPolicy": {
-    "mode": "curated",
-    "note": "Repository is private. Only issues labeled `public` are published (unless HUB_PUBLISH_PRIVATE_ISSUES=1). Issue bodies and excluded labels never ship.",
+    "mode": "public_repo_mirror",
+    "note": "Repository is public. Snapshot publishes allowlisted issue fields only (no bodies). Tokens never ship to the client.",
     "excludeLabels": [
       "private",
       "internal",

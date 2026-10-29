@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "catalogKind": "planning",
-  "updatedAt": "2026-10-29T00:00:00.000Z",
+  "updatedAt": "2026-10-29T03:00:00.000Z",
   "repository": {
     "owner": "datguydaz",
     "name": "Project-Zone",
@@ -99,7 +99,7 @@
       "requirements": [
         { "id": "m2-r1", "title": "HQ FPS to Emerald damage adapter", "completed": true, "verification": "playtest_confirmed" },
         { "id": "m2-r2", "title": "Emerald to HQ FPS damage adapter", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m2-r3", "title": "Enemy detection and pursuit", "completed": false, "verification": "unverified" },
+        { "id": "m2-r3", "title": "Enemy detection and pursuit", "completed": true, "verification": "playtest_confirmed" },
         { "id": "m2-r4", "title": "Melee and ranged combat validation", "completed": false, "verification": "unverified" },
         { "id": "m2-r5", "title": "Death and hit reaction testing", "completed": false, "verification": "unverified" },
         { "id": "m2-r6", "title": "Package compatibility validation", "completed": false, "verification": "unverified" }
@@ -183,6 +183,16 @@
   ],
   "activity": [
     {
+      "id": "act-detection-adapter",
+      "kind": "feature",
+      "title": "Enemy detection and pursuit verified",
+      "summary": "EmeraldHqPlayerTargetAdapter confirmed in Play Mode. HQ player is detected and pursued by Emerald AI. Issue #10 closed.",
+      "date": "2026-10-29T03:05:00.000Z",
+      "milestoneId": "m2-emerald-ai-integration",
+      "url": "https://github.com/datguydaz/Project-Zone/issues/10",
+      "public": true
+    },
+    {
       "id": "act-m1-complete",
       "kind": "milestone",
       "title": "Milestone 1 completed",
@@ -204,6 +214,16 @@
     }
   ],
   "devlog": [
+    {
+      "id": "log-2026-10-29-detection",
+      "date": "2026-10-29",
+      "title": "Enemy detection and pursuit verified",
+      "kind": "feature",
+      "body": "Issue #10 closed after Play Mode confirmation. Emerald AIs detect and pursue the HQ FPS player via EmeraldHqPlayerTargetAdapter.",
+      "milestoneId": "m2-emerald-ai-integration",
+      "public": true,
+      "screenshots": []
+    },
     {
       "id": "log-2026-03-25-m1",
       "date": "2026-03-25",

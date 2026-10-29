@@ -17,16 +17,16 @@ Authoritative **live** progress comes from GitHub Milestones + Issues after sync
 ## Milestone 2 — Emerald AI Integration
 
 - **Status:** In Progress
-- HQ FPS to Emerald damage adapter — verified in play mode
-- Emerald to HQ FPS damage adapter — verified in play mode
-- Enemy detection and pursuit — remaining
-- Melee and ranged combat validation — remaining
-- Death and hit reaction testing — remaining
-- Package compatibility validation — remaining
+- HQ FPS to Emerald damage adapter — verified in play mode (#8)
+- Emerald to HQ FPS damage adapter — verified in play mode (#9)
+- Enemy detection and pursuit — verified in play mode (#10)
+- Melee and ranged combat validation — remaining (#11)
+- Death and hit reaction testing — remaining (#12)
+- Package compatibility validation — remaining (#13)
 
 ## Milestone 3 — The Outskirts
 
-- **Status:** Not Started
+- **Status:** Planned (Not Started)
 - First playable region
 - Safe settlement
 - Abandoned checkpoint
@@ -37,7 +37,7 @@ Authoritative **live** progress comes from GitHub Milestones + Issues after sync
 
 ## Milestone 4 — Inventory & Persistence
 
-- **Status:** Not Started
+- **Status:** Planned (Not Started)
 - Loot containers
 - Backpack UI
 - Permanent stash
@@ -47,7 +47,7 @@ Authoritative **live** progress comes from GitHub Milestones + Issues after sync
 
 ## Milestone 5 — Death & Contracts
 
-- **Status:** Not Started
+- **Status:** Planned (Not Started)
 - Hybrid death rules
 - Recoverable death caches
 - Currency
