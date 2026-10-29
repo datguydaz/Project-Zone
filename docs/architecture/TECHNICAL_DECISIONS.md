@@ -2,6 +2,11 @@
 
 Append-only. Newest first.
 
+## 2026-10-29 — Backup policy: git history + tags, optional code zip
+
+- **Decision:** Primary backup = commit/push + milestone tags. Optional `tools/Export-ProjectZoneBackup.ps1` zips `_ProjectZone`/docs/website/config into gitignored `Backups/`.
+- **Decision:** Do not store `*.bak` / duplicate scenes inside `Assets/`. Vendor packs are not part of the code backup zip.
+
 ## 2026-10-29 — M5.5–M15 roadmap established
 
 - **Decision:** Track M5.5–M15 on GitHub + Development Hub; work milestones in order with approval gates.

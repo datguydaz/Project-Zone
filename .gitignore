@@ -118,3 +118,6 @@ InitTestScene*.unity*
 /website/dist/
 /website/public/data/hub-snapshot.prev.json
 /.tools/
+
+# Local code/scene zip backups (see docs/process/BACKUP_POLICY.md)
+/Backups/

@@ -2,6 +2,14 @@
 
 Only verified work belongs here. Do not invent activity.
 
+## 2026-10-29 — Code/scene backup policy adopted
+
+**Kind:** process  
+**Milestone:** M5.5  
+**Public:** yes
+
+Primary backup remains git commit/push + milestone tags. Added gitignored `Backups/` export script for `_ProjectZone`/docs/website/config only (excludes vendor packs).
+
 ## 2026-10-29 — M5.5–M15 roadmap tracking established
 
 **Kind:** process / architecture  
