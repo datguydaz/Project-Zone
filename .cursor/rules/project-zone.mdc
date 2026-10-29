@@ -1,0 +1,37 @@
+---
+description: Permanent PROJECT ZONE isolation, Unity standards, and change reporting
+alwaysApply: true
+---
+
+# PROJECT ZONE
+
+PROJECT ZONE is an independent Unity 6 URP game. These rules stay active for the life of the project.
+
+## Isolation
+
+- Work only inside this workspace. Do not read, modify, import, or reuse code, assets, configs, saves, or repos from any other project unless the user explicitly approves that path.
+- Do not modify another Unity or Unreal project, files outside this workspace, or global Unity, Cursor, or system settings.
+- Do not attach this project to an unrelated Git remote, branch, or config. Do not assume architecture from previous projects.
+- If an action could affect another project, stop and ask.
+
+## Standards
+
+- Engine: Unity 6, URP, C#. HQ FPS Weapons 2.0 is the FPS framework. Emerald AI 2026 is the NPC framework.
+- Keep custom game code in `Assets/_ProjectZone/`. Prefer adapters over editing third-party source. Do not duplicate systems those frameworks already provide.
+- Do not invent package APIs. Do not add multiplayer packages or networking until approved. Keep 1–4 player co-op possible later.
+- Inspect before changing. Do not delete or overwrite existing files until their purpose is verified. No destructive Git operations without approval.
+
+## Rollback
+
+Before a major change, create a Git commit or a project backup inside this workspace so the change can be reverted.
+
+## Report after every development task
+
+1. What changed.
+2. Files created or modified.
+3. What was actually tested.
+4. Compile errors or warnings found.
+5. Remaining issues or risks.
+6. Recommended next step.
+
+Never claim a test passed without running it or watching the user run it. If Unity needs a manual click, give the exact menu path and say it was not performed here.

@@ -6,7 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/PolymindGames/HQFPS/Demo/Scenes/MainMenu/HQFPS_MainMenu.unity
+    guid: 43d0e18391e01924995e0ccacbca0276
+  - enabled: 1
+    path: Assets/PolymindGames/HQFPS/Demo/Scenes/FiringRange/HQFPS_FiringRange.unity
+    guid: 950887b64125bbd4d90842cdfaa48b4d
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.input.settings: {fileID: 11400000, guid: 2ed49337353089548bf42d1e2d8caa75, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 5ea1c83b524748b45b21b996e2b1f0e0, type: 3}
+  m_UseUCBPForAssetBundles: 0
