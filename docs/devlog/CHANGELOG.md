@@ -2,14 +2,14 @@
 
 Only verified work belongs here. Do not invent activity.
 
-## 2026-10-29 — Outskirts NPCs, navigation, and atmosphere
+## 2026-10-29 — Milestone 3 completed (Outskirts)
 
-**Kind:** feature / milestone  
+**Kind:** milestone  
 **Milestone:** M3 The Outskirts  
 **Issue:** #19 / #20  
 **Public:** yes
 
-Added `OutskirtsNpcBootstrap` (NavMesh bake, settlement civilian NavMesh placeholder, Emerald hostiles at Checkpoint/Industrial, HQ target adapter wiring) and `OutskirtsAtmosphereBootstrap` (dusk sun, linear fog, URP color/vignette volume, dust particles, ambient audio hook). Greybox/art polish remains later. Awaiting Play Mode confirm to close #19/#20 and Milestone 3.
+Play Mode confirmed NPCs/NavMesh (#19) and atmosphere systems (#20) on `PZ_Outskirts`. Issues #19–#20 and Milestone 3 closed. Fog/visual atmosphere and final NPC/prop art remain polish follow-ups, not blockers for M3 sign-off.
 
 ## 2026-10-29 — Underground entrance greybox verified
 

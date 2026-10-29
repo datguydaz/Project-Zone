@@ -26,15 +26,15 @@ Authoritative **live** progress comes from GitHub Milestones + Issues after sync
 
 ## Milestone 3 — The Outskirts
 
-- **Status:** Completed (awaiting final Play Mode confirm on #19/#20)
+- **Status:** Completed (developer confirmed)
 - **Scene:** `Assets/_ProjectZone/Scenes/PZ_Outskirts.unity` (keep `PZ_DamageAdapterTest` as M2 combat sandbox; leave `HQFPS_FiringRange` as vendor demo)
 - First playable region layout — verified in play mode (#14)
 - Safe settlement — verified greybox hub in play mode (#15); art/prop pass later
 - Abandoned checkpoint — verified greybox in play mode (#16); art/prop pass later
 - Industrial building — verified greybox in play mode (#17); art/prop pass later
 - Underground entrance — verified greybox in play mode (#18); real transition/art later
-- NPC placement and navigation — NavMesh bake + settlement civilian placeholder + Emerald hostiles at Checkpoint/Industrial (#19)
-- Environmental atmosphere — dusk lighting, fog, URP volume, dust hints, ambient audio hook (#20)
+- NPC placement and navigation — verified in play mode (#19); final NPC art/behavior later
+- Environmental atmosphere — systems verified in play mode (#20); fog/look polish later
 
 ## Milestone 4 — Inventory & Persistence
 

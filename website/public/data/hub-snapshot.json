@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T14:32:17.348Z",
-  "syncedAt": "2026-10-29T14:32:17.348Z",
-  "lastSyncAttemptAt": "2026-10-29T14:32:17.348Z",
+  "generatedAt": "2026-10-29T15:38:40.373Z",
+  "syncedAt": "2026-10-29T15:38:40.373Z",
+  "lastSyncAttemptAt": "2026-10-29T15:38:40.373Z",
   "syncStatus": "ok",
   "syncError": null,
   "syncSource": "github_api",
@@ -164,7 +164,7 @@
       "number": 3,
       "title": "The Outskirts",
       "description": "First playable region: settlement, checkpoint, industrial building, underground entrance, NPCs, atmosphere.",
-      "status": "in_progress",
+      "status": "completed",
       "githubMilestoneNumber": 3,
       "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/3",
       "scope": [
@@ -185,36 +185,36 @@
         {
           "id": "m3-r2",
           "title": "Safe settlement",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m3-r3",
           "title": "Abandoned checkpoint",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m3-r4",
           "title": "Industrial building",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m3-r5",
           "title": "Underground entrance",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m3-r6",
           "title": "NPC placement and navigation",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m3-r7",
           "title": "Environmental atmosphere",
-          "completed": false
+          "completed": true
         }
       ],
       "blockers": [],
-      "lastUpdated": "2026-10-29T14:32:04Z",
+      "lastUpdated": "2026-10-29T15:38:20Z",
       "issueIds": [
         20,
         19,
@@ -224,11 +224,11 @@
         15,
         14
       ],
-      "progressPercent": 14,
+      "progressPercent": 100,
       "progressMode": "issue_based",
       "progressVerified": true,
-      "openCount": 6,
-      "closedCount": 1,
+      "openCount": 0,
+      "closedCount": 7,
       "blockedCount": 0
     },
     {
@@ -587,8 +587,8 @@
       "id": 6091681876,
       "number": 20,
       "title": "Environmental atmosphere",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "world",
@@ -597,16 +597,16 @@
       "milestoneId": "m3-the-outskirts",
       "milestoneTitle": "The Outskirts",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/20",
-      "updatedAt": "2026-10-29T02:48:54Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T15:38:19Z",
+      "closedAt": "2026-10-29T15:38:19Z",
       "isPublic": true
     },
     {
       "id": 6091681588,
       "number": 19,
       "title": "NPC placement and navigation",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "ai",
@@ -616,16 +616,16 @@
       "milestoneId": "m3-the-outskirts",
       "milestoneTitle": "The Outskirts",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/19",
-      "updatedAt": "2026-10-29T02:48:54Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T15:38:17Z",
+      "closedAt": "2026-10-29T15:38:17Z",
       "isPublic": true
     },
     {
       "id": 6091681396,
       "number": 18,
       "title": "Underground entrance",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "world",
@@ -634,16 +634,16 @@
       "milestoneId": "m3-the-outskirts",
       "milestoneTitle": "The Outskirts",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/18",
-      "updatedAt": "2026-10-29T02:48:53Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T15:26:17Z",
+      "closedAt": "2026-10-29T15:26:17Z",
       "isPublic": true
     },
     {
       "id": 6091681281,
       "number": 17,
       "title": "Industrial building",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "world",
@@ -652,16 +652,16 @@
       "milestoneId": "m3-the-outskirts",
       "milestoneTitle": "The Outskirts",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/17",
-      "updatedAt": "2026-10-29T02:48:52Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T15:24:51Z",
+      "closedAt": "2026-10-29T15:24:51Z",
       "isPublic": true
     },
     {
       "id": 6091681122,
       "number": 16,
       "title": "Abandoned checkpoint",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "world",
@@ -670,16 +670,16 @@
       "milestoneId": "m3-the-outskirts",
       "milestoneTitle": "The Outskirts",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/16",
-      "updatedAt": "2026-10-29T02:48:51Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T15:02:10Z",
+      "closedAt": "2026-10-29T15:02:10Z",
       "isPublic": true
     },
     {
       "id": 6091680936,
       "number": 15,
       "title": "Safe settlement",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "world",
@@ -688,8 +688,8 @@
       "milestoneId": "m3-the-outskirts",
       "milestoneTitle": "The Outskirts",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/15",
-      "updatedAt": "2026-10-29T02:48:50Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T14:35:12Z",
+      "closedAt": "2026-10-29T14:35:12Z",
       "isPublic": true
     },
     {
@@ -954,6 +954,15 @@
     }
   ],
   "activity": [
+    {
+      "id": "act-m3-complete",
+      "kind": "milestone",
+      "title": "Milestone 3 completed — The Outskirts",
+      "summary": "PZ_Outskirts greybox region, NPCs/NavMesh, and atmosphere systems signed off in Play Mode. Issues #14–#20 closed. Art/fog polish remains follow-up.",
+      "date": "2026-10-29T15:37:00.000Z",
+      "milestoneId": "m3-the-outskirts",
+      "url": "https://github.com/datguydaz/Project-Zone/milestone/3"
+    },
     {
       "id": "act-outskirts-greybox",
       "kind": "feature",
