@@ -54,10 +54,12 @@ namespace ProjectZone
 
         private void ResolveHostilePrefab()
         {
-            if (_hostilePrefab != null)
-                return;
 #if UNITY_EDITOR
-            _hostilePrefab = UnityEditor.AssetDatabase.LoadAssetAtPath<GameObject>(DefaultHostilePrefabPath);
+            // Always prefer a real prefab asset — a bad scene fileID (e.g. 100100000) can
+            // deserialize as a non-null Object that fails Instantiate<GameObject>.
+            GameObject loaded = UnityEditor.AssetDatabase.LoadAssetAtPath<GameObject>(DefaultHostilePrefabPath);
+            if (loaded != null)
+                _hostilePrefab = loaded;
 #endif
         }
 
@@ -116,9 +118,36 @@ namespace ProjectZone
             }
         }
 
-        private static void SpawnHostile(Transform parent, GameObject prefab, string name, Vector3 worldPos)
+        private void SpawnHostile(Transform parent, GameObject prefab, string name, Vector3 worldPos)
         {
-            GameObject instance = Instantiate(prefab, worldPos, Quaternion.identity, parent);
+            if (prefab == null)
+            {
+                CreateNavPlaceholder(parent, name + "_Placeholder", worldPos, new Color(0.7f, 0.35f, 0.3f), wander: true);
+                return;
+            }
+
+            GameObject instance;
+            try
+            {
+                Object spawned = Instantiate((Object)prefab, worldPos, Quaternion.identity, parent);
+                instance = spawned as GameObject;
+                if (instance == null)
+                {
+                    if (spawned != null)
+                        Destroy(spawned);
+                    throw new System.InvalidCastException(
+                        $"Hostile prefab '{prefab.name}' did not instantiate as a GameObject.");
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogWarning(
+                    $"[ProjectZone][Outskirts] Failed to spawn hostile '{name}' from '{prefab.name}': {ex.Message}. Using placeholder.",
+                    this);
+                CreateNavPlaceholder(parent, name + "_Placeholder", worldPos, new Color(0.7f, 0.35f, 0.3f), wander: true);
+                return;
+            }
+
             instance.name = name;
 
             if (instance.GetComponent<EmeraldDamageReceiver>() == null)

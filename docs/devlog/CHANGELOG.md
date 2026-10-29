@@ -2,6 +2,24 @@
 
 Only verified work belongs here. Do not invent activity.
 
+## 2026-10-29 — Milestone 4 completed (Inventory & Persistence)
+
+**Kind:** milestone  
+**Milestone:** M4 Inventory & Persistence  
+**Issue:** #21–#26  
+**Public:** yes
+
+Play Mode confirmed on `PZ_Outskirts`: Settlement stash, loot containers, HQ Item Wheel + transfer panel, starting HQFPS_M1911 loadout, persistence adapters. Issues #21–#26 and Milestone 4 closed.
+
+## 2026-10-29 — M4 inventory adapters implemented (Play Mode pending)
+
+**Kind:** feature  
+**Milestone:** M4 Inventory & Persistence  
+**Issue:** #21–#26  
+**Public:** yes
+
+Implemented Project Zone adapters on top of HQ FPS inventory (loot containers, backpack UI, permanent stash, transfers, profile snapshots, SceneSaveHandler on `PZ_Outskirts`). Superseded by Milestone 4 completion entry above.
+
 ## 2026-10-29 — Milestone 3 completed (Outskirts)
 
 **Kind:** milestone  

@@ -38,6 +38,8 @@ NavMesh: `NavMesh Surface` on `Outskirts Region`. `OutskirtsNpcBootstrap` bakes 
 
 NPCs (#19): under `Outskirts_NPCs` — settlement civilian NavMesh wanderer; Emerald hostiles at Checkpoint + Industrial (Example Summoned AI prefab). HQ target adapter wires automatically.
 
+Inventory (#21–#26): `OutskirtsInventoryBootstrap` spawns `Outskirts_Inventory` (stash at SupplyShed, loot at Checkpoint/Industrial). See `docs/compatibility/m4-inventory-persistence.md`.
+
 Atmosphere (#20): `OutskirtsAtmosphereBootstrap` — dusk directional light, denser fog, global URP volume (exposure/contrast/vignette), dust particle hints, ambient `AudioSource` (clip assign later).
 
 Layout version is stamped on `OutskirtsGreyboxBootstrap`; bump forces rebuild when opening the scene.

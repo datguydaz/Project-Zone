@@ -24,7 +24,7 @@ For the private repo, hub sync publishes only issues labeled `public` (plus non-
 | 1 | Unity & HQ FPS Foundation | closed | Completed |
 | 2 | Emerald AI Integration | open | In Progress |
 | 3 | The Outskirts | open | Not Started |
-| 4 | Inventory & Persistence | open | Not Started |
+| 4 | Inventory & Persistence | closed | Completed |
 | 5 | Death & Contracts | open | Not Started |
 
 ## Issues

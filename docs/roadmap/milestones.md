@@ -38,13 +38,13 @@ Authoritative **live** progress comes from GitHub Milestones + Issues after sync
 
 ## Milestone 4 — Inventory & Persistence
 
-- **Status:** Planned (Not Started)
-- Loot containers
-- Backpack UI
-- Permanent stash
-- Inventory transfers
-- Save/load validation
-- Persistent equipment and items
+- **Status:** Completed (Play Mode confirmed)
+- Loot containers — Outskirts loot markers + HQ containers (#21)
+- Backpack UI — HQ Item Wheel (MMB) + loot/stash transfer panel (#22)
+- Permanent stash — Settlement courtyard stash + profile save (#23)
+- Inventory transfers — HQ ItemTransfering dual panel (#24)
+- Save/load validation — snapshots, stash file, SceneSaveHandler (#25)
+- Persistent equipment and items — holster/backpack snapshot + starting M1911 (#26)
 
 ## Milestone 5 — Death & Contracts
 

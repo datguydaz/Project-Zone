@@ -137,7 +137,7 @@
       "number": 4,
       "title": "Inventory & Persistence",
       "description": "Add loot, backpack UI, permanent stash, inventory transfers, and verified save/load for equipment and items.",
-      "status": "not_started",
+      "status": "completed",
       "scope": [
         "Loot containers",
         "Backpack UI",
@@ -147,12 +147,12 @@
         "Persistent equipment and items"
       ],
       "requirements": [
-        { "id": "m4-r1", "title": "Loot containers", "completed": false, "verification": "unverified" },
-        { "id": "m4-r2", "title": "Backpack UI", "completed": false, "verification": "unverified" },
-        { "id": "m4-r3", "title": "Permanent stash", "completed": false, "verification": "unverified" },
-        { "id": "m4-r4", "title": "Inventory transfers", "completed": false, "verification": "unverified" },
-        { "id": "m4-r5", "title": "Save/load validation", "completed": false, "verification": "unverified" },
-        { "id": "m4-r6", "title": "Persistent equipment and items", "completed": false, "verification": "unverified" }
+        { "id": "m4-r1", "title": "Loot containers", "completed": true, "verification": "playtest_confirmed" },
+        { "id": "m4-r2", "title": "Backpack UI", "completed": true, "verification": "playtest_confirmed" },
+        { "id": "m4-r3", "title": "Permanent stash", "completed": true, "verification": "playtest_confirmed" },
+        { "id": "m4-r4", "title": "Inventory transfers", "completed": true, "verification": "playtest_confirmed" },
+        { "id": "m4-r5", "title": "Save/load validation", "completed": true, "verification": "playtest_confirmed" },
+        { "id": "m4-r6", "title": "Persistent equipment and items", "completed": true, "verification": "playtest_confirmed" }
       ],
       "blockers": []
     },

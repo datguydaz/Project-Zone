@@ -48,6 +48,9 @@ namespace ProjectZone.Editor
             surface.collectObjects = CollectObjects.All;
             surface.useGeometry = NavMeshCollectGeometry.PhysicsColliders;
             surface.BuildNavMesh();
+            region.AddComponent<OutskirtsNpcBootstrap>();
+            region.AddComponent<OutskirtsAtmosphereBootstrap>();
+            region.AddComponent<OutskirtsInventoryBootstrap>();
 
             GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>(GameModePrefabPath);
             if (prefab != null)
