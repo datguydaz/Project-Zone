@@ -24,6 +24,9 @@ namespace ProjectZone
         [SerializeField]
         private bool _enableDeathHitValidation = true;
 
+        [SerializeField]
+        private bool _enablePackageCompatibilityValidation = true;
+
         private IEnumerator Start()
         {
             DisableNamedObject(LegacyPlayerName);
@@ -84,6 +87,16 @@ namespace ProjectZone
                     deathValidator = player.gameObject.AddComponent<EmeraldDeathHitReactionValidator>();
 
                 deathValidator.BindPlayer(player);
+            }
+
+            if (_enablePackageCompatibilityValidation)
+            {
+                PackageCompatibilityValidator compat =
+                    player.GetComponent<PackageCompatibilityValidator>();
+                if (compat == null)
+                    compat = player.gameObject.AddComponent<PackageCompatibilityValidator>();
+
+                compat.RunReport(player);
             }
         }
     }
