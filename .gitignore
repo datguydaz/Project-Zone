@@ -112,3 +112,9 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Development hub (website/)
+/website/node_modules/
+/website/dist/
+/website/public/data/hub-snapshot.prev.json
+/.tools/

@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-void: #070807;
+  --color-charcoal: #0c0e0b;
+  --color-panel: #121510;
+  --color-panel-raised: #181c14;
+  --color-edge: #2a3124;
+  --color-edge-strong: #3d4634;
+  --color-mist: #9aa392;
+  --color-fog: #c5cbb8;
+  --color-bone: #e8ecdf;
+  --color-olive: #6b7f4a;
+  --color-olive-bright: #8fa862;
+  --color-amber: #c4a35a;
+  --color-amber-bright: #e0be6a;
+  --color-danger: #b85c4a;
+  --color-blocked: #a67c52;
+  --color-done: #5f8f6a;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    background:
+      radial-gradient(ellipse 80% 50% at 10% -10%, rgba(107, 127, 74, 0.12), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 90% 0%, rgba(196, 163, 90, 0.06), transparent 50%),
+      linear-gradient(180deg, var(--color-charcoal) 0%, var(--color-void) 100%);
+    color: var(--color-fog);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: rgba(143, 168, 98, 0.35);
+    color: var(--color-bone);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-olive-bright);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .panel {
+    background: color-mix(in srgb, var(--color-panel) 92%, transparent);
+    border: 1px solid var(--color-edge);
+    border-radius: 0.75rem;
+  }
+
+  .panel-raised {
+    background: color-mix(in srgb, var(--color-panel-raised) 94%, transparent);
+    border: 1px solid var(--color-edge);
+    border-radius: 0.75rem;
+  }
+
+  .hairline {
+    border-color: var(--color-edge);
+  }
+
+  .text-label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-mist);
+  }
+
+  .fade-in {
+    animation: fade-in 420ms ease-out both;
+  }
+
+  .fade-in-delay {
+    animation: fade-in 520ms ease-out 80ms both;
+  }
+
+  .fade-in-late {
+    animation: fade-in 620ms ease-out 140ms both;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

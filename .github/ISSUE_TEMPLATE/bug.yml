@@ -1,0 +1,41 @@
+name: Bug Report
+description: Report a verified PROJECT ZONE bug.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: input
+    id: scene
+    attributes:
+      label: Scene / area
+      placeholder: e.g. PZ_DamageAdapterTest
+  - type: dropdown
+    id: visibility
+    attributes:
+      label: Hub visibility
+      options:
+        - public
+        - private
+    validations:
+      required: true

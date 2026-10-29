@@ -1,5 +1,5 @@
 ---
-description: Permanent PROJECT ZONE isolation, Unity standards, and change reporting
+description: Permanent PROJECT ZONE isolation, Unity standards, hub workflow, and change reporting
 alwaysApply: true
 ---
 
@@ -35,3 +35,21 @@ Before a major change, create a Git commit or a project backup inside this works
 6. Recommended next step.
 
 Never claim a test passed without running it or watching the user run it. If Unity needs a manual click, give the exact menu path and say it was not performed here.
+
+## Development hub workflow
+
+The public-facing development hub lives only under `website/`. Planning data lives in `website/data/hub-catalog.json`. Tracking docs live under `docs/roadmap/` and `docs/devlog/`. Do not move Unity gameplay code for hub work.
+
+GitHub Issues and Milestones are the authoritative live tracking source after sync. Local catalog data is planning-only and must never be presented as live GitHub-verified progress.
+
+After every completed / approved development task:
+
+1. Identify the associated milestone and GitHub issue (do not invent issue numbers).
+2. Report implementation details, files touched, tests performed, and unresolved problems.
+3. Update local roadmap docs when the milestone scope changed: `docs/roadmap/milestones.md`.
+4. Propose any required GitHub issue/milestone changes for user approval. Do **not** close issues automatically; close only after verified completion and user approval when remote changes are involved.
+5. Update `docs/devlog/CHANGELOG.md` and public catalog/devlog entries for meaningful completed work. Do not fabricate activity.
+6. If catalog requirements changed, update `website/data/hub-catalog.json` and regenerate the planning snapshot with `npm run catalog:build` in `website/`. Live website progress becomes authoritative only after the approved GitHub sync workflow succeeds (`website/scripts/sync-github.mjs`).
+7. Do not push, publish GitHub Pages, change repository visibility, or execute remote issue/milestone creation without explicit approval.
+
+If GitHub authentication or API access is unavailable, say so clearly. Do not pretend synchronization succeeded.

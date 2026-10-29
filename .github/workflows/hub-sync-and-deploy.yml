@@ -1,0 +1,94 @@
+name: Hub Sync and Deploy
+
+# Deploy only runs when repository variable HUB_DEPLOY_ENABLED=true.
+# Sync + build always run so the snapshot and dist can be verified before going public.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "website/**"
+      - "docs/devlog/**"
+      - "docs/roadmap/**"
+      - ".github/workflows/hub-sync-and-deploy.yml"
+  issues:
+    types: [opened, edited, closed, reopened, labeled, unlabeled, milestoned, demilestoned]
+  milestone:
+    types: [created, closed, opened, edited, deleted]
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  issues: read
+
+concurrency:
+  group: hub-pages
+  cancel-in-progress: true
+
+jobs:
+  sync-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install website dependencies
+        working-directory: website
+        run: npm ci
+
+      - name: Ensure planning snapshot exists
+        working-directory: website
+        run: |
+          if [ ! -f public/data/hub-snapshot.json ]; then
+            node scripts/build-planning-snapshot.mjs
+          fi
+          cp public/data/hub-snapshot.json public/data/hub-snapshot.prev.json
+
+      - name: Sync GitHub tracking data
+        working-directory: website
+        env:
+          CI: "true"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          HUB_PUBLISH_PRIVATE_ISSUES: "0"
+        run: node scripts/sync-github.mjs
+        continue-on-error: true
+
+      - name: Validate snapshot schema
+        working-directory: website
+        run: node scripts/validate-snapshot.mjs
+
+      - name: Build website
+        working-directory: website
+        env:
+          VITE_BASE_PATH: /${{ github.event.repository.name }}/
+        run: npm run build
+
+      - name: Upload Pages artifact
+        if: ${{ vars.HUB_DEPLOY_ENABLED == 'true' }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: website/dist
+
+  deploy:
+    needs: sync-and-build
+    if: ${{ github.ref == 'refs/heads/main' && vars.HUB_DEPLOY_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

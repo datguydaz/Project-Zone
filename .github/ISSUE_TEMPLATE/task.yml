@@ -1,0 +1,69 @@
+name: Development Task
+description: Track a PROJECT ZONE development task against a milestone.
+title: "[Task] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use GitHub Issues as the source of truth. Do not mark complete until verified in-editor or by playtest.
+  - type: dropdown
+    id: milestone_hint
+    attributes:
+      label: Target milestone
+      options:
+        - M1 — Unity & HQ FPS Foundation
+        - M2 — Emerald AI Integration
+        - M3 — The Outskirts
+        - M4 — Inventory & Persistence
+        - M5 — Death & Contracts
+        - Unassigned
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area labels to apply
+      description: Also add matching GitHub labels on the issue.
+      multiple: true
+      options:
+        - milestone
+        - gameplay
+        - ai
+        - combat
+        - inventory
+        - world
+        - multiplayer
+        - ui
+        - bug
+        - enhancement
+        - blocked
+        - documentation
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What needs to be done and how we will verify it.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Checklist of verified outcomes required before closing.
+      value: |
+        - [ ]
+    validations:
+      required: true
+  - type: dropdown
+    id: visibility
+    attributes:
+      label: Hub visibility
+      description: Private/internal issues are excluded from the public hub snapshot.
+      options:
+        - public
+        - private
+    validations:
+      required: true

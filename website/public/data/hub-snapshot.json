@@ -1,0 +1,415 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-29T02:43:28.029Z",
+  "syncedAt": null,
+  "lastSyncAttemptAt": null,
+  "syncStatus": "seed",
+  "syncError": null,
+  "syncSource": "catalog",
+  "dataAuthority": "planning_catalog",
+  "repository": {
+    "owner": "datguydaz",
+    "name": "Project-Zone",
+    "url": "https://github.com/datguydaz/Project-Zone",
+    "defaultBranch": "main",
+    "visibility": "unknown"
+  },
+  "project": {
+    "title": "PROJECT ZONE",
+    "tagline": "Independent Unity 6 open-zone FPS RPG",
+    "phase": "Emerald AI Integration",
+    "description": "PROJECT ZONE is an independent Unity 6 URP open-zone FPS RPG. HQ FPS Weapons 2.0 handles player combat and movement. Emerald AI 2026 handles NPC behaviour. Custom adapters in Assets/_ProjectZone bridge the two frameworks.",
+    "engine": "Unity 6 · URP · C#"
+  },
+  "milestones": [
+    {
+      "id": "m1-unity-hqfps-foundation",
+      "number": 1,
+      "title": "Unity & HQ FPS Foundation",
+      "description": "Establish the Unity 6 URP project, integrate HQ FPS Weapons 2.0, validate movement and weapons on the Firing Range, and lock project isolation rules.",
+      "status": "completed",
+      "githubMilestoneNumber": null,
+      "githubMilestoneUrl": null,
+      "scope": [
+        "Unity 6 project setup",
+        "URP configuration",
+        "HQ FPS Weapons 2.0 integration",
+        "Weapon and movement validation",
+        "Firing Range testing",
+        "Git repository initialization",
+        "Permanent Cursor project rule"
+      ],
+      "requirements": [
+        {
+          "id": "m1-r1",
+          "title": "Unity 6 project setup",
+          "completed": true
+        },
+        {
+          "id": "m1-r2",
+          "title": "URP configuration",
+          "completed": true
+        },
+        {
+          "id": "m1-r3",
+          "title": "HQ FPS Weapons 2.0 integration",
+          "completed": true
+        },
+        {
+          "id": "m1-r4",
+          "title": "Weapon and movement validation",
+          "completed": true
+        },
+        {
+          "id": "m1-r5",
+          "title": "Firing Range testing",
+          "completed": true
+        },
+        {
+          "id": "m1-r6",
+          "title": "Git repository initialization",
+          "completed": true
+        },
+        {
+          "id": "m1-r7",
+          "title": "Permanent Cursor project rule",
+          "completed": true
+        }
+      ],
+      "blockers": [],
+      "lastUpdated": "2026-10-29T00:00:00.000Z",
+      "issueIds": [],
+      "progressPercent": 100,
+      "progressMode": "planning_checklist",
+      "progressVerified": false,
+      "openCount": 0,
+      "closedCount": 7,
+      "blockedCount": 0
+    },
+    {
+      "id": "m2-emerald-ai-integration",
+      "number": 2,
+      "title": "Emerald AI Integration",
+      "description": "Bridge HQ FPS Weapons damage into Emerald AI and Emerald damage into the player, then validate detection, pursuit, combat, and death reactions.",
+      "status": "in_progress",
+      "githubMilestoneNumber": null,
+      "githubMilestoneUrl": null,
+      "scope": [
+        "HQ FPS to Emerald damage adapter",
+        "Emerald to HQ FPS damage adapter",
+        "Enemy detection and pursuit",
+        "Melee and ranged combat validation",
+        "Death and hit reaction testing",
+        "Package compatibility validation"
+      ],
+      "requirements": [
+        {
+          "id": "m2-r1",
+          "title": "HQ FPS to Emerald damage adapter",
+          "completed": true
+        },
+        {
+          "id": "m2-r2",
+          "title": "Emerald to HQ FPS damage adapter",
+          "completed": true
+        },
+        {
+          "id": "m2-r3",
+          "title": "Enemy detection and pursuit",
+          "completed": false
+        },
+        {
+          "id": "m2-r4",
+          "title": "Melee and ranged combat validation",
+          "completed": false
+        },
+        {
+          "id": "m2-r5",
+          "title": "Death and hit reaction testing",
+          "completed": false
+        },
+        {
+          "id": "m2-r6",
+          "title": "Package compatibility validation",
+          "completed": false
+        }
+      ],
+      "blockers": [],
+      "lastUpdated": "2026-10-29T00:00:00.000Z",
+      "issueIds": [],
+      "progressPercent": 33,
+      "progressMode": "planning_checklist",
+      "progressVerified": false,
+      "openCount": 4,
+      "closedCount": 2,
+      "blockedCount": 0
+    },
+    {
+      "id": "m3-the-outskirts",
+      "number": 3,
+      "title": "The Outskirts",
+      "description": "Build the first playable region with a safe settlement, abandoned checkpoint, industrial building, underground entrance, and atmospheric NPC placement.",
+      "status": "not_started",
+      "githubMilestoneNumber": null,
+      "githubMilestoneUrl": null,
+      "scope": [
+        "First playable region",
+        "Safe settlement",
+        "Abandoned checkpoint",
+        "Industrial building",
+        "Underground entrance",
+        "NPC placement and navigation",
+        "Environmental atmosphere"
+      ],
+      "requirements": [
+        {
+          "id": "m3-r1",
+          "title": "First playable region",
+          "completed": false
+        },
+        {
+          "id": "m3-r2",
+          "title": "Safe settlement",
+          "completed": false
+        },
+        {
+          "id": "m3-r3",
+          "title": "Abandoned checkpoint",
+          "completed": false
+        },
+        {
+          "id": "m3-r4",
+          "title": "Industrial building",
+          "completed": false
+        },
+        {
+          "id": "m3-r5",
+          "title": "Underground entrance",
+          "completed": false
+        },
+        {
+          "id": "m3-r6",
+          "title": "NPC placement and navigation",
+          "completed": false
+        },
+        {
+          "id": "m3-r7",
+          "title": "Environmental atmosphere",
+          "completed": false
+        }
+      ],
+      "blockers": [],
+      "lastUpdated": "2026-10-29T00:00:00.000Z",
+      "issueIds": [],
+      "progressPercent": 0,
+      "progressMode": "planning_checklist",
+      "progressVerified": false,
+      "openCount": 7,
+      "closedCount": 0,
+      "blockedCount": 0
+    },
+    {
+      "id": "m4-inventory-persistence",
+      "number": 4,
+      "title": "Inventory & Persistence",
+      "description": "Add loot, backpack UI, permanent stash, inventory transfers, and verified save/load for equipment and items.",
+      "status": "not_started",
+      "githubMilestoneNumber": null,
+      "githubMilestoneUrl": null,
+      "scope": [
+        "Loot containers",
+        "Backpack UI",
+        "Permanent stash",
+        "Inventory transfers",
+        "Save/load validation",
+        "Persistent equipment and items"
+      ],
+      "requirements": [
+        {
+          "id": "m4-r1",
+          "title": "Loot containers",
+          "completed": false
+        },
+        {
+          "id": "m4-r2",
+          "title": "Backpack UI",
+          "completed": false
+        },
+        {
+          "id": "m4-r3",
+          "title": "Permanent stash",
+          "completed": false
+        },
+        {
+          "id": "m4-r4",
+          "title": "Inventory transfers",
+          "completed": false
+        },
+        {
+          "id": "m4-r5",
+          "title": "Save/load validation",
+          "completed": false
+        },
+        {
+          "id": "m4-r6",
+          "title": "Persistent equipment and items",
+          "completed": false
+        }
+      ],
+      "blockers": [],
+      "lastUpdated": "2026-10-29T00:00:00.000Z",
+      "issueIds": [],
+      "progressPercent": 0,
+      "progressMode": "planning_checklist",
+      "progressVerified": false,
+      "openCount": 6,
+      "closedCount": 0,
+      "blockedCount": 0
+    },
+    {
+      "id": "m5-death-contracts",
+      "number": 5,
+      "title": "Death & Contracts",
+      "description": "Complete the expedition loop with hybrid death rules, recoverable caches, currency, repeatable contracts, and progression rewards.",
+      "status": "not_started",
+      "githubMilestoneNumber": null,
+      "githubMilestoneUrl": null,
+      "scope": [
+        "Hybrid death rules",
+        "Recoverable death caches",
+        "Currency",
+        "Repeatable contracts",
+        "Rewards and progression",
+        "Complete expedition gameplay loop"
+      ],
+      "requirements": [
+        {
+          "id": "m5-r1",
+          "title": "Hybrid death rules",
+          "completed": false
+        },
+        {
+          "id": "m5-r2",
+          "title": "Recoverable death caches",
+          "completed": false
+        },
+        {
+          "id": "m5-r3",
+          "title": "Currency",
+          "completed": false
+        },
+        {
+          "id": "m5-r4",
+          "title": "Repeatable contracts",
+          "completed": false
+        },
+        {
+          "id": "m5-r5",
+          "title": "Rewards and progression",
+          "completed": false
+        },
+        {
+          "id": "m5-r6",
+          "title": "Complete expedition gameplay loop",
+          "completed": false
+        }
+      ],
+      "blockers": [],
+      "lastUpdated": "2026-10-29T00:00:00.000Z",
+      "issueIds": [],
+      "progressPercent": 0,
+      "progressMode": "planning_checklist",
+      "progressVerified": false,
+      "openCount": 6,
+      "closedCount": 0,
+      "blockedCount": 0
+    }
+  ],
+  "issues": [],
+  "activity": [
+    {
+      "id": "act-m1-complete",
+      "kind": "milestone",
+      "title": "Milestone 1 completed",
+      "summary": "Unity 6 URP foundation, HQ FPS Weapons 2.0 integration, Firing Range validation, and permanent Cursor isolation rule confirmed by the developer.",
+      "date": "2026-03-25T00:00:00.000Z",
+      "milestoneId": "m1-unity-hqfps-foundation",
+      "url": null
+    },
+    {
+      "id": "act-damage-adapters",
+      "kind": "feature",
+      "title": "Damage adapters verified in play mode",
+      "summary": "HQ FPS to Emerald and Emerald to HQ FPS damage bridges confirmed working in PZ_DamageAdapterTest, including flesh surface hits and player damage events.",
+      "date": "2026-03-26T00:00:00.000Z",
+      "milestoneId": "m2-emerald-ai-integration",
+      "url": null
+    }
+  ],
+  "devlog": [
+    {
+      "id": "log-2026-03-25-m1",
+      "date": "2026-03-25",
+      "title": "Milestone 1 — Unity & HQ FPS Foundation",
+      "kind": "milestone",
+      "body": "Confirmed complete: Unity 6 URP project setup, HQ FPS Weapons 2.0 integration, weapon and movement validation on the Firing Range, Git repository initialization, and the permanent Cursor project isolation rule.",
+      "milestoneId": "m1-unity-hqfps-foundation",
+      "public": true,
+      "screenshots": []
+    },
+    {
+      "id": "log-2026-03-26-damage",
+      "date": "2026-03-26",
+      "title": "Damage bridge playtest confirmed",
+      "kind": "feature",
+      "body": "Milestone 2 damage adapters are functional. Player shots register on Emerald AI via Hitbox-layer HQ damage volumes with Flesh surface mapping. Emerald damage reaches the player through the HQ damage bridge. Remaining Milestone 2 work: broader combat validation, death/hit reactions, and package compatibility sign-off.",
+      "milestoneId": "m2-emerald-ai-integration",
+      "public": true,
+      "screenshots": []
+    }
+  ],
+  "publicPolicy": {
+    "mode": "curated",
+    "note": "Public hub data is allowlisted. Issue bodies, private notes, credentials, and local paths are never published. Until GitHub sync succeeds, the site shows planning catalog data labeled as unverified.",
+    "excludeLabels": [
+      "private",
+      "internal",
+      "confidential"
+    ],
+    "requirePublicLabelForPrivateRepo": true,
+    "issueFieldAllowlist": [
+      "id",
+      "number",
+      "title",
+      "state",
+      "status",
+      "labels",
+      "milestoneId",
+      "milestoneTitle",
+      "htmlUrl",
+      "updatedAt",
+      "closedAt",
+      "isPublic"
+    ],
+    "milestoneFieldAllowlist": [
+      "id",
+      "number",
+      "title",
+      "description",
+      "status",
+      "githubMilestoneNumber",
+      "githubMilestoneUrl",
+      "scope",
+      "requirements",
+      "blockers",
+      "lastUpdated",
+      "issueIds",
+      "progressPercent",
+      "progressMode",
+      "openCount",
+      "closedCount",
+      "blockedCount",
+      "progressVerified"
+    ]
+  }
+}
