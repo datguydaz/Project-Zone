@@ -2,6 +2,14 @@
 
 Only verified work belongs here. Do not invent activity.
 
+## 2026-10-29 — M5.5–M15 roadmap tracking established
+
+**Kind:** process / architecture  
+**Milestone:** M5.5 Technical Foundation & Asset Readiness  
+**Public:** yes
+
+Created GitHub milestones/issues for M5.5–M15, seeded asset registry and performance/architecture docs, updated Development Hub catalog + sync mapping. M5.5 audit documentation started. No M6 implementation. Standalone FPS baseline not yet measured.
+
 ## 2026-10-29 — Female Zombie animation playback fixed
 
 **Kind:** fix  

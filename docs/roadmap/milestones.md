@@ -3,55 +3,93 @@
 Authoritative **live** progress comes from GitHub Milestones + Issues after sync.
 `website/data/hub-catalog.json` is the local planning catalog and must not be shown as live verified progress.
 
+**Performance doctrine:** typical 120–150+ FPS; 100 FPS floor on documented reference hardware (standalone builds). Do not claim targets met until measured.
+
 ## Milestone 1 — Unity & HQ FPS Foundation
 
-- **Status:** Completed (developer confirmed)
-- Unity 6 project setup
-- URP configuration
-- HQ FPS Weapons 2.0 integration
-- Weapon and movement validation
-- Firing Range testing
-- Git repository initialization
-- Permanent Cursor project rule
+- **Status:** Completed
+- Unity 6 / URP / HQ FPS Weapons 2.0 foundation verified
 
 ## Milestone 2 — Emerald AI Integration
 
-- **Status:** Completed (developer confirmed)
-- HQ FPS to Emerald damage adapter — verified in play mode (#8)
-- Emerald to HQ FPS damage adapter — verified in play mode (#9)
-- Enemy detection and pursuit — verified in play mode (#10)
-- Melee and ranged combat validation — ranged verified (#11); Female Zombie melee hostiles added on Outskirts (Play Mode re-check for melee checkbox)
-- Death and hit reaction testing — verified in play mode (#12)
-- Package compatibility validation — verified in play mode (#13)
+- **Status:** Completed
+- HQ↔Emerald combat adapters verified; Female Zombie melee greybox added later on Outskirts
 
 ## Milestone 3 — The Outskirts
 
-- **Status:** Completed (developer confirmed)
-- **Scene:** `Assets/_ProjectZone/Scenes/PZ_Outskirts.unity` (keep `PZ_DamageAdapterTest` as M2 combat sandbox; leave `HQFPS_FiringRange` as vendor demo)
-- First playable region layout — verified in play mode (#14)
-- Safe settlement — verified greybox hub in play mode (#15); art/prop pass later
-- Abandoned checkpoint — verified greybox in play mode (#16); art/prop pass later
-- Industrial building — verified greybox in play mode (#17); art/prop pass later
-- Underground entrance — verified greybox in play mode (#18); real transition/art later
-- NPC placement and navigation — verified in play mode (#19); final NPC art/behavior later
-- Environmental atmosphere — systems verified in play mode (#20); fog/look polish later
+- **Status:** Completed
+- Greybox region (`PZ_Outskirts`) verified; art/underground load polish deferred to M6+
 
 ## Milestone 4 — Inventory & Persistence
 
-- **Status:** Completed (Play Mode confirmed)
-- Loot containers — Outskirts loot markers + HQ containers (#21)
-- Backpack UI — HQ Item Wheel (MMB) + loot/stash transfer panel (#22)
-- Permanent stash — Settlement courtyard stash + profile save (#23)
-- Inventory transfers — HQ ItemTransfering dual panel (#24)
-- Save/load validation — snapshots, stash file, SceneSaveHandler (#25)
-- Persistent equipment and items — holster/backpack snapshot + starting M1911 (#26)
+- **Status:** Completed
+- Loot, stash, transfers, snapshots, starting M1911 verified
 
 ## Milestone 5 — Death & Contracts
 
-- **Status:** Completed (Play Mode confirmed)
-- Hybrid death rules — safe zone vs expedition spill (#27)
-- Recoverable death caches — world marker + Settlement claim (#28)
-- Currency — profile wallet (#29)
-- Repeatable contracts — Settlement board (#30)
-- Rewards and progression — credits + reputation on turn-in (#31)
-- Complete expedition gameplay loop — session phases + F8 validator (#32)
+- **Status:** Completed
+- Hybrid death, caches, wallet, contracts, expedition loop verified
+
+## Milestone 5.5 — Technical Foundation & Asset Readiness
+
+- **Status:** In Progress (tracking + audit)
+- **Gate:** Stop for approval before M6
+- Audit scenes/packages/custom systems
+- Region/scene-loading architecture proposal
+- Asset import conventions + registry
+- Lighting/terrain/weather strategy
+- Performance targets + profiling procedure
+- Emerald multi-region readiness
+- Git LFS / save versioning / licensing audit
+- Technical decision log + roadmap sync
+
+## Milestone 6 — World Architecture & Environment Pipeline
+
+- **Status:** Planned
+- Settlement, checkpoint, industrial, underground production layout
+- Modular env standards, LOD/culling, NavMesh, persistence, traversal benchmarks
+
+## Milestone 7 — Atmosphere, Lighting & Audio
+
+- **Status:** Planned
+- Unified lighting, day/night, HAZE vs simple fog, foliage workflow, audio zones, atmosphere checkpoint
+
+## Milestone 8 — Living World & Dynamic Encounters
+
+- **Status:** Planned
+- Encounter management, human/mutant spawns, AI budgets, activation distances, load profiling
+
+## Milestone 9 — Factions, NPCs & Settlements
+
+- **Status:** Planned
+- Factions, traders, light dialogue, reputation, settlement NPC budgets
+
+## Milestone 10 — Loot, Economy & Equipment Progression
+
+- **Status:** Planned
+- Loot/economy/repair/attachments/armor on HQ FPS; anti-dupe; save compatibility
+
+## Milestone 11 — Contracts, Exploration & Anomalies
+
+- **Status:** Planned
+- Expanded contracts, POIs, anomaly prototype, hazard counterplay
+
+## Milestone 12 — Combat, Mutants & Survival
+
+- **Status:** Planned
+- Human/mutant variety, feedback, optional survival eval, combat stress tests
+
+## Milestone 13 — World Expansion & Optimization
+
+- **Status:** Planned
+- More locations, connectivity, vegetation/lighting/AI/memory optimization
+
+## Milestone 14 — UI/UX, Accessibility & Polish
+
+- **Status:** Planned
+- Inventory/loot/contracts/map/HUD, settings, rebinding, accessibility
+
+## Milestone 15 — Vertical Slice & Alpha Readiness
+
+- **Status:** Planned
+- Feature freeze, critical bugs, full loop + performance validation, internal alpha build

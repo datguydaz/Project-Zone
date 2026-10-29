@@ -38,11 +38,23 @@ const ISSUE_PUBLIC_FIELDS = [
 ];
 
 const MILESTONE_TITLE_MAP = [
-  { match: /unity.*hq.*fps|foundation/i, id: "m1-unity-hqfps-foundation" },
-  { match: /emerald/i, id: "m2-emerald-ai-integration" },
-  { match: /outskirts/i, id: "m3-the-outskirts" },
-  { match: /inventory|persistence/i, id: "m4-inventory-persistence" },
-  { match: /death|contract/i, id: "m5-death-contracts" },
+  // Newer milestones first so "foundation" / "contracts" do not steal M5.5+ titles.
+  { match: /5\.5|technical foundation|asset readiness/i, id: "m5_5-technical-foundation" },
+  { match: /^6\b|world architecture|environment pipeline/i, id: "m6-world-architecture" },
+  { match: /^7\b|atmosphere.*lighting|lighting & audio/i, id: "m7-atmosphere-lighting-audio" },
+  { match: /^8\b|living world|dynamic encounters/i, id: "m8-living-world-encounters" },
+  { match: /^9\b|factions|npcs & settlements/i, id: "m9-factions-npcs-settlements" },
+  { match: /^10\b|loot.*economy|equipment progression/i, id: "m10-loot-economy-equipment" },
+  { match: /^11\b|contracts.*exploration|exploration & anomalies/i, id: "m11-contracts-exploration-anomalies" },
+  { match: /^12\b|combat.*mutants|mutants & survival/i, id: "m12-combat-mutants-survival" },
+  { match: /^13\b|world expansion|expansion & optimization/i, id: "m13-world-expansion-optimization" },
+  { match: /^14\b|ui\/ux|accessibility & polish/i, id: "m14-uiux-accessibility-polish" },
+  { match: /^15\b|vertical slice|alpha readiness/i, id: "m15-vertical-slice-alpha" },
+  { match: /unity.*hq.*fps|unity & hq fps foundation/i, id: "m1-unity-hqfps-foundation" },
+  { match: /emerald ai integration|^emerald/i, id: "m2-emerald-ai-integration" },
+  { match: /the outskirts|^outskirts/i, id: "m3-the-outskirts" },
+  { match: /inventory & persistence|inventory.*persistence/i, id: "m4-inventory-persistence" },
+  { match: /death & contracts|^death|^contracts$/i, id: "m5-death-contracts" },
 ];
 
 function parseRepo() {

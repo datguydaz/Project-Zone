@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "catalogKind": "planning",
-  "updatedAt": "2026-10-29T04:10:00.000Z",
+  "updatedAt": "2026-10-29T21:45:02.806Z",
   "repository": {
     "owner": "datguydaz",
     "name": "Project-Zone",
@@ -11,14 +11,18 @@
   "project": {
     "title": "PROJECT ZONE",
     "tagline": "Independent Unity 6 open-zone FPS RPG",
-    "phase": "Emerald AI Integration",
-    "description": "PROJECT ZONE is an independent Unity 6 URP open-zone FPS RPG. Explore a dangerous exclusion zone, fight hostiles, scavenge gear, complete contracts, and return to safety. Built with HQ FPS Weapons 2.0 and Emerald AI 2026, bridged by custom Project Zone adapters.",
+    "phase": "Technical Foundation & Asset Readiness (M5.5)",
+    "description": "PROJECT ZONE is an independent Unity 6 URP open-zone FPS RPG. Explore a dangerous exclusion zone, fight hostiles, scavenge gear, complete contracts, and return to safety. Performance-first: 120–150+ FPS typical, 100 FPS floor on reference hardware. Built with HQ FPS Weapons 2.0 and Emerald AI 2026, bridged by Project Zone adapters.",
     "engine": "Unity 6 · URP · C#"
   },
   "publicPolicy": {
     "mode": "curated",
     "note": "Public hub data is allowlisted. Issue bodies, private notes, credentials, and local paths are never published. Until GitHub sync succeeds, the site shows planning catalog data labeled as unverified.",
-    "excludeLabels": ["private", "internal", "confidential"],
+    "excludeLabels": [
+      "private",
+      "internal",
+      "confidential"
+    ],
     "requirePublicLabelForPrivateRepo": true,
     "issueFieldAllowlist": [
       "id",
@@ -72,13 +76,48 @@
         "Permanent Cursor project rule"
       ],
       "requirements": [
-        { "id": "m1-r1", "title": "Unity 6 project setup", "completed": true, "verification": "developer_confirmed" },
-        { "id": "m1-r2", "title": "URP configuration", "completed": true, "verification": "developer_confirmed" },
-        { "id": "m1-r3", "title": "HQ FPS Weapons 2.0 integration", "completed": true, "verification": "developer_confirmed" },
-        { "id": "m1-r4", "title": "Weapon and movement validation", "completed": true, "verification": "developer_confirmed" },
-        { "id": "m1-r5", "title": "Foundation combat validation", "completed": true, "verification": "developer_confirmed" },
-        { "id": "m1-r6", "title": "Git repository initialization", "completed": true, "verification": "developer_confirmed" },
-        { "id": "m1-r7", "title": "Permanent Cursor project rule", "completed": true, "verification": "developer_confirmed" }
+        {
+          "id": "m1-r1",
+          "title": "Unity 6 project setup",
+          "completed": true,
+          "verification": "developer_confirmed"
+        },
+        {
+          "id": "m1-r2",
+          "title": "URP configuration",
+          "completed": true,
+          "verification": "developer_confirmed"
+        },
+        {
+          "id": "m1-r3",
+          "title": "HQ FPS Weapons 2.0 integration",
+          "completed": true,
+          "verification": "developer_confirmed"
+        },
+        {
+          "id": "m1-r4",
+          "title": "Weapon and movement validation",
+          "completed": true,
+          "verification": "developer_confirmed"
+        },
+        {
+          "id": "m1-r5",
+          "title": "Foundation combat validation",
+          "completed": true,
+          "verification": "developer_confirmed"
+        },
+        {
+          "id": "m1-r6",
+          "title": "Git repository initialization",
+          "completed": true,
+          "verification": "developer_confirmed"
+        },
+        {
+          "id": "m1-r7",
+          "title": "Permanent Cursor project rule",
+          "completed": true,
+          "verification": "developer_confirmed"
+        }
       ],
       "blockers": []
     },
@@ -97,12 +136,42 @@
         "Package compatibility validation"
       ],
       "requirements": [
-        { "id": "m2-r1", "title": "HQ FPS to Emerald damage adapter", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m2-r2", "title": "Emerald to HQ FPS damage adapter", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m2-r3", "title": "Enemy detection and pursuit", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m2-r4", "title": "Melee and ranged combat validation", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m2-r5", "title": "Death and hit reaction testing", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m2-r6", "title": "Package compatibility validation", "completed": true, "verification": "playtest_confirmed" }
+        {
+          "id": "m2-r1",
+          "title": "HQ FPS to Emerald damage adapter",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m2-r2",
+          "title": "Emerald to HQ FPS damage adapter",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m2-r3",
+          "title": "Enemy detection and pursuit",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m2-r4",
+          "title": "Melee and ranged combat validation",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m2-r5",
+          "title": "Death and hit reaction testing",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m2-r6",
+          "title": "Package compatibility validation",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        }
       ],
       "blockers": []
     },
@@ -122,13 +191,48 @@
         "Environmental atmosphere"
       ],
       "requirements": [
-        { "id": "m3-r1", "title": "First playable region", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m3-r2", "title": "Safe settlement", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m3-r3", "title": "Abandoned checkpoint", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m3-r4", "title": "Industrial building", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m3-r5", "title": "Underground entrance", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m3-r6", "title": "NPC placement and navigation", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m3-r7", "title": "Environmental atmosphere", "completed": true, "verification": "playtest_confirmed" }
+        {
+          "id": "m3-r1",
+          "title": "First playable region",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m3-r2",
+          "title": "Safe settlement",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m3-r3",
+          "title": "Abandoned checkpoint",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m3-r4",
+          "title": "Industrial building",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m3-r5",
+          "title": "Underground entrance",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m3-r6",
+          "title": "NPC placement and navigation",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m3-r7",
+          "title": "Environmental atmosphere",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        }
       ],
       "blockers": []
     },
@@ -147,12 +251,42 @@
         "Persistent equipment and items"
       ],
       "requirements": [
-        { "id": "m4-r1", "title": "Loot containers", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m4-r2", "title": "Backpack UI", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m4-r3", "title": "Permanent stash", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m4-r4", "title": "Inventory transfers", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m4-r5", "title": "Save/load validation", "completed": true, "verification": "playtest_confirmed" },
-        { "id": "m4-r6", "title": "Persistent equipment and items", "completed": true, "verification": "playtest_confirmed" }
+        {
+          "id": "m4-r1",
+          "title": "Loot containers",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m4-r2",
+          "title": "Backpack UI",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m4-r3",
+          "title": "Permanent stash",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m4-r4",
+          "title": "Inventory transfers",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m4-r5",
+          "title": "Save/load validation",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m4-r6",
+          "title": "Persistent equipment and items",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        }
       ],
       "blockers": []
     },
@@ -161,7 +295,7 @@
       "number": 5,
       "title": "Death & Contracts",
       "description": "Complete the expedition loop with hybrid death rules, recoverable caches, currency, repeatable contracts, and progression rewards.",
-      "status": "in_progress",
+      "status": "completed",
       "scope": [
         "Hybrid death rules",
         "Recoverable death caches",
@@ -171,17 +305,611 @@
         "Complete expedition gameplay loop"
       ],
       "requirements": [
-        { "id": "m5-r1", "title": "Hybrid death rules", "completed": false, "verification": "implementation_ready" },
-        { "id": "m5-r2", "title": "Recoverable death caches", "completed": false, "verification": "implementation_ready" },
-        { "id": "m5-r3", "title": "Currency", "completed": false, "verification": "implementation_ready" },
-        { "id": "m5-r4", "title": "Repeatable contracts", "completed": false, "verification": "implementation_ready" },
-        { "id": "m5-r5", "title": "Rewards and progression", "completed": false, "verification": "implementation_ready" },
-        { "id": "m5-r6", "title": "Complete expedition gameplay loop", "completed": false, "verification": "implementation_ready" }
+        {
+          "id": "m5-r1",
+          "title": "Hybrid death rules",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m5-r2",
+          "title": "Recoverable death caches",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m5-r3",
+          "title": "Currency",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m5-r4",
+          "title": "Repeatable contracts",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m5-r5",
+          "title": "Rewards and progression",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        },
+        {
+          "id": "m5-r6",
+          "title": "Complete expedition gameplay loop",
+          "completed": true,
+          "verification": "playtest_confirmed"
+        }
       ],
-      "blockers": ["Awaiting Play Mode confirmation on PZ_Outskirts before closing #27–#32"]
+      "blockers": []
+    },
+    {
+      "id": "m5_5-technical-foundation",
+      "number": 5.5,
+      "title": "Technical Foundation & Asset Readiness",
+      "description": "Performance-first technical baseline, asset registry, world architecture proposal, AI and persistence readiness. Approval gate before M6.",
+      "status": "in_progress",
+      "scope": [
+        "Scene/package/custom systems audit",
+        "Region/scene-loading architecture",
+        "Asset import conventions",
+        "Lighting/terrain/weather strategy",
+        "Performance targets and profiling procedure",
+        "Emerald multi-region readiness",
+        "Git LFS / save versioning / licensing",
+        "Technical decisions and roadmap sync"
+      ],
+      "requirements": [
+        {
+          "id": "m5_5-technical-foundation-r1",
+          "title": "Scene/package/custom systems audit",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m5_5-technical-foundation-r2",
+          "title": "Region/scene-loading architecture",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m5_5-technical-foundation-r3",
+          "title": "Asset import conventions",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m5_5-technical-foundation-r4",
+          "title": "Lighting/terrain/weather strategy",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m5_5-technical-foundation-r5",
+          "title": "Performance targets and profiling procedure",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m5_5-technical-foundation-r6",
+          "title": "Emerald multi-region readiness",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m5_5-technical-foundation-r7",
+          "title": "Git LFS / save versioning / licensing",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m5_5-technical-foundation-r8",
+          "title": "Technical decisions and roadmap sync",
+          "completed": false,
+          "verification": "planned"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "id": "m6-world-architecture",
+      "number": 6,
+      "title": "World Architecture & Environment Pipeline",
+      "description": "Scalable Outskirts environment foundation using approved assets.",
+      "status": "not_started",
+      "scope": [
+        "Region/scene organization",
+        "Settlement / checkpoint / industrial / underground",
+        "Modular standards, LOD/culling",
+        "NavMesh and transitions",
+        "Persistence across regions",
+        "Traversal benchmarks"
+      ],
+      "requirements": [
+        {
+          "id": "m6-world-architecture-r1",
+          "title": "Region/scene organization",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m6-world-architecture-r2",
+          "title": "Settlement / checkpoint / industrial / underground",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m6-world-architecture-r3",
+          "title": "Modular standards, LOD/culling",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m6-world-architecture-r4",
+          "title": "NavMesh and transitions",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m6-world-architecture-r5",
+          "title": "Persistence across regions",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m6-world-architecture-r6",
+          "title": "Traversal benchmarks",
+          "completed": false,
+          "verification": "planned"
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ]
+    },
+    {
+      "id": "m7-atmosphere-lighting-audio",
+      "number": 7,
+      "title": "Atmosphere, Lighting & Audio",
+      "description": "Exclusion-zone atmosphere with performance-disciplined fog/foliage/audio.",
+      "status": "not_started",
+      "scope": [
+        "Lighting presets",
+        "HAZE vs simple fog",
+        "Foliage workflow",
+        "Ambient audio",
+        "Atmosphere checkpoint"
+      ],
+      "requirements": [
+        {
+          "id": "m7-atmosphere-lighting-audio-r1",
+          "title": "Lighting presets",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m7-atmosphere-lighting-audio-r2",
+          "title": "HAZE vs simple fog",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m7-atmosphere-lighting-audio-r3",
+          "title": "Foliage workflow",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m7-atmosphere-lighting-audio-r4",
+          "title": "Ambient audio",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m7-atmosphere-lighting-audio-r5",
+          "title": "Atmosphere checkpoint",
+          "completed": false,
+          "verification": "planned"
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ]
+    },
+    {
+      "id": "m8-living-world-encounters",
+      "number": 8,
+      "title": "Living World & Dynamic Encounters",
+      "description": "Region-based encounters with AI budgets and activation distances.",
+      "status": "not_started",
+      "scope": [
+        "Encounter management",
+        "Human/mutant spawns",
+        "AI budgets",
+        "Persistence",
+        "Load profiling"
+      ],
+      "requirements": [
+        {
+          "id": "m8-living-world-encounters-r1",
+          "title": "Encounter management",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m8-living-world-encounters-r2",
+          "title": "Human/mutant spawns",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m8-living-world-encounters-r3",
+          "title": "AI budgets",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m8-living-world-encounters-r4",
+          "title": "Persistence",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m8-living-world-encounters-r5",
+          "title": "Load profiling",
+          "completed": false,
+          "verification": "planned"
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ]
+    },
+    {
+      "id": "m9-factions-npcs-settlements",
+      "number": 9,
+      "title": "Factions, NPCs & Settlements",
+      "description": "Factions, traders, light dialogue, reputation, settlement performance.",
+      "status": "not_started",
+      "scope": [
+        "Factions",
+        "Traders",
+        "Dialogue",
+        "Reputation",
+        "Settlement NPC budgets"
+      ],
+      "requirements": [
+        {
+          "id": "m9-factions-npcs-settlements-r1",
+          "title": "Factions",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m9-factions-npcs-settlements-r2",
+          "title": "Traders",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m9-factions-npcs-settlements-r3",
+          "title": "Dialogue",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m9-factions-npcs-settlements-r4",
+          "title": "Reputation",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m9-factions-npcs-settlements-r5",
+          "title": "Settlement NPC budgets",
+          "completed": false,
+          "verification": "planned"
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ]
+    },
+    {
+      "id": "m10-loot-economy-equipment",
+      "number": 10,
+      "title": "Loot, Economy & Equipment Progression",
+      "description": "Meaningful scavenging and equipment progression on HQ FPS systems.",
+      "status": "not_started",
+      "scope": [
+        "Loot",
+        "Traders",
+        "Repair",
+        "Attachments/armor",
+        "Economy",
+        "Anti-dupe"
+      ],
+      "requirements": [
+        {
+          "id": "m10-loot-economy-equipment-r1",
+          "title": "Loot",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m10-loot-economy-equipment-r2",
+          "title": "Traders",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m10-loot-economy-equipment-r3",
+          "title": "Repair",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m10-loot-economy-equipment-r4",
+          "title": "Attachments/armor",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m10-loot-economy-equipment-r5",
+          "title": "Economy",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m10-loot-economy-equipment-r6",
+          "title": "Anti-dupe",
+          "completed": false,
+          "verification": "planned"
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ]
+    },
+    {
+      "id": "m11-contracts-exploration-anomalies",
+      "number": 11,
+      "title": "Contracts, Exploration & Anomalies",
+      "description": "Expanded contracts, POIs, anomaly prototypes.",
+      "status": "not_started",
+      "scope": [
+        "Contract types",
+        "POIs",
+        "Anomalies",
+        "Hazards",
+        "Objective persistence"
+      ],
+      "requirements": [
+        {
+          "id": "m11-contracts-exploration-anomalies-r1",
+          "title": "Contract types",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m11-contracts-exploration-anomalies-r2",
+          "title": "POIs",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m11-contracts-exploration-anomalies-r3",
+          "title": "Anomalies",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m11-contracts-exploration-anomalies-r4",
+          "title": "Hazards",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m11-contracts-exploration-anomalies-r5",
+          "title": "Objective persistence",
+          "completed": false,
+          "verification": "planned"
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ]
+    },
+    {
+      "id": "m12-combat-mutants-survival",
+      "number": 12,
+      "title": "Combat, Mutants & Survival",
+      "description": "Varied combat and carefully scoped survival systems.",
+      "status": "not_started",
+      "scope": [
+        "Human/mutant combat",
+        "Feedback",
+        "Survival evaluation",
+        "Stress tests"
+      ],
+      "requirements": [
+        {
+          "id": "m12-combat-mutants-survival-r1",
+          "title": "Human/mutant combat",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m12-combat-mutants-survival-r2",
+          "title": "Feedback",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m12-combat-mutants-survival-r3",
+          "title": "Survival evaluation",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m12-combat-mutants-survival-r4",
+          "title": "Stress tests",
+          "completed": false,
+          "verification": "planned"
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ]
+    },
+    {
+      "id": "m13-world-expansion-optimization",
+      "number": 13,
+      "title": "World Expansion & Optimization",
+      "description": "Expand proven content while preserving high FPS.",
+      "status": "not_started",
+      "scope": [
+        "New locations",
+        "Optimization passes",
+        "Worst-case profiling"
+      ],
+      "requirements": [
+        {
+          "id": "m13-world-expansion-optimization-r1",
+          "title": "New locations",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m13-world-expansion-optimization-r2",
+          "title": "Optimization passes",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m13-world-expansion-optimization-r3",
+          "title": "Worst-case profiling",
+          "completed": false,
+          "verification": "planned"
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ]
+    },
+    {
+      "id": "m14-uiux-accessibility-polish",
+      "number": 14,
+      "title": "UI/UX, Accessibility & Polish",
+      "description": "Readable UI, settings, accessibility, usability.",
+      "status": "not_started",
+      "scope": [
+        "Inventory/loot/contracts/map/HUD",
+        "Settings",
+        "Accessibility",
+        "Usability"
+      ],
+      "requirements": [
+        {
+          "id": "m14-uiux-accessibility-polish-r1",
+          "title": "Inventory/loot/contracts/map/HUD",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m14-uiux-accessibility-polish-r2",
+          "title": "Settings",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m14-uiux-accessibility-polish-r3",
+          "title": "Accessibility",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m14-uiux-accessibility-polish-r4",
+          "title": "Usability",
+          "completed": false,
+          "verification": "planned"
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ]
+    },
+    {
+      "id": "m15-vertical-slice-alpha",
+      "number": 15,
+      "title": "Vertical Slice & Alpha Readiness",
+      "description": "Stable internal alpha with full Outskirts loop and performance acceptance.",
+      "status": "not_started",
+      "scope": [
+        "Feature freeze",
+        "Critical bugs",
+        "Full loop tests",
+        "Perf/memory stress",
+        "Alpha build"
+      ],
+      "requirements": [
+        {
+          "id": "m15-vertical-slice-alpha-r1",
+          "title": "Feature freeze",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m15-vertical-slice-alpha-r2",
+          "title": "Critical bugs",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m15-vertical-slice-alpha-r3",
+          "title": "Full loop tests",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m15-vertical-slice-alpha-r4",
+          "title": "Perf/memory stress",
+          "completed": false,
+          "verification": "planned"
+        },
+        {
+          "id": "m15-vertical-slice-alpha-r5",
+          "title": "Alpha build",
+          "completed": false,
+          "verification": "planned"
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ]
     }
   ],
   "activity": [
+    {
+      "id": "act-m55-roadmap",
+      "kind": "milestone",
+      "title": "Roadmap M5.5–M15 established",
+      "summary": "GitHub and Development Hub tracking extended through Milestone 15. M5.5 technical foundation audit and asset registry seeded. Performance doctrine documented. M6+ gated on approval.",
+      "date": "2026-10-29T21:45:02.806Z",
+      "milestoneId": "m5_5-technical-foundation",
+      "url": "https://github.com/datguydaz/Project-Zone/milestones",
+      "public": true
+    },
+    {
+      "id": "act-m5-complete",
+      "kind": "milestone",
+      "title": "Milestone 5 completed — Death & Contracts",
+      "summary": "Play Mode confirmed hybrid death, caches, wallet, contracts, and expedition loop. Issues #27–#32 closed.",
+      "date": "2026-10-29T16:20:00.000Z",
+      "milestoneId": "m5-death-contracts",
+      "url": "https://github.com/datguydaz/Project-Zone/milestone/5",
+      "public": true
+    },
     {
       "id": "act-m3-complete",
       "kind": "milestone",

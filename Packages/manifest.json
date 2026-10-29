@@ -2,6 +2,7 @@
   "dependencies": {
     "com.unity.ai.navigation": "2.0.16",
     "com.unity.animation.rigging": "6.6.0",
+    "com.unity.burst": "2.0.0",
     "com.unity.collab-proxy": "2.13.6",
     "com.unity.collections": "6.6.0",
     "com.unity.editorcoroutines": "6.6.0",

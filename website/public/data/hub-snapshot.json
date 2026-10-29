@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T16:20:38.600Z",
-  "syncedAt": "2026-10-29T16:20:38.600Z",
-  "lastSyncAttemptAt": "2026-10-29T16:20:38.600Z",
+  "generatedAt": "2026-10-29T21:49:23.070Z",
+  "syncedAt": "2026-10-29T21:49:23.070Z",
+  "lastSyncAttemptAt": "2026-10-29T21:49:23.070Z",
   "syncStatus": "ok",
   "syncError": null,
   "syncSource": "github_api",
@@ -17,8 +17,8 @@
   "project": {
     "title": "PROJECT ZONE",
     "tagline": "Independent Unity 6 open-zone FPS RPG",
-    "phase": "Emerald AI Integration",
-    "description": "PROJECT ZONE is an independent Unity 6 URP open-zone FPS RPG. Explore a dangerous exclusion zone, fight hostiles, scavenge gear, complete contracts, and return to safety. Built with HQ FPS Weapons 2.0 and Emerald AI 2026, bridged by custom Project Zone adapters.",
+    "phase": "Technical Foundation & Asset Readiness (M5.5)",
+    "description": "PROJECT ZONE is an independent Unity 6 URP open-zone FPS RPG. Explore a dangerous exclusion zone, fight hostiles, scavenge gear, complete contracts, and return to safety. Performance-first: 120–150+ FPS typical, 100 FPS floor on reference hardware. Built with HQ FPS Weapons 2.0 and Emerald AI 2026, bridged by Project Zone adapters.",
     "engine": "Unity 6 · URP · C#"
   },
   "milestones": [
@@ -316,37 +316,35 @@
         {
           "id": "m5-r1",
           "title": "Hybrid death rules",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m5-r2",
           "title": "Recoverable death caches",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m5-r3",
           "title": "Currency",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m5-r4",
           "title": "Repeatable contracts",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m5-r5",
           "title": "Rewards and progression",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m5-r6",
           "title": "Complete expedition gameplay loop",
-          "completed": false
+          "completed": true
         }
       ],
-      "blockers": [
-        "Awaiting Play Mode confirmation on PZ_Outskirts before closing #27–#32"
-      ],
+      "blockers": [],
       "lastUpdated": "2026-10-29T16:20:21Z",
       "issueIds": [
         32,
@@ -362,9 +360,2805 @@
       "openCount": 0,
       "closedCount": 6,
       "blockedCount": 0
+    },
+    {
+      "id": "m5_5-technical-foundation",
+      "number": 5.5,
+      "title": "5.5 — Technical Foundation & Asset Readiness",
+      "description": "Performance-first technical baseline, asset registry, world architecture proposal, AI/persistence readiness. Stop for approval before M6.",
+      "status": "not_started",
+      "githubMilestoneNumber": 6,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/6",
+      "scope": [
+        "Scene/package/custom systems audit",
+        "Region/scene-loading architecture",
+        "Asset import conventions",
+        "Lighting/terrain/weather strategy",
+        "Performance targets and profiling procedure",
+        "Emerald multi-region readiness",
+        "Git LFS / save versioning / licensing",
+        "Technical decisions and roadmap sync"
+      ],
+      "requirements": [
+        {
+          "id": "m5_5-technical-foundation-r1",
+          "title": "Scene/package/custom systems audit",
+          "completed": false
+        },
+        {
+          "id": "m5_5-technical-foundation-r2",
+          "title": "Region/scene-loading architecture",
+          "completed": false
+        },
+        {
+          "id": "m5_5-technical-foundation-r3",
+          "title": "Asset import conventions",
+          "completed": false
+        },
+        {
+          "id": "m5_5-technical-foundation-r4",
+          "title": "Lighting/terrain/weather strategy",
+          "completed": false
+        },
+        {
+          "id": "m5_5-technical-foundation-r5",
+          "title": "Performance targets and profiling procedure",
+          "completed": false
+        },
+        {
+          "id": "m5_5-technical-foundation-r6",
+          "title": "Emerald multi-region readiness",
+          "completed": false
+        },
+        {
+          "id": "m5_5-technical-foundation-r7",
+          "title": "Git LFS / save versioning / licensing",
+          "completed": false
+        },
+        {
+          "id": "m5_5-technical-foundation-r8",
+          "title": "Technical decisions and roadmap sync",
+          "completed": false
+        }
+      ],
+      "blockers": [],
+      "lastUpdated": "2026-10-29T21:45:31Z",
+      "issueIds": [
+        40,
+        39,
+        38,
+        37,
+        36,
+        35,
+        34,
+        33
+      ],
+      "progressPercent": 0,
+      "progressMode": "issue_based",
+      "progressVerified": true,
+      "openCount": 8,
+      "closedCount": 0,
+      "blockedCount": 0
+    },
+    {
+      "id": "m6-world-architecture",
+      "number": 6,
+      "title": "6 — World Architecture & Environment Pipeline",
+      "description": "Scalable Outskirts environment foundation: settlement, checkpoint, industrial, underground, LOD/culling, NavMesh, persistence.",
+      "status": "not_started",
+      "githubMilestoneNumber": 7,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/7",
+      "scope": [
+        "Region/scene organization",
+        "Settlement / checkpoint / industrial / underground",
+        "Modular standards, LOD/culling",
+        "NavMesh and transitions",
+        "Persistence across regions",
+        "Traversal benchmarks"
+      ],
+      "requirements": [
+        {
+          "id": "m6-world-architecture-r1",
+          "title": "Region/scene organization",
+          "completed": false
+        },
+        {
+          "id": "m6-world-architecture-r2",
+          "title": "Settlement / checkpoint / industrial / underground",
+          "completed": false
+        },
+        {
+          "id": "m6-world-architecture-r3",
+          "title": "Modular standards, LOD/culling",
+          "completed": false
+        },
+        {
+          "id": "m6-world-architecture-r4",
+          "title": "NavMesh and transitions",
+          "completed": false
+        },
+        {
+          "id": "m6-world-architecture-r5",
+          "title": "Persistence across regions",
+          "completed": false
+        },
+        {
+          "id": "m6-world-architecture-r6",
+          "title": "Traversal benchmarks",
+          "completed": false
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ],
+      "lastUpdated": "2026-10-29T21:45:55Z",
+      "issueIds": [
+        50,
+        49,
+        48,
+        47,
+        46,
+        45,
+        44,
+        43,
+        42,
+        41
+      ],
+      "progressPercent": 0,
+      "progressMode": "issue_based",
+      "progressVerified": true,
+      "openCount": 10,
+      "closedCount": 0,
+      "blockedCount": 0
+    },
+    {
+      "id": "m7-atmosphere-lighting-audio",
+      "number": 7,
+      "title": "7 — Atmosphere, Lighting & Audio",
+      "description": "Exclusion-zone atmosphere: lighting presets, fog/foliage choice, ambient audio, weather evaluation, playable atmosphere checkpoint.",
+      "status": "not_started",
+      "githubMilestoneNumber": 8,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/8",
+      "scope": [
+        "Lighting presets",
+        "HAZE vs simple fog",
+        "Foliage workflow",
+        "Ambient audio",
+        "Atmosphere checkpoint"
+      ],
+      "requirements": [
+        {
+          "id": "m7-atmosphere-lighting-audio-r1",
+          "title": "Lighting presets",
+          "completed": false
+        },
+        {
+          "id": "m7-atmosphere-lighting-audio-r2",
+          "title": "HAZE vs simple fog",
+          "completed": false
+        },
+        {
+          "id": "m7-atmosphere-lighting-audio-r3",
+          "title": "Foliage workflow",
+          "completed": false
+        },
+        {
+          "id": "m7-atmosphere-lighting-audio-r4",
+          "title": "Ambient audio",
+          "completed": false
+        },
+        {
+          "id": "m7-atmosphere-lighting-audio-r5",
+          "title": "Atmosphere checkpoint",
+          "completed": false
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ],
+      "lastUpdated": "2026-10-29T21:46:18Z",
+      "issueIds": [
+        60,
+        59,
+        58,
+        57,
+        56,
+        55,
+        54,
+        53,
+        52,
+        51
+      ],
+      "progressPercent": 0,
+      "progressMode": "issue_based",
+      "progressVerified": true,
+      "openCount": 10,
+      "closedCount": 0,
+      "blockedCount": 0
+    },
+    {
+      "id": "m8-living-world-encounters",
+      "number": 8,
+      "title": "8 — Living World & Dynamic Encounters",
+      "description": "Region-based encounters, human/mutant spawns, AI budgets, activation distances, encounter persistence.",
+      "status": "not_started",
+      "githubMilestoneNumber": 9,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/9",
+      "scope": [
+        "Encounter management",
+        "Human/mutant spawns",
+        "AI budgets",
+        "Persistence",
+        "Load profiling"
+      ],
+      "requirements": [
+        {
+          "id": "m8-living-world-encounters-r1",
+          "title": "Encounter management",
+          "completed": false
+        },
+        {
+          "id": "m8-living-world-encounters-r2",
+          "title": "Human/mutant spawns",
+          "completed": false
+        },
+        {
+          "id": "m8-living-world-encounters-r3",
+          "title": "AI budgets",
+          "completed": false
+        },
+        {
+          "id": "m8-living-world-encounters-r4",
+          "title": "Persistence",
+          "completed": false
+        },
+        {
+          "id": "m8-living-world-encounters-r5",
+          "title": "Load profiling",
+          "completed": false
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ],
+      "lastUpdated": "2026-10-29T21:46:40Z",
+      "issueIds": [
+        70,
+        69,
+        68,
+        67,
+        66,
+        65,
+        64,
+        63,
+        62,
+        61
+      ],
+      "progressPercent": 0,
+      "progressMode": "issue_based",
+      "progressVerified": true,
+      "openCount": 10,
+      "closedCount": 0,
+      "blockedCount": 0
+    },
+    {
+      "id": "m9-factions-npcs-settlements",
+      "number": 9,
+      "title": "9 — Factions, NPCs & Settlements",
+      "description": "Factions, traders, dialogue, reputation, settlement NPC populations, contract/encounter links.",
+      "status": "not_started",
+      "githubMilestoneNumber": 10,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/10",
+      "scope": [
+        "Factions",
+        "Traders",
+        "Dialogue",
+        "Reputation",
+        "Settlement NPC budgets"
+      ],
+      "requirements": [
+        {
+          "id": "m9-factions-npcs-settlements-r1",
+          "title": "Factions",
+          "completed": false
+        },
+        {
+          "id": "m9-factions-npcs-settlements-r2",
+          "title": "Traders",
+          "completed": false
+        },
+        {
+          "id": "m9-factions-npcs-settlements-r3",
+          "title": "Dialogue",
+          "completed": false
+        },
+        {
+          "id": "m9-factions-npcs-settlements-r4",
+          "title": "Reputation",
+          "completed": false
+        },
+        {
+          "id": "m9-factions-npcs-settlements-r5",
+          "title": "Settlement NPC budgets",
+          "completed": false
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ],
+      "lastUpdated": "2026-10-29T21:47:02Z",
+      "issueIds": [
+        80,
+        79,
+        78,
+        77,
+        76,
+        75,
+        74,
+        73,
+        72,
+        71
+      ],
+      "progressPercent": 0,
+      "progressMode": "issue_based",
+      "progressVerified": true,
+      "openCount": 10,
+      "closedCount": 0,
+      "blockedCount": 0
+    },
+    {
+      "id": "m10-loot-economy-equipment",
+      "number": 10,
+      "title": "10 — Loot, Economy & Equipment Progression",
+      "description": "Loot categories, traders, repair, attachments/armor, economy rules, save-safe inventory progression on HQ FPS.",
+      "status": "not_started",
+      "githubMilestoneNumber": 11,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/11",
+      "scope": [
+        "Loot",
+        "Traders",
+        "Repair",
+        "Attachments/armor",
+        "Economy",
+        "Anti-dupe"
+      ],
+      "requirements": [
+        {
+          "id": "m10-loot-economy-equipment-r1",
+          "title": "Loot",
+          "completed": false
+        },
+        {
+          "id": "m10-loot-economy-equipment-r2",
+          "title": "Traders",
+          "completed": false
+        },
+        {
+          "id": "m10-loot-economy-equipment-r3",
+          "title": "Repair",
+          "completed": false
+        },
+        {
+          "id": "m10-loot-economy-equipment-r4",
+          "title": "Attachments/armor",
+          "completed": false
+        },
+        {
+          "id": "m10-loot-economy-equipment-r5",
+          "title": "Economy",
+          "completed": false
+        },
+        {
+          "id": "m10-loot-economy-equipment-r6",
+          "title": "Anti-dupe",
+          "completed": false
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ],
+      "lastUpdated": "2026-10-29T21:47:23Z",
+      "issueIds": [
+        90,
+        89,
+        88,
+        87,
+        86,
+        85,
+        84,
+        83,
+        82,
+        81
+      ],
+      "progressPercent": 0,
+      "progressMode": "issue_based",
+      "progressVerified": true,
+      "openCount": 10,
+      "closedCount": 0,
+      "blockedCount": 0
+    },
+    {
+      "id": "m11-contracts-exploration-anomalies",
+      "number": 11,
+      "title": "11 — Contracts, Exploration & Anomalies",
+      "description": "Expanded contracts, POIs, anomaly prototypes, hazard counterplay, objective persistence.",
+      "status": "not_started",
+      "githubMilestoneNumber": 12,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/12",
+      "scope": [
+        "Contract types",
+        "POIs",
+        "Anomalies",
+        "Hazards",
+        "Objective persistence"
+      ],
+      "requirements": [
+        {
+          "id": "m11-contracts-exploration-anomalies-r1",
+          "title": "Contract types",
+          "completed": false
+        },
+        {
+          "id": "m11-contracts-exploration-anomalies-r2",
+          "title": "POIs",
+          "completed": false
+        },
+        {
+          "id": "m11-contracts-exploration-anomalies-r3",
+          "title": "Anomalies",
+          "completed": false
+        },
+        {
+          "id": "m11-contracts-exploration-anomalies-r4",
+          "title": "Hazards",
+          "completed": false
+        },
+        {
+          "id": "m11-contracts-exploration-anomalies-r5",
+          "title": "Objective persistence",
+          "completed": false
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ],
+      "lastUpdated": "2026-10-29T21:47:46Z",
+      "issueIds": [
+        100,
+        99,
+        98,
+        97,
+        96,
+        95,
+        94,
+        93,
+        92,
+        91
+      ],
+      "progressPercent": 0,
+      "progressMode": "issue_based",
+      "progressVerified": true,
+      "openCount": 10,
+      "closedCount": 0,
+      "blockedCount": 0
+    },
+    {
+      "id": "m12-combat-mutants-survival",
+      "number": 12,
+      "title": "12 — Combat, Mutants & Survival",
+      "description": "Human/mutant combat variety, feedback, survival systems evaluation, combat stress tests within FPS budgets.",
+      "status": "not_started",
+      "githubMilestoneNumber": 13,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/13",
+      "scope": [
+        "Human/mutant combat",
+        "Feedback",
+        "Survival evaluation",
+        "Stress tests"
+      ],
+      "requirements": [
+        {
+          "id": "m12-combat-mutants-survival-r1",
+          "title": "Human/mutant combat",
+          "completed": false
+        },
+        {
+          "id": "m12-combat-mutants-survival-r2",
+          "title": "Feedback",
+          "completed": false
+        },
+        {
+          "id": "m12-combat-mutants-survival-r3",
+          "title": "Survival evaluation",
+          "completed": false
+        },
+        {
+          "id": "m12-combat-mutants-survival-r4",
+          "title": "Stress tests",
+          "completed": false
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ],
+      "lastUpdated": "2026-10-29T21:48:07Z",
+      "issueIds": [
+        110,
+        109,
+        108,
+        107,
+        106,
+        105,
+        104,
+        103,
+        102,
+        101
+      ],
+      "progressPercent": 0,
+      "progressMode": "issue_based",
+      "progressVerified": true,
+      "openCount": 10,
+      "closedCount": 0,
+      "blockedCount": 0
+    },
+    {
+      "id": "m13-world-expansion-optimization",
+      "number": 13,
+      "title": "13 — World Expansion & Optimization",
+      "description": "Additional locations, connectivity, vegetation/lighting/AI optimization, worst-case profiling.",
+      "status": "not_started",
+      "githubMilestoneNumber": 14,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/14",
+      "scope": [
+        "New locations",
+        "Optimization passes",
+        "Worst-case profiling"
+      ],
+      "requirements": [
+        {
+          "id": "m13-world-expansion-optimization-r1",
+          "title": "New locations",
+          "completed": false
+        },
+        {
+          "id": "m13-world-expansion-optimization-r2",
+          "title": "Optimization passes",
+          "completed": false
+        },
+        {
+          "id": "m13-world-expansion-optimization-r3",
+          "title": "Worst-case profiling",
+          "completed": false
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ],
+      "lastUpdated": "2026-10-29T21:48:29Z",
+      "issueIds": [
+        120,
+        119,
+        118,
+        117,
+        116,
+        115,
+        114,
+        113,
+        112,
+        111
+      ],
+      "progressPercent": 0,
+      "progressMode": "issue_based",
+      "progressVerified": true,
+      "openCount": 10,
+      "closedCount": 0,
+      "blockedCount": 0
+    },
+    {
+      "id": "m14-uiux-accessibility-polish",
+      "number": 14,
+      "title": "14 — UI/UX, Accessibility & Polish",
+      "description": "Inventory/loot/contracts/map/HUD polish, settings, rebinding, accessibility, usability testing.",
+      "status": "not_started",
+      "githubMilestoneNumber": 15,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/15",
+      "scope": [
+        "Inventory/loot/contracts/map/HUD",
+        "Settings",
+        "Accessibility",
+        "Usability"
+      ],
+      "requirements": [
+        {
+          "id": "m14-uiux-accessibility-polish-r1",
+          "title": "Inventory/loot/contracts/map/HUD",
+          "completed": false
+        },
+        {
+          "id": "m14-uiux-accessibility-polish-r2",
+          "title": "Settings",
+          "completed": false
+        },
+        {
+          "id": "m14-uiux-accessibility-polish-r3",
+          "title": "Accessibility",
+          "completed": false
+        },
+        {
+          "id": "m14-uiux-accessibility-polish-r4",
+          "title": "Usability",
+          "completed": false
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ],
+      "lastUpdated": "2026-10-29T21:48:49Z",
+      "issueIds": [
+        130,
+        129,
+        128,
+        127,
+        126,
+        125,
+        124,
+        123,
+        122,
+        121
+      ],
+      "progressPercent": 0,
+      "progressMode": "issue_based",
+      "progressVerified": true,
+      "openCount": 10,
+      "closedCount": 0,
+      "blockedCount": 0
+    },
+    {
+      "id": "m15-vertical-slice-alpha",
+      "number": 15,
+      "title": "15 — Vertical Slice & Alpha Readiness",
+      "description": "Feature freeze, critical bugs, full loop validation, performance/memory stress, internal alpha build.",
+      "status": "not_started",
+      "githubMilestoneNumber": 16,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/16",
+      "scope": [
+        "Feature freeze",
+        "Critical bugs",
+        "Full loop tests",
+        "Perf/memory stress",
+        "Alpha build"
+      ],
+      "requirements": [
+        {
+          "id": "m15-vertical-slice-alpha-r1",
+          "title": "Feature freeze",
+          "completed": false
+        },
+        {
+          "id": "m15-vertical-slice-alpha-r2",
+          "title": "Critical bugs",
+          "completed": false
+        },
+        {
+          "id": "m15-vertical-slice-alpha-r3",
+          "title": "Full loop tests",
+          "completed": false
+        },
+        {
+          "id": "m15-vertical-slice-alpha-r4",
+          "title": "Perf/memory stress",
+          "completed": false
+        },
+        {
+          "id": "m15-vertical-slice-alpha-r5",
+          "title": "Alpha build",
+          "completed": false
+        }
+      ],
+      "blockers": [
+        "Waiting for previous milestone approval"
+      ],
+      "lastUpdated": "2026-10-29T21:49:14Z",
+      "issueIds": [
+        142,
+        141,
+        140,
+        139,
+        138,
+        137,
+        136,
+        135,
+        134,
+        133,
+        132,
+        131
+      ],
+      "progressPercent": 0,
+      "progressMode": "issue_based",
+      "progressVerified": true,
+      "openCount": 12,
+      "closedCount": 0,
+      "blockedCount": 0
     }
   ],
   "issues": [
+    {
+      "id": 6109097786,
+      "number": 142,
+      "title": "Produce internal alpha build",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "testing"
+      ],
+      "milestoneId": "m15-vertical-slice-alpha",
+      "milestoneTitle": "15 — Vertical Slice & Alpha Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/142",
+      "updatedAt": "2026-10-29T21:49:14Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109097343,
+      "number": 141,
+      "title": "Validate save compatibility",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "persistence",
+        "testing"
+      ],
+      "milestoneId": "m15-vertical-slice-alpha",
+      "milestoneTitle": "15 — Vertical Slice & Alpha Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/141",
+      "updatedAt": "2026-10-29T21:49:12Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109096847,
+      "number": 140,
+      "title": "Run performance and memory stress tests",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "performance",
+        "testing"
+      ],
+      "milestoneId": "m15-vertical-slice-alpha",
+      "milestoneTitle": "15 — Vertical Slice & Alpha Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/140",
+      "updatedAt": "2026-10-29T21:49:10Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109096435,
+      "number": 139,
+      "title": "Run extended gameplay sessions",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "testing"
+      ],
+      "milestoneId": "m15-vertical-slice-alpha",
+      "milestoneTitle": "15 — Vertical Slice & Alpha Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/139",
+      "updatedAt": "2026-10-29T21:49:07Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109096027,
+      "number": 138,
+      "title": "Test environmental hazards",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public",
+        "testing"
+      ],
+      "milestoneId": "m15-vertical-slice-alpha",
+      "milestoneTitle": "15 — Vertical Slice & Alpha Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/138",
+      "updatedAt": "2026-10-29T21:49:05Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109095623,
+      "number": 137,
+      "title": "Test human and mutant combat",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "combat",
+        "public",
+        "testing"
+      ],
+      "milestoneId": "m15-vertical-slice-alpha",
+      "milestoneTitle": "15 — Vertical Slice & Alpha Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/137",
+      "updatedAt": "2026-10-29T21:49:04Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109095211,
+      "number": 136,
+      "title": "Test contracts and faction progression",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public",
+        "testing"
+      ],
+      "milestoneId": "m15-vertical-slice-alpha",
+      "milestoneTitle": "15 — Vertical Slice & Alpha Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/136",
+      "updatedAt": "2026-10-29T21:49:02Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109094764,
+      "number": 135,
+      "title": "Test death-cache recovery",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "persistence",
+        "testing"
+      ],
+      "milestoneId": "m15-vertical-slice-alpha",
+      "milestoneTitle": "15 — Vertical Slice & Alpha Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/135",
+      "updatedAt": "2026-10-29T21:49:00Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109094324,
+      "number": 134,
+      "title": "Test inventory and stash persistence",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "persistence",
+        "testing"
+      ],
+      "milestoneId": "m15-vertical-slice-alpha",
+      "milestoneTitle": "15 — Vertical Slice & Alpha Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/134",
+      "updatedAt": "2026-10-29T21:48:57Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109093881,
+      "number": 133,
+      "title": "Test fresh-game progression",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public",
+        "testing"
+      ],
+      "milestoneId": "m15-vertical-slice-alpha",
+      "milestoneTitle": "15 — Vertical Slice & Alpha Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/133",
+      "updatedAt": "2026-10-29T21:48:56Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109093480,
+      "number": 132,
+      "title": "Resolve critical bugs",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "bug",
+        "milestone",
+        "public",
+        "testing"
+      ],
+      "milestoneId": "m15-vertical-slice-alpha",
+      "milestoneTitle": "15 — Vertical Slice & Alpha Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/132",
+      "updatedAt": "2026-10-29T21:48:53Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109093072,
+      "number": 131,
+      "title": "Freeze major feature development",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "documentation",
+        "milestone",
+        "public"
+      ],
+      "milestoneId": "m15-vertical-slice-alpha",
+      "milestoneTitle": "15 — Vertical Slice & Alpha Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/131",
+      "updatedAt": "2026-10-29T21:48:51Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109092674,
+      "number": 130,
+      "title": "Conduct usability and regression testing",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "testing"
+      ],
+      "milestoneId": "m14-uiux-accessibility-polish",
+      "milestoneTitle": "14 — UI/UX, Accessibility & Polish",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/130",
+      "updatedAt": "2026-10-29T21:48:49Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109092274,
+      "number": 129,
+      "title": "Improve accessibility options",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "accessibility",
+        "milestone",
+        "ui",
+        "public"
+      ],
+      "milestoneId": "m14-uiux-accessibility-polish",
+      "milestoneTitle": "14 — UI/UX, Accessibility & Polish",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/129",
+      "updatedAt": "2026-10-29T21:48:47Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109091824,
+      "number": 128,
+      "title": "Improve audio settings and mixing",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ui",
+        "public",
+        "audio"
+      ],
+      "milestoneId": "m14-uiux-accessibility-polish",
+      "milestoneTitle": "14 — UI/UX, Accessibility & Polish",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/128",
+      "updatedAt": "2026-10-29T21:48:46Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109091397,
+      "number": 127,
+      "title": "Add input rebinding where needed",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "accessibility",
+        "milestone",
+        "ui",
+        "public"
+      ],
+      "milestoneId": "m14-uiux-accessibility-polish",
+      "milestoneTitle": "14 — UI/UX, Accessibility & Polish",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/127",
+      "updatedAt": "2026-10-29T21:48:43Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109091004,
+      "number": 126,
+      "title": "Add or refine graphics settings",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ui",
+        "public",
+        "performance"
+      ],
+      "milestoneId": "m14-uiux-accessibility-polish",
+      "milestoneTitle": "14 — UI/UX, Accessibility & Polish",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/126",
+      "updatedAt": "2026-10-29T21:48:41Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109090583,
+      "number": 125,
+      "title": "Improve HUD readability",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ui",
+        "public"
+      ],
+      "milestoneId": "m14-uiux-accessibility-polish",
+      "milestoneTitle": "14 — UI/UX, Accessibility & Polish",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/125",
+      "updatedAt": "2026-10-29T21:48:39Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109090149,
+      "number": 124,
+      "title": "Develop map and navigation tools",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "ui",
+        "public"
+      ],
+      "milestoneId": "m14-uiux-accessibility-polish",
+      "milestoneTitle": "14 — UI/UX, Accessibility & Polish",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/124",
+      "updatedAt": "2026-10-29T21:48:37Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109089783,
+      "number": 123,
+      "title": "Improve contract journal",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "ui",
+        "public"
+      ],
+      "milestoneId": "m14-uiux-accessibility-polish",
+      "milestoneTitle": "14 — UI/UX, Accessibility & Polish",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/123",
+      "updatedAt": "2026-10-29T21:48:35Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109089315,
+      "number": 122,
+      "title": "Improve loot feedback",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "inventory",
+        "ui",
+        "public"
+      ],
+      "milestoneId": "m14-uiux-accessibility-polish",
+      "milestoneTitle": "14 — UI/UX, Accessibility & Polish",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/122",
+      "updatedAt": "2026-10-29T21:48:33Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109088874,
+      "number": 121,
+      "title": "Refine inventory UX",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "inventory",
+        "ui",
+        "public"
+      ],
+      "milestoneId": "m14-uiux-accessibility-polish",
+      "milestoneTitle": "14 — UI/UX, Accessibility & Polish",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/121",
+      "updatedAt": "2026-10-29T21:48:31Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109088353,
+      "number": 120,
+      "title": "Validate the complete playable world",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public",
+        "testing"
+      ],
+      "milestoneId": "m13-world-expansion-optimization",
+      "milestoneTitle": "13 — World Expansion & Optimization",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/120",
+      "updatedAt": "2026-10-29T21:48:29Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109087920,
+      "number": 119,
+      "title": "Profile worst-case gameplay scenarios",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "performance",
+        "testing"
+      ],
+      "milestoneId": "m13-world-expansion-optimization",
+      "milestoneTitle": "13 — World Expansion & Optimization",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/119",
+      "updatedAt": "2026-10-29T21:48:27Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109087545,
+      "number": 118,
+      "title": "Reduce loading and memory spikes",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "performance",
+        "persistence"
+      ],
+      "milestoneId": "m13-world-expansion-optimization",
+      "milestoneTitle": "13 — World Expansion & Optimization",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/118",
+      "updatedAt": "2026-10-29T21:48:25Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109086971,
+      "number": 117,
+      "title": "Optimize AI and physics workloads",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "public",
+        "performance"
+      ],
+      "milestoneId": "m13-world-expansion-optimization",
+      "milestoneTitle": "13 — World Expansion & Optimization",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/117",
+      "updatedAt": "2026-10-29T21:48:22Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109086533,
+      "number": 116,
+      "title": "Optimize materials and shaders",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "performance",
+        "assets"
+      ],
+      "milestoneId": "m13-world-expansion-optimization",
+      "milestoneTitle": "13 — World Expansion & Optimization",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/116",
+      "updatedAt": "2026-10-29T21:48:20Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109086103,
+      "number": 115,
+      "title": "Optimize lighting and shadows",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "performance",
+        "environment"
+      ],
+      "milestoneId": "m13-world-expansion-optimization",
+      "milestoneTitle": "13 — World Expansion & Optimization",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/115",
+      "updatedAt": "2026-10-29T21:48:18Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109085607,
+      "number": 114,
+      "title": "Optimize vegetation and terrain",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "performance",
+        "environment"
+      ],
+      "milestoneId": "m13-world-expansion-optimization",
+      "milestoneTitle": "13 — World Expansion & Optimization",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/114",
+      "updatedAt": "2026-10-29T21:48:16Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109085167,
+      "number": 113,
+      "title": "Expand environmental variety",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "environment"
+      ],
+      "milestoneId": "m13-world-expansion-optimization",
+      "milestoneTitle": "13 — World Expansion & Optimization",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/113",
+      "updatedAt": "2026-10-29T21:48:13Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109084788,
+      "number": 112,
+      "title": "Improve region connectivity",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public",
+        "architecture"
+      ],
+      "milestoneId": "m13-world-expansion-optimization",
+      "milestoneTitle": "13 — World Expansion & Optimization",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/112",
+      "updatedAt": "2026-10-29T21:48:11Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109084367,
+      "number": 111,
+      "title": "Add additional approved exploration locations",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public",
+        "environment"
+      ],
+      "milestoneId": "m13-world-expansion-optimization",
+      "milestoneTitle": "13 — World Expansion & Optimization",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/111",
+      "updatedAt": "2026-10-29T21:48:09Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109083977,
+      "number": 110,
+      "title": "Stress-test combat with multiple enemies",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "combat",
+        "public",
+        "performance",
+        "testing"
+      ],
+      "milestoneId": "m12-combat-mutants-survival",
+      "milestoneTitle": "12 — Combat, Mutants & Survival",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/110",
+      "updatedAt": "2026-10-29T21:48:07Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109083539,
+      "number": 109,
+      "title": "Optimize animation, physics, and gore effects",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "performance",
+        "assets"
+      ],
+      "milestoneId": "m12-combat-mutants-survival",
+      "milestoneTitle": "12 — Combat, Mutants & Survival",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/109",
+      "updatedAt": "2026-10-29T21:48:05Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109083110,
+      "number": 108,
+      "title": "Evaluate equipment degradation",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "inventory",
+        "public"
+      ],
+      "milestoneId": "m12-combat-mutants-survival",
+      "milestoneTitle": "12 — Combat, Mutants & Survival",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/108",
+      "updatedAt": "2026-10-29T21:48:03Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109082641,
+      "number": 107,
+      "title": "Evaluate radiation and environmental hazards",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public",
+        "environment"
+      ],
+      "milestoneId": "m12-combat-mutants-survival",
+      "milestoneTitle": "12 — Combat, Mutants & Survival",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/107",
+      "updatedAt": "2026-10-29T21:48:01Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109082083,
+      "number": 106,
+      "title": "Evaluate bleeding and medical treatment",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m12-combat-mutants-survival",
+      "milestoneTitle": "12 — Combat, Mutants & Survival",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/106",
+      "updatedAt": "2026-10-29T21:47:58Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109081556,
+      "number": 105,
+      "title": "Balance damage and survivability",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "combat",
+        "public"
+      ],
+      "milestoneId": "m12-combat-mutants-survival",
+      "milestoneTitle": "12 — Combat, Mutants & Survival",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/105",
+      "updatedAt": "2026-10-29T21:47:56Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109081158,
+      "number": 104,
+      "title": "Improve hit reactions and combat feedback",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "combat",
+        "public"
+      ],
+      "milestoneId": "m12-combat-mutants-survival",
+      "milestoneTitle": "12 — Combat, Mutants & Survival",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/104",
+      "updatedAt": "2026-10-29T21:47:54Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109080694,
+      "number": 103,
+      "title": "Develop distinct mutant behaviors",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "combat",
+        "public"
+      ],
+      "milestoneId": "m12-combat-mutants-survival",
+      "milestoneTitle": "12 — Combat, Mutants & Survival",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/103",
+      "updatedAt": "2026-10-29T21:47:51Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109080274,
+      "number": 102,
+      "title": "Improve enemy reactions and awareness",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "combat",
+        "public"
+      ],
+      "milestoneId": "m12-combat-mutants-survival",
+      "milestoneTitle": "12 — Combat, Mutants & Survival",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/102",
+      "updatedAt": "2026-10-29T21:47:49Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109079862,
+      "number": 101,
+      "title": "Refine human enemy combat",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "combat",
+        "public"
+      ],
+      "milestoneId": "m12-combat-mutants-survival",
+      "milestoneTitle": "12 — Combat, Mutants & Survival",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/101",
+      "updatedAt": "2026-10-29T21:47:47Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109079460,
+      "number": 100,
+      "title": "Verify objective persistence",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "persistence",
+        "testing"
+      ],
+      "milestoneId": "m11-contracts-exploration-anomalies",
+      "milestoneTitle": "11 — Contracts, Exploration & Anomalies",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/100",
+      "updatedAt": "2026-10-29T21:47:46Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109079040,
+      "number": 99,
+      "title": "Establish contract reward balancing",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m11-contracts-exploration-anomalies",
+      "milestoneTitle": "11 — Contracts, Exploration & Anomalies",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/99",
+      "updatedAt": "2026-10-29T21:47:44Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109078453,
+      "number": 98,
+      "title": "Create hazard detection and counterplay",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m11-contracts-exploration-anomalies",
+      "milestoneTitle": "11 — Contracts, Exploration & Anomalies",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/98",
+      "updatedAt": "2026-10-29T21:47:41Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109077806,
+      "number": 97,
+      "title": "Prototype environmental anomalies",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public",
+        "environment"
+      ],
+      "milestoneId": "m11-contracts-exploration-anomalies",
+      "milestoneTitle": "11 — Contracts, Exploration & Anomalies",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/97",
+      "updatedAt": "2026-10-29T21:47:38Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109077362,
+      "number": 96,
+      "title": "Establish discoverable points of interest",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "world",
+        "public"
+      ],
+      "milestoneId": "m11-contracts-exploration-anomalies",
+      "milestoneTitle": "11 — Contracts, Exploration & Anomalies",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/96",
+      "updatedAt": "2026-10-29T21:47:36Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109076849,
+      "number": 95,
+      "title": "Add exploration objectives",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "world",
+        "public"
+      ],
+      "milestoneId": "m11-contracts-exploration-anomalies",
+      "milestoneTitle": "11 — Contracts, Exploration & Anomalies",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/95",
+      "updatedAt": "2026-10-29T21:47:34Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109076358,
+      "number": 94,
+      "title": "Add investigation objectives",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m11-contracts-exploration-anomalies",
+      "milestoneTitle": "11 — Contracts, Exploration & Anomalies",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/94",
+      "updatedAt": "2026-10-29T21:47:31Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109075981,
+      "number": 93,
+      "title": "Add elimination objectives",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "combat",
+        "public"
+      ],
+      "milestoneId": "m11-contracts-exploration-anomalies",
+      "milestoneTitle": "11 — Contracts, Exploration & Anomalies",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/93",
+      "updatedAt": "2026-10-29T21:47:29Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109075524,
+      "number": 92,
+      "title": "Add retrieval objectives",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m11-contracts-exploration-anomalies",
+      "milestoneTitle": "11 — Contracts, Exploration & Anomalies",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/92",
+      "updatedAt": "2026-10-29T21:47:27Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109075039,
+      "number": 91,
+      "title": "Expand contract types",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m11-contracts-exploration-anomalies",
+      "milestoneTitle": "11 — Contracts, Exploration & Anomalies",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/91",
+      "updatedAt": "2026-10-29T21:47:25Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109074527,
+      "number": 90,
+      "title": "Validate inventory and save compatibility",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "persistence",
+        "testing"
+      ],
+      "milestoneId": "m10-loot-economy-equipment",
+      "milestoneTitle": "10 — Loot, Economy & Equipment Progression",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/90",
+      "updatedAt": "2026-10-29T21:47:23Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109074146,
+      "number": 89,
+      "title": "Prevent duplication exploits",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "bug",
+        "milestone",
+        "public",
+        "persistence"
+      ],
+      "milestoneId": "m10-loot-economy-equipment",
+      "milestoneTitle": "10 — Loot, Economy & Equipment Progression",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/89",
+      "updatedAt": "2026-10-29T21:47:21Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109073775,
+      "number": 88,
+      "title": "Establish economy rules",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "documentation",
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m10-loot-economy-equipment",
+      "milestoneTitle": "10 — Loot, Economy & Equipment Progression",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/88",
+      "updatedAt": "2026-10-29T21:47:19Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109073356,
+      "number": 87,
+      "title": "Balance ammunition and consumable availability",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m10-loot-economy-equipment",
+      "milestoneTitle": "10 — Loot, Economy & Equipment Progression",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/87",
+      "updatedAt": "2026-10-29T21:47:17Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109072931,
+      "number": 86,
+      "title": "Introduce armor and protection values",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "combat",
+        "inventory",
+        "public"
+      ],
+      "milestoneId": "m10-loot-economy-equipment",
+      "milestoneTitle": "10 — Loot, Economy & Equipment Progression",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/86",
+      "updatedAt": "2026-10-29T21:47:15Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109072532,
+      "number": 85,
+      "title": "Expand weapon attachment progression",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "combat",
+        "inventory",
+        "public"
+      ],
+      "milestoneId": "m10-loot-economy-equipment",
+      "milestoneTitle": "10 — Loot, Economy & Equipment Progression",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/85",
+      "updatedAt": "2026-10-29T21:47:13Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109072105,
+      "number": 84,
+      "title": "Establish repair costs",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "inventory",
+        "public"
+      ],
+      "milestoneId": "m10-loot-economy-equipment",
+      "milestoneTitle": "10 — Loot, Economy & Equipment Progression",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/84",
+      "updatedAt": "2026-10-29T21:47:11Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109071722,
+      "number": 83,
+      "title": "Add trader buying and selling",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "inventory",
+        "public"
+      ],
+      "milestoneId": "m10-loot-economy-equipment",
+      "milestoneTitle": "10 — Loot, Economy & Equipment Progression",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/83",
+      "updatedAt": "2026-10-29T21:47:09Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109071217,
+      "number": 82,
+      "title": "Introduce item condition where appropriate",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "inventory",
+        "public"
+      ],
+      "milestoneId": "m10-loot-economy-equipment",
+      "milestoneTitle": "10 — Loot, Economy & Equipment Progression",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/82",
+      "updatedAt": "2026-10-29T21:47:06Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109070810,
+      "number": 81,
+      "title": "Expand loot categories",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "inventory",
+        "public"
+      ],
+      "milestoneId": "m10-loot-economy-equipment",
+      "milestoneTitle": "10 — Loot, Economy & Equipment Progression",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/81",
+      "updatedAt": "2026-10-29T21:47:04Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109070338,
+      "number": 80,
+      "title": "Profile settlement NPC populations",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "performance",
+        "testing"
+      ],
+      "milestoneId": "m9-factions-npcs-settlements",
+      "milestoneTitle": "9 — Factions, NPCs & Settlements",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/80",
+      "updatedAt": "2026-10-29T21:47:02Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109069959,
+      "number": 79,
+      "title": "Persist relationships and reputation",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "persistence"
+      ],
+      "milestoneId": "m9-factions-npcs-settlements",
+      "milestoneTitle": "9 — Factions, NPCs & Settlements",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/79",
+      "updatedAt": "2026-10-29T21:47:00Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109069568,
+      "number": 78,
+      "title": "Connect factions to contracts and encounters",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m9-factions-npcs-settlements",
+      "milestoneTitle": "9 — Factions, NPCs & Settlements",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/78",
+      "updatedAt": "2026-10-29T21:46:58Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109069156,
+      "number": 77,
+      "title": "Integrate NPC schedules where beneficial",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "public",
+        "performance"
+      ],
+      "milestoneId": "m9-factions-npcs-settlements",
+      "milestoneTitle": "9 — Factions, NPCs & Settlements",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/77",
+      "updatedAt": "2026-10-29T21:46:56Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109068601,
+      "number": 76,
+      "title": "Establish reputation rules",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public",
+        "persistence"
+      ],
+      "milestoneId": "m9-factions-npcs-settlements",
+      "milestoneTitle": "9 — Factions, NPCs & Settlements",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/76",
+      "updatedAt": "2026-10-29T21:46:54Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109068216,
+      "number": 75,
+      "title": "Create lightweight dialogue interactions",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "ui",
+        "public"
+      ],
+      "milestoneId": "m9-factions-npcs-settlements",
+      "milestoneTitle": "9 — Factions, NPCs & Settlements",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/75",
+      "updatedAt": "2026-10-29T21:46:51Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109067767,
+      "number": 74,
+      "title": "Introduce traders",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "inventory",
+        "public"
+      ],
+      "milestoneId": "m9-factions-npcs-settlements",
+      "milestoneTitle": "9 — Factions, NPCs & Settlements",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/74",
+      "updatedAt": "2026-10-29T21:46:49Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109067258,
+      "number": 73,
+      "title": "Implement friendly NPC interactions",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "ui",
+        "public"
+      ],
+      "milestoneId": "m9-factions-npcs-settlements",
+      "milestoneTitle": "9 — Factions, NPCs & Settlements",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/73",
+      "updatedAt": "2026-10-29T21:46:47Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109066823,
+      "number": 72,
+      "title": "Establish faction hostility and neutrality",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "ai",
+        "public"
+      ],
+      "milestoneId": "m9-factions-npcs-settlements",
+      "milestoneTitle": "9 — Factions, NPCs & Settlements",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/72",
+      "updatedAt": "2026-10-29T21:46:45Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109066140,
+      "number": 71,
+      "title": "Define initial factions",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "documentation",
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m9-factions-npcs-settlements",
+      "milestoneTitle": "9 — Factions, NPCs & Settlements",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/71",
+      "updatedAt": "2026-10-29T21:46:42Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109065702,
+      "number": 70,
+      "title": "Profile Emerald AI under representative load",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "public",
+        "performance",
+        "testing"
+      ],
+      "milestoneId": "m8-living-world-encounters",
+      "milestoneTitle": "8 — Living World & Dynamic Encounters",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/70",
+      "updatedAt": "2026-10-29T21:46:40Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109065246,
+      "number": 69,
+      "title": "Verify encounter persistence",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "public",
+        "persistence"
+      ],
+      "milestoneId": "m8-living-world-encounters",
+      "milestoneTitle": "8 — Living World & Dynamic Encounters",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/69",
+      "updatedAt": "2026-10-29T21:46:38Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109064766,
+      "number": 68,
+      "title": "Establish active AI budgets",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "public",
+        "performance"
+      ],
+      "milestoneId": "m8-living-world-encounters",
+      "milestoneTitle": "8 — Living World & Dynamic Encounters",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/68",
+      "updatedAt": "2026-10-29T21:46:36Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109064322,
+      "number": 67,
+      "title": "Implement AI activation and deactivation distances",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "public",
+        "performance"
+      ],
+      "milestoneId": "m8-living-world-encounters",
+      "milestoneTitle": "8 — Living World & Dynamic Encounters",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/67",
+      "updatedAt": "2026-10-29T21:46:33Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109063843,
+      "number": 66,
+      "title": "Establish enemy respawn rules",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "ai",
+        "public"
+      ],
+      "milestoneId": "m8-living-world-encounters",
+      "milestoneTitle": "8 — Living World & Dynamic Encounters",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/66",
+      "updatedAt": "2026-10-29T21:46:31Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109063467,
+      "number": 65,
+      "title": "Introduce limited dynamic events",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "ai",
+        "public"
+      ],
+      "milestoneId": "m8-living-world-encounters",
+      "milestoneTitle": "8 — Living World & Dynamic Encounters",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/65",
+      "updatedAt": "2026-10-29T21:46:29Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109062879,
+      "number": 64,
+      "title": "Add mutant roaming encounters",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "combat",
+        "public"
+      ],
+      "milestoneId": "m8-living-world-encounters",
+      "milestoneTitle": "8 — Living World & Dynamic Encounters",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/64",
+      "updatedAt": "2026-10-29T21:46:27Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109062313,
+      "number": 63,
+      "title": "Add human patrol encounters",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "combat",
+        "public"
+      ],
+      "milestoneId": "m8-living-world-encounters",
+      "milestoneTitle": "8 — Living World & Dynamic Encounters",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/63",
+      "updatedAt": "2026-10-29T21:46:24Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109061967,
+      "number": 62,
+      "title": "Implement controlled enemy spawning",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "ai",
+        "public"
+      ],
+      "milestoneId": "m8-living-world-encounters",
+      "milestoneTitle": "8 — Living World & Dynamic Encounters",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/62",
+      "updatedAt": "2026-10-29T21:46:22Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109061565,
+      "number": 61,
+      "title": "Design region-based encounter management",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "public",
+        "architecture"
+      ],
+      "milestoneId": "m8-living-world-encounters",
+      "milestoneTitle": "8 — Living World & Dynamic Encounters",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/61",
+      "updatedAt": "2026-10-29T21:46:20Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109061127,
+      "number": 60,
+      "title": "Atmosphere playable checkpoint + profile",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public",
+        "performance",
+        "testing"
+      ],
+      "milestoneId": "m7-atmosphere-lighting-audio",
+      "milestoneTitle": "7 — Atmosphere, Lighting & Audio",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/60",
+      "updatedAt": "2026-10-29T21:46:18Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109060557,
+      "number": 59,
+      "title": "Create environmental storytelling standards",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "documentation",
+        "milestone",
+        "public",
+        "environment"
+      ],
+      "milestoneId": "m7-atmosphere-lighting-audio",
+      "milestoneTitle": "7 — Atmosphere, Lighting & Audio",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/59",
+      "updatedAt": "2026-10-29T21:46:16Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109060121,
+      "number": 58,
+      "title": "Evaluate lightweight weather effects",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "performance",
+        "environment"
+      ],
+      "milestoneId": "m7-atmosphere-lighting-audio",
+      "milestoneTitle": "7 — Atmosphere, Lighting & Audio",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/58",
+      "updatedAt": "2026-10-29T21:46:13Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109059656,
+      "number": 57,
+      "title": "Establish indoor/outdoor atmosphere transitions",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "environment",
+        "audio"
+      ],
+      "milestoneId": "m7-atmosphere-lighting-audio",
+      "milestoneTitle": "7 — Atmosphere, Lighting & Audio",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/57",
+      "updatedAt": "2026-10-29T21:46:11Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109059237,
+      "number": 56,
+      "title": "Implement ambient audio zones",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public",
+        "audio"
+      ],
+      "milestoneId": "m7-atmosphere-lighting-audio",
+      "milestoneTitle": "7 — Atmosphere, Lighting & Audio",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/56",
+      "updatedAt": "2026-10-29T21:46:09Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109058744,
+      "number": 55,
+      "title": "Select primary foliage workflow",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "performance",
+        "assets"
+      ],
+      "milestoneId": "m7-atmosphere-lighting-audio",
+      "milestoneTitle": "7 — Atmosphere, Lighting & Audio",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/55",
+      "updatedAt": "2026-10-29T21:46:07Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109058280,
+      "number": 54,
+      "title": "Benchmark HAZE against simpler fog alternatives",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "performance",
+        "assets",
+        "testing"
+      ],
+      "milestoneId": "m7-atmosphere-lighting-audio",
+      "milestoneTitle": "7 — Atmosphere, Lighting & Audio",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/54",
+      "updatedAt": "2026-10-29T21:46:05Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109057737,
+      "number": 53,
+      "title": "Establish nighttime preset",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "environment"
+      ],
+      "milestoneId": "m7-atmosphere-lighting-audio",
+      "milestoneTitle": "7 — Atmosphere, Lighting & Audio",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/53",
+      "updatedAt": "2026-10-29T21:46:02Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109057207,
+      "number": 52,
+      "title": "Establish overcast daytime preset",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "environment"
+      ],
+      "milestoneId": "m7-atmosphere-lighting-audio",
+      "milestoneTitle": "7 — Atmosphere, Lighting & Audio",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/52",
+      "updatedAt": "2026-10-29T21:46:00Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109056678,
+      "number": 51,
+      "title": "Create unified environmental lighting strategy",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "architecture",
+        "environment"
+      ],
+      "milestoneId": "m7-atmosphere-lighting-audio",
+      "milestoneTitle": "7 — Atmosphere, Lighting & Audio",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/51",
+      "updatedAt": "2026-10-29T21:45:57Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109056210,
+      "number": 50,
+      "title": "Benchmark representative traversal scenarios",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "performance",
+        "testing"
+      ],
+      "milestoneId": "m6-world-architecture",
+      "milestoneTitle": "6 — World Architecture & Environment Pipeline",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/50",
+      "updatedAt": "2026-10-29T21:45:55Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109055659,
+      "number": 49,
+      "title": "Verify persistence across regions",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "persistence",
+        "testing"
+      ],
+      "milestoneId": "m6-world-architecture",
+      "milestoneTitle": "6 — World Architecture & Environment Pipeline",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/49",
+      "updatedAt": "2026-10-29T21:45:52Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109055197,
+      "number": 48,
+      "title": "Validate NavMesh and region transitions",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "world",
+        "public",
+        "testing"
+      ],
+      "milestoneId": "m6-world-architecture",
+      "milestoneTitle": "6 — World Architecture & Environment Pipeline",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/48",
+      "updatedAt": "2026-10-29T21:45:50Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109054685,
+      "number": 47,
+      "title": "Implement LOD, culling, and collision conventions",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "performance",
+        "environment"
+      ],
+      "milestoneId": "m6-world-architecture",
+      "milestoneTitle": "6 — World Architecture & Environment Pipeline",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/47",
+      "updatedAt": "2026-10-29T21:45:48Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109054188,
+      "number": 46,
+      "title": "Establish modular environment construction standards",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "environment",
+        "assets"
+      ],
+      "milestoneId": "m6-world-architecture",
+      "milestoneTitle": "6 — World Architecture & Environment Pipeline",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/46",
+      "updatedAt": "2026-10-29T21:45:46Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109053671,
+      "number": 45,
+      "title": "Integrate an underground exploration area",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public",
+        "environment"
+      ],
+      "milestoneId": "m6-world-architecture",
+      "milestoneTitle": "6 — World Architecture & Environment Pipeline",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/45",
+      "updatedAt": "2026-10-29T21:45:44Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109053005,
+      "number": 44,
+      "title": "Develop an industrial exploration location",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public",
+        "environment"
+      ],
+      "milestoneId": "m6-world-architecture",
+      "milestoneTitle": "6 — World Architecture & Environment Pipeline",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/44",
+      "updatedAt": "2026-10-29T21:45:41Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109052334,
+      "number": 43,
+      "title": "Build an abandoned checkpoint",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public",
+        "environment"
+      ],
+      "milestoneId": "m6-world-architecture",
+      "milestoneTitle": "6 — World Architecture & Environment Pipeline",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/43",
+      "updatedAt": "2026-10-29T21:45:38Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109051803,
+      "number": 42,
+      "title": "Create or refine the safe settlement",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public",
+        "environment"
+      ],
+      "milestoneId": "m6-world-architecture",
+      "milestoneTitle": "6 — World Architecture & Environment Pipeline",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/42",
+      "updatedAt": "2026-10-29T21:45:36Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109051323,
+      "number": 41,
+      "title": "Establish region and scene organization",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public",
+        "architecture"
+      ],
+      "milestoneId": "m6-world-architecture",
+      "milestoneTitle": "6 — World Architecture & Environment Pipeline",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/41",
+      "updatedAt": "2026-10-29T21:45:33Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109050792,
+      "number": 40,
+      "title": "Document technical decisions and update GitHub roadmap",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "documentation",
+        "milestone",
+        "public"
+      ],
+      "milestoneId": "m5_5-technical-foundation",
+      "milestoneTitle": "5.5 — Technical Foundation & Asset Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/40",
+      "updatedAt": "2026-10-29T21:45:31Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109050322,
+      "number": 39,
+      "title": "Audit Git LFS, save-data versioning, and asset licensing",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "documentation",
+        "milestone",
+        "public",
+        "assets",
+        "persistence"
+      ],
+      "milestoneId": "m5_5-technical-foundation",
+      "milestoneTitle": "5.5 — Technical Foundation & Asset Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/39",
+      "updatedAt": "2026-10-29T21:45:28Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109049866,
+      "number": 38,
+      "title": "Verify Emerald AI navigation and multi-region readiness",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "public",
+        "architecture"
+      ],
+      "milestoneId": "m5_5-technical-foundation",
+      "milestoneTitle": "5.5 — Technical Foundation & Asset Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/38",
+      "updatedAt": "2026-10-29T21:45:26Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109049305,
+      "number": 37,
+      "title": "Set performance targets and profiling procedure",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "performance",
+        "testing"
+      ],
+      "milestoneId": "m5_5-technical-foundation",
+      "milestoneTitle": "5.5 — Technical Foundation & Asset Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/37",
+      "updatedAt": "2026-10-29T21:45:24Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109048714,
+      "number": 36,
+      "title": "Define lighting, terrain, and weather integration strategy",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "public",
+        "architecture",
+        "environment"
+      ],
+      "milestoneId": "m5_5-technical-foundation",
+      "milestoneTitle": "5.5 — Technical Foundation & Asset Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/36",
+      "updatedAt": "2026-10-29T21:45:21Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109048232,
+      "number": 35,
+      "title": "Establish asset import and folder conventions",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "documentation",
+        "milestone",
+        "public",
+        "assets"
+      ],
+      "milestoneId": "m5_5-technical-foundation",
+      "milestoneTitle": "5.5 — Technical Foundation & Asset Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/35",
+      "updatedAt": "2026-10-29T21:45:19Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109047724,
+      "number": 34,
+      "title": "Define region and scene-loading architecture",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public",
+        "architecture"
+      ],
+      "milestoneId": "m5_5-technical-foundation",
+      "milestoneTitle": "5.5 — Technical Foundation & Asset Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/34",
+      "updatedAt": "2026-10-29T21:45:17Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6109047252,
+      "number": 33,
+      "title": "Audit Unity scenes, packages, and custom systems",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "documentation",
+        "milestone",
+        "public",
+        "architecture"
+      ],
+      "milestoneId": "m5_5-technical-foundation",
+      "milestoneTitle": "5.5 — Technical Foundation & Asset Readiness",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/33",
+      "updatedAt": "2026-10-29T21:45:15Z",
+      "closedAt": null,
+      "isPublic": true
+    },
     {
       "id": 6091684026,
       "number": 32,
@@ -956,6 +3750,24 @@
     }
   ],
   "activity": [
+    {
+      "id": "act-m55-roadmap",
+      "kind": "milestone",
+      "title": "Roadmap M5.5–M15 established",
+      "summary": "GitHub and Development Hub tracking extended through Milestone 15. M5.5 technical foundation audit and asset registry seeded. Performance doctrine documented. M6+ gated on approval.",
+      "date": "2026-10-29T21:45:02.806Z",
+      "milestoneId": "m5_5-technical-foundation",
+      "url": "https://github.com/datguydaz/Project-Zone/milestones"
+    },
+    {
+      "id": "act-m5-complete",
+      "kind": "milestone",
+      "title": "Milestone 5 completed — Death & Contracts",
+      "summary": "Play Mode confirmed hybrid death, caches, wallet, contracts, and expedition loop. Issues #27–#32 closed.",
+      "date": "2026-10-29T16:20:00.000Z",
+      "milestoneId": "m5-death-contracts",
+      "url": "https://github.com/datguydaz/Project-Zone/milestone/5"
+    },
     {
       "id": "act-m3-complete",
       "kind": "milestone",
