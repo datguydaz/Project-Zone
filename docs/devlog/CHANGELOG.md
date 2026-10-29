@@ -2,6 +2,14 @@
 
 Only verified work belongs here. Do not invent activity.
 
+## 2026-10-29 — M5.5 findings + M1–M5 verification honesty
+
+**Kind:** documentation / process  
+**Milestone:** M5.5  
+**Public:** yes
+
+Published M5.5 findings report and M1–M5 verification matrix: reported Play Mode completions preserved; missing standalone FPS and optional melee re-check flagged separately. M5.5 GitHub issues left open pending developer acceptance. M6 not started.
+
 ## 2026-10-29 — Code/scene backup policy adopted
 
 **Kind:** process  

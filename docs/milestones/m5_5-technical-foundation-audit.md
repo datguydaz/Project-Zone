@@ -58,6 +58,9 @@ Targets documented. **No standalone FPS baseline recorded in this pass.** Profil
 
 ## 9. Approval gate
 
+See consolidated report: `docs/milestones/m5_5-findings-report.md`  
+Verification honesty: `docs/verification/M1-M5_VERIFICATION_MATRIX.md`
+
 **Stop before M6.** Developer should approve:
 
 1. World loading approach (single-scene through M7 vs early additive underground).
@@ -65,3 +68,5 @@ Targets documented. **No standalone FPS baseline recorded in this pass.** Profil
 3. Reference hardware fields in BASELINE.md.
 4. First standalone baseline run when convenient.
 5. Authorization to begin M6 implementation.
+
+Do not close #33–#40 solely because these docs exist.
