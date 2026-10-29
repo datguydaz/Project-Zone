@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T02:43:28.029Z",
-  "syncedAt": null,
-  "lastSyncAttemptAt": null,
-  "syncStatus": "seed",
+  "generatedAt": "2026-10-29T02:49:15.056Z",
+  "syncedAt": "2026-10-29T02:49:15.056Z",
+  "lastSyncAttemptAt": "2026-10-29T02:49:15.056Z",
+  "syncStatus": "ok",
   "syncError": null,
-  "syncSource": "catalog",
-  "dataAuthority": "planning_catalog",
+  "syncSource": "github_api",
+  "dataAuthority": "github",
   "repository": {
     "owner": "datguydaz",
     "name": "Project-Zone",
     "url": "https://github.com/datguydaz/Project-Zone",
     "defaultBranch": "main",
-    "visibility": "unknown"
+    "visibility": "private"
   },
   "project": {
     "title": "PROJECT ZONE",
@@ -26,10 +26,10 @@
       "id": "m1-unity-hqfps-foundation",
       "number": 1,
       "title": "Unity & HQ FPS Foundation",
-      "description": "Establish the Unity 6 URP project, integrate HQ FPS Weapons 2.0, validate movement and weapons on the Firing Range, and lock project isolation rules.",
+      "description": "Unity 6 URP setup, HQ FPS Weapons 2.0 integration, Firing Range validation, Git init, Cursor isolation rule.",
       "status": "completed",
-      "githubMilestoneNumber": null,
-      "githubMilestoneUrl": null,
+      "githubMilestoneNumber": 1,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/1",
       "scope": [
         "Unity 6 project setup",
         "URP configuration",
@@ -77,11 +77,19 @@
         }
       ],
       "blockers": [],
-      "lastUpdated": "2026-10-29T00:00:00.000Z",
-      "issueIds": [],
+      "lastUpdated": "2026-10-29T02:48:42Z",
+      "issueIds": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
       "progressPercent": 100,
-      "progressMode": "planning_checklist",
-      "progressVerified": false,
+      "progressMode": "issue_based",
+      "progressVerified": true,
       "openCount": 0,
       "closedCount": 7,
       "blockedCount": 0
@@ -90,10 +98,10 @@
       "id": "m2-emerald-ai-integration",
       "number": 2,
       "title": "Emerald AI Integration",
-      "description": "Bridge HQ FPS Weapons damage into Emerald AI and Emerald damage into the player, then validate detection, pursuit, combat, and death reactions.",
+      "description": "HQ↔Emerald damage adapters, detection/pursuit, combat validation, death/hit reactions, package compatibility.",
       "status": "in_progress",
-      "githubMilestoneNumber": null,
-      "githubMilestoneUrl": null,
+      "githubMilestoneNumber": 2,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/2",
       "scope": [
         "HQ FPS to Emerald damage adapter",
         "Emerald to HQ FPS damage adapter",
@@ -135,11 +143,18 @@
         }
       ],
       "blockers": [],
-      "lastUpdated": "2026-10-29T00:00:00.000Z",
-      "issueIds": [],
+      "lastUpdated": "2026-10-29T02:48:49Z",
+      "issueIds": [
+        13,
+        12,
+        11,
+        10,
+        9,
+        8
+      ],
       "progressPercent": 33,
-      "progressMode": "planning_checklist",
-      "progressVerified": false,
+      "progressMode": "issue_based",
+      "progressVerified": true,
       "openCount": 4,
       "closedCount": 2,
       "blockedCount": 0
@@ -148,10 +163,10 @@
       "id": "m3-the-outskirts",
       "number": 3,
       "title": "The Outskirts",
-      "description": "Build the first playable region with a safe settlement, abandoned checkpoint, industrial building, underground entrance, and atmospheric NPC placement.",
-      "status": "not_started",
-      "githubMilestoneNumber": null,
-      "githubMilestoneUrl": null,
+      "description": "First playable region: settlement, checkpoint, industrial building, underground entrance, NPCs, atmosphere.",
+      "status": "in_progress",
+      "githubMilestoneNumber": 3,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/3",
       "scope": [
         "First playable region",
         "Safe settlement",
@@ -199,11 +214,19 @@
         }
       ],
       "blockers": [],
-      "lastUpdated": "2026-10-29T00:00:00.000Z",
-      "issueIds": [],
+      "lastUpdated": "2026-10-29T02:48:54Z",
+      "issueIds": [
+        20,
+        19,
+        18,
+        17,
+        16,
+        15,
+        14
+      ],
       "progressPercent": 0,
-      "progressMode": "planning_checklist",
-      "progressVerified": false,
+      "progressMode": "issue_based",
+      "progressVerified": true,
       "openCount": 7,
       "closedCount": 0,
       "blockedCount": 0
@@ -212,10 +235,10 @@
       "id": "m4-inventory-persistence",
       "number": 4,
       "title": "Inventory & Persistence",
-      "description": "Add loot, backpack UI, permanent stash, inventory transfers, and verified save/load for equipment and items.",
-      "status": "not_started",
-      "githubMilestoneNumber": null,
-      "githubMilestoneUrl": null,
+      "description": "Loot, backpack UI, stash, transfers, save/load, persistent equipment.",
+      "status": "in_progress",
+      "githubMilestoneNumber": 4,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/4",
       "scope": [
         "Loot containers",
         "Backpack UI",
@@ -257,11 +280,18 @@
         }
       ],
       "blockers": [],
-      "lastUpdated": "2026-10-29T00:00:00.000Z",
-      "issueIds": [],
+      "lastUpdated": "2026-10-29T02:49:00Z",
+      "issueIds": [
+        26,
+        25,
+        24,
+        23,
+        22,
+        21
+      ],
       "progressPercent": 0,
-      "progressMode": "planning_checklist",
-      "progressVerified": false,
+      "progressMode": "issue_based",
+      "progressVerified": true,
       "openCount": 6,
       "closedCount": 0,
       "blockedCount": 0
@@ -270,10 +300,10 @@
       "id": "m5-death-contracts",
       "number": 5,
       "title": "Death & Contracts",
-      "description": "Complete the expedition loop with hybrid death rules, recoverable caches, currency, repeatable contracts, and progression rewards.",
-      "status": "not_started",
-      "githubMilestoneNumber": null,
-      "githubMilestoneUrl": null,
+      "description": "Hybrid death, recoverable caches, currency, contracts, rewards, expedition loop.",
+      "status": "in_progress",
+      "githubMilestoneNumber": 5,
+      "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/5",
       "scope": [
         "Hybrid death rules",
         "Recoverable death caches",
@@ -315,17 +345,614 @@
         }
       ],
       "blockers": [],
-      "lastUpdated": "2026-10-29T00:00:00.000Z",
-      "issueIds": [],
+      "lastUpdated": "2026-10-29T02:49:06Z",
+      "issueIds": [
+        32,
+        31,
+        30,
+        29,
+        28,
+        27
+      ],
       "progressPercent": 0,
-      "progressMode": "planning_checklist",
-      "progressVerified": false,
+      "progressMode": "issue_based",
+      "progressVerified": true,
       "openCount": 6,
       "closedCount": 0,
       "blockedCount": 0
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "id": 6091684026,
+      "number": 32,
+      "title": "Complete expedition gameplay loop",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m5-death-contracts",
+      "milestoneTitle": "Death & Contracts",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/32",
+      "updatedAt": "2026-10-29T02:49:05Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091683865,
+      "number": 31,
+      "title": "Rewards and progression",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m5-death-contracts",
+      "milestoneTitle": "Death & Contracts",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/31",
+      "updatedAt": "2026-10-29T02:49:05Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091683640,
+      "number": 30,
+      "title": "Repeatable contracts",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m5-death-contracts",
+      "milestoneTitle": "Death & Contracts",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/30",
+      "updatedAt": "2026-10-29T02:49:04Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091683457,
+      "number": 29,
+      "title": "Currency",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m5-death-contracts",
+      "milestoneTitle": "Death & Contracts",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/29",
+      "updatedAt": "2026-10-29T02:49:03Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091683273,
+      "number": 28,
+      "title": "Recoverable death caches",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "inventory",
+        "public"
+      ],
+      "milestoneId": "m5-death-contracts",
+      "milestoneTitle": "Death & Contracts",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/28",
+      "updatedAt": "2026-10-29T02:49:02Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091683126,
+      "number": 27,
+      "title": "Hybrid death rules",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m5-death-contracts",
+      "milestoneTitle": "Death & Contracts",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/27",
+      "updatedAt": "2026-10-29T02:49:01Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091683000,
+      "number": 26,
+      "title": "Persistent equipment and items",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "inventory",
+        "public"
+      ],
+      "milestoneId": "m4-inventory-persistence",
+      "milestoneTitle": "Inventory & Persistence",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/26",
+      "updatedAt": "2026-10-29T02:49:00Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091682753,
+      "number": 25,
+      "title": "Save/load validation",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "inventory",
+        "public"
+      ],
+      "milestoneId": "m4-inventory-persistence",
+      "milestoneTitle": "Inventory & Persistence",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/25",
+      "updatedAt": "2026-10-29T02:48:59Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091682600,
+      "number": 24,
+      "title": "Inventory transfers",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "inventory",
+        "public"
+      ],
+      "milestoneId": "m4-inventory-persistence",
+      "milestoneTitle": "Inventory & Persistence",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/24",
+      "updatedAt": "2026-10-29T02:48:58Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091682472,
+      "number": 23,
+      "title": "Permanent stash",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "inventory",
+        "public"
+      ],
+      "milestoneId": "m4-inventory-persistence",
+      "milestoneTitle": "Inventory & Persistence",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/23",
+      "updatedAt": "2026-10-29T02:48:57Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091682183,
+      "number": 22,
+      "title": "Backpack UI",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "inventory",
+        "ui",
+        "public"
+      ],
+      "milestoneId": "m4-inventory-persistence",
+      "milestoneTitle": "Inventory & Persistence",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/22",
+      "updatedAt": "2026-10-29T02:48:56Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091682026,
+      "number": 21,
+      "title": "Loot containers",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "inventory",
+        "public"
+      ],
+      "milestoneId": "m4-inventory-persistence",
+      "milestoneTitle": "Inventory & Persistence",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/21",
+      "updatedAt": "2026-10-29T02:48:55Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091681876,
+      "number": 20,
+      "title": "Environmental atmosphere",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public"
+      ],
+      "milestoneId": "m3-the-outskirts",
+      "milestoneTitle": "The Outskirts",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/20",
+      "updatedAt": "2026-10-29T02:48:54Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091681588,
+      "number": 19,
+      "title": "NPC placement and navigation",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "world",
+        "public"
+      ],
+      "milestoneId": "m3-the-outskirts",
+      "milestoneTitle": "The Outskirts",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/19",
+      "updatedAt": "2026-10-29T02:48:54Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091681396,
+      "number": 18,
+      "title": "Underground entrance",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public"
+      ],
+      "milestoneId": "m3-the-outskirts",
+      "milestoneTitle": "The Outskirts",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/18",
+      "updatedAt": "2026-10-29T02:48:53Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091681281,
+      "number": 17,
+      "title": "Industrial building",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public"
+      ],
+      "milestoneId": "m3-the-outskirts",
+      "milestoneTitle": "The Outskirts",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/17",
+      "updatedAt": "2026-10-29T02:48:52Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091681122,
+      "number": 16,
+      "title": "Abandoned checkpoint",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public"
+      ],
+      "milestoneId": "m3-the-outskirts",
+      "milestoneTitle": "The Outskirts",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/16",
+      "updatedAt": "2026-10-29T02:48:51Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091680936,
+      "number": 15,
+      "title": "Safe settlement",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public"
+      ],
+      "milestoneId": "m3-the-outskirts",
+      "milestoneTitle": "The Outskirts",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/15",
+      "updatedAt": "2026-10-29T02:48:50Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091680819,
+      "number": 14,
+      "title": "First playable region layout",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "world",
+        "public"
+      ],
+      "milestoneId": "m3-the-outskirts",
+      "milestoneTitle": "The Outskirts",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/14",
+      "updatedAt": "2026-10-29T02:48:49Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091680702,
+      "number": 13,
+      "title": "Package compatibility validation",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "documentation",
+        "milestone",
+        "ai",
+        "public"
+      ],
+      "milestoneId": "m2-emerald-ai-integration",
+      "milestoneTitle": "Emerald AI Integration",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/13",
+      "updatedAt": "2026-10-29T02:48:48Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091680461,
+      "number": 12,
+      "title": "Death and hit reaction testing",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "combat",
+        "public"
+      ],
+      "milestoneId": "m2-emerald-ai-integration",
+      "milestoneTitle": "Emerald AI Integration",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/12",
+      "updatedAt": "2026-10-29T02:48:48Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091680344,
+      "number": 11,
+      "title": "Melee and ranged combat validation",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "ai",
+        "combat",
+        "public"
+      ],
+      "milestoneId": "m2-emerald-ai-integration",
+      "milestoneTitle": "Emerald AI Integration",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/11",
+      "updatedAt": "2026-10-29T02:48:47Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091680216,
+      "number": 10,
+      "title": "Enemy detection and pursuit",
+      "state": "open",
+      "status": "open",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "ai",
+        "public"
+      ],
+      "milestoneId": "m2-emerald-ai-integration",
+      "milestoneTitle": "Emerald AI Integration",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/10",
+      "updatedAt": "2026-10-29T02:48:46Z",
+      "closedAt": null,
+      "isPublic": true
+    },
+    {
+      "id": 6091679875,
+      "number": 9,
+      "title": "Emerald to HQ FPS damage adapter",
+      "state": "closed",
+      "status": "completed",
+      "labels": [
+        "milestone",
+        "ai",
+        "combat",
+        "public"
+      ],
+      "milestoneId": "m2-emerald-ai-integration",
+      "milestoneTitle": "Emerald AI Integration",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/9",
+      "updatedAt": "2026-10-29T02:48:45Z",
+      "closedAt": "2026-10-29T02:48:45Z",
+      "isPublic": true
+    },
+    {
+      "id": 6091679520,
+      "number": 8,
+      "title": "HQ FPS to Emerald damage adapter",
+      "state": "closed",
+      "status": "completed",
+      "labels": [
+        "milestone",
+        "ai",
+        "combat",
+        "public"
+      ],
+      "milestoneId": "m2-emerald-ai-integration",
+      "milestoneTitle": "Emerald AI Integration",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/8",
+      "updatedAt": "2026-10-29T02:48:43Z",
+      "closedAt": "2026-10-29T02:48:43Z",
+      "isPublic": true
+    },
+    {
+      "id": 6091679188,
+      "number": 7,
+      "title": "Permanent Cursor project rule",
+      "state": "closed",
+      "status": "completed",
+      "labels": [
+        "documentation",
+        "milestone",
+        "public"
+      ],
+      "milestoneId": "m1-unity-hqfps-foundation",
+      "milestoneTitle": "Unity & HQ FPS Foundation",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/7",
+      "updatedAt": "2026-10-29T02:48:41Z",
+      "closedAt": "2026-10-29T02:48:41Z",
+      "isPublic": true
+    },
+    {
+      "id": 6091678839,
+      "number": 6,
+      "title": "Git repository initialization",
+      "state": "closed",
+      "status": "completed",
+      "labels": [
+        "documentation",
+        "milestone",
+        "public"
+      ],
+      "milestoneId": "m1-unity-hqfps-foundation",
+      "milestoneTitle": "Unity & HQ FPS Foundation",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/6",
+      "updatedAt": "2026-10-29T02:48:40Z",
+      "closedAt": "2026-10-29T02:48:40Z",
+      "isPublic": true
+    },
+    {
+      "id": 6091678491,
+      "number": 5,
+      "title": "Firing Range testing",
+      "state": "closed",
+      "status": "completed",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "public"
+      ],
+      "milestoneId": "m1-unity-hqfps-foundation",
+      "milestoneTitle": "Unity & HQ FPS Foundation",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/5",
+      "updatedAt": "2026-10-29T02:48:38Z",
+      "closedAt": "2026-10-29T02:48:38Z",
+      "isPublic": true
+    },
+    {
+      "id": 6091678073,
+      "number": 4,
+      "title": "Weapon and movement validation",
+      "state": "closed",
+      "status": "completed",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "combat",
+        "public"
+      ],
+      "milestoneId": "m1-unity-hqfps-foundation",
+      "milestoneTitle": "Unity & HQ FPS Foundation",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/4",
+      "updatedAt": "2026-10-29T02:48:36Z",
+      "closedAt": "2026-10-29T02:48:36Z",
+      "isPublic": true
+    },
+    {
+      "id": 6091677688,
+      "number": 3,
+      "title": "HQ FPS Weapons 2.0 integration",
+      "state": "closed",
+      "status": "completed",
+      "labels": [
+        "milestone",
+        "gameplay",
+        "combat",
+        "public"
+      ],
+      "milestoneId": "m1-unity-hqfps-foundation",
+      "milestoneTitle": "Unity & HQ FPS Foundation",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/3",
+      "updatedAt": "2026-10-29T02:48:34Z",
+      "closedAt": "2026-10-29T02:48:34Z",
+      "isPublic": true
+    },
+    {
+      "id": 6091677389,
+      "number": 2,
+      "title": "URP configuration",
+      "state": "closed",
+      "status": "completed",
+      "labels": [
+        "documentation",
+        "milestone",
+        "public"
+      ],
+      "milestoneId": "m1-unity-hqfps-foundation",
+      "milestoneTitle": "Unity & HQ FPS Foundation",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/2",
+      "updatedAt": "2026-10-29T02:48:31Z",
+      "closedAt": "2026-10-29T02:48:31Z",
+      "isPublic": true
+    },
+    {
+      "id": 6091676991,
+      "number": 1,
+      "title": "Unity 6 project setup",
+      "state": "closed",
+      "status": "completed",
+      "labels": [
+        "documentation",
+        "milestone",
+        "public"
+      ],
+      "milestoneId": "m1-unity-hqfps-foundation",
+      "milestoneTitle": "Unity & HQ FPS Foundation",
+      "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/1",
+      "updatedAt": "2026-10-29T02:48:30Z",
+      "closedAt": "2026-10-29T02:48:30Z",
+      "isPublic": true
+    }
+  ],
   "activity": [
     {
       "id": "act-m1-complete",
@@ -370,7 +997,7 @@
   ],
   "publicPolicy": {
     "mode": "curated",
-    "note": "Public hub data is allowlisted. Issue bodies, private notes, credentials, and local paths are never published. Until GitHub sync succeeds, the site shows planning catalog data labeled as unverified.",
+    "note": "Repository is private. Only issues labeled `public` are published (unless HUB_PUBLISH_PRIVATE_ISSUES=1). Issue bodies and excluded labels never ship.",
     "excludeLabels": [
       "private",
       "internal",
