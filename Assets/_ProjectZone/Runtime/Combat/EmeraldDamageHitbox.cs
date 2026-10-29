@@ -32,11 +32,15 @@ namespace ProjectZone
 
             int healthBefore = _health.Health;
             if (healthBefore <= 0)
+            {
+                NotifyPostDeathIgnored();
                 return DamageResult.Ignored;
+            }
 
             int amount = Mathf.Max(1, Mathf.CeilToInt(damage));
-            Transform attacker = args.Source != null ? args.Source.transform : null;
-            int ragdollForce = Mathf.Clamp(Mathf.RoundToInt(args.HitForce.magnitude), 1, 1000);
+            Transform attacker = ResolveAttackerTransform(args);
+            // Emerald hit reactions / attacker detection work best with a living attacker transform.
+            int ragdollForce = Mathf.Clamp(Mathf.RoundToInt(args.HitForce.magnitude), 50, 1000);
             _health.Damage(amount, attacker, ragdollForce, _criticalHit);
 
             int healthAfter = _health.Health;
@@ -50,6 +54,29 @@ namespace ProjectZone
                 DamageTracker.RegisterDamage(this, result, amount, in args);
 
             return result;
+        }
+
+        private void NotifyPostDeathIgnored()
+        {
+            EmeraldDeathHitReactionValidator validator = FindAnyObjectByType<EmeraldDeathHitReactionValidator>();
+            validator?.NotifyPostDeathDamageIgnored(_health);
+        }
+
+        private static Transform ResolveAttackerTransform(in DamageArgs args)
+        {
+            if (args.Source == null)
+                return Player.AllPlayers.Count > 0 ? Player.AllPlayers[0].transform : null;
+
+            Transform sourceTransform = args.Source.transform;
+            Player player = sourceTransform.GetComponentInParent<Player>();
+            if (player != null)
+                return player.transform;
+
+            Character character = sourceTransform.GetComponentInParent<Character>();
+            if (character != null)
+                return character.transform;
+
+            return sourceTransform;
         }
     }
 }

@@ -5,9 +5,9 @@ using UnityEngine;
 namespace ProjectZone
 {
     /// <summary>
-    /// Wires Milestone 2 combat/detection adapters in the integration test scene
+    /// Wires Milestone 2 combat adapters in the integration test scene
     /// and waits for the HQ player spawned by the scene game mode.
-    /// Issues: #8/#9 (damage), #10 (detection), #11 (combat loop validation).
+    /// Issues: #8–#12 adapters/validation harnesses.
     /// </summary>
     [DefaultExecutionOrder(-50)]
     public sealed class DamageAdapterTestSetup : MonoBehaviour
@@ -20,6 +20,9 @@ namespace ProjectZone
 
         [SerializeField]
         private bool _enableCombatValidation = true;
+
+        [SerializeField]
+        private bool _enableDeathHitValidation = true;
 
         private IEnumerator Start()
         {
@@ -43,7 +46,7 @@ namespace ProjectZone
         private static void AttachAiDamageReceivers()
         {
             EmeraldAI.EmeraldHealth[] healthComponents =
-                FindObjectsByType<EmeraldAI.EmeraldHealth>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+                FindObjectsByType<EmeraldAI.EmeraldHealth>(FindObjectsInactive.Exclude);
 
             for (int i = 0; i < healthComponents.Length; i++)
             {
@@ -64,14 +67,24 @@ namespace ProjectZone
 
             targetAdapter.Configure(player, _logDetectionDiagnostics);
 
-            if (!_enableCombatValidation)
-                return;
+            if (_enableCombatValidation)
+            {
+                EmeraldCombatLoopValidator combatValidator = player.GetComponent<EmeraldCombatLoopValidator>();
+                if (combatValidator == null)
+                    combatValidator = player.gameObject.AddComponent<EmeraldCombatLoopValidator>();
 
-            EmeraldCombatLoopValidator validator = player.GetComponent<EmeraldCombatLoopValidator>();
-            if (validator == null)
-                validator = player.gameObject.AddComponent<EmeraldCombatLoopValidator>();
+                combatValidator.BindPlayer(player);
+            }
 
-            validator.BindPlayer(player);
+            if (_enableDeathHitValidation)
+            {
+                EmeraldDeathHitReactionValidator deathValidator =
+                    player.GetComponent<EmeraldDeathHitReactionValidator>();
+                if (deathValidator == null)
+                    deathValidator = player.gameObject.AddComponent<EmeraldDeathHitReactionValidator>();
+
+                deathValidator.BindPlayer(player);
+            }
         }
     }
 }

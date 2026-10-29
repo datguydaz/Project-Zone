@@ -35,13 +35,10 @@ namespace ProjectZone
             if (player == null)
                 return;
 
+            // Use HQ health events only — bridge OnTakeDamage fires in the same hit and would double-count.
             _playerHealth = player.HealthManager;
             if (_playerHealth != null)
                 _playerHealth.DamageReceived += HandlePlayerDamageReceived;
-
-            HqPlayerDamageBridge bridge = player.GetComponent<HqPlayerDamageBridge>();
-            if (bridge != null)
-                bridge.OnTakeDamage.AddListener(HandleBridgeTakeDamage);
 
             RenameExampleHostiles();
             LogStatus("Combat validation started (issue #11).");
@@ -51,10 +48,6 @@ namespace ProjectZone
         {
             if (_playerHealth != null)
                 _playerHealth.DamageReceived -= HandlePlayerDamageReceived;
-
-            HqPlayerDamageBridge bridge = FindFirstObjectByType<HqPlayerDamageBridge>();
-            if (bridge != null)
-                bridge.OnTakeDamage.RemoveListener(HandleBridgeTakeDamage);
         }
 
         private void Update()
@@ -72,7 +65,7 @@ namespace ProjectZone
         private void WatchAiHealthDrops()
         {
             EmeraldHealth[] healthComponents =
-                FindObjectsByType<EmeraldHealth>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+                FindObjectsByType<EmeraldHealth>(FindObjectsInactive.Exclude);
 
             for (int i = 0; i < healthComponents.Length; i++)
             {
@@ -111,34 +104,35 @@ namespace ProjectZone
                 _duplicateDamageSuspect = true;
 
             _lastPlayerDamageRealtime = now;
-            ClassifyIncomingAttack();
+            ClassifyIncomingAttack(args.Source != null ? args.Source.transform : null);
         }
 
-        private void HandleBridgeTakeDamage()
+        private void ClassifyIncomingAttack(Transform attacker)
         {
-            ClassifyIncomingAttack();
-        }
+            EmeraldSystem hostile = null;
+            if (attacker != null)
+                hostile = attacker.GetComponentInParent<EmeraldSystem>();
 
-        private void ClassifyIncomingAttack()
-        {
-            EmeraldSystem nearestHostile = FindNearestCombatAi();
-            if (nearestHostile == null)
+            if (hostile == null)
+                hostile = FindNearestCombatAi();
+
+            if (hostile == null)
             {
                 _rangedAiDamagedPlayer = true;
                 return;
             }
 
-            if (LooksLikeMelee(nearestHostile))
+            if (LooksLikeMelee(hostile))
             {
                 _meleeAiDamagedPlayer = true;
                 if (_logChecklist)
-                    Debug.Log($"[ProjectZone][Combat] Melee AI '{nearestHostile.name}' damaged player.", nearestHostile);
+                    Debug.Log($"[ProjectZone][Combat] Melee AI '{hostile.name}' damaged player.", hostile);
             }
             else
             {
                 _rangedAiDamagedPlayer = true;
                 if (_logChecklist)
-                    Debug.Log($"[ProjectZone][Combat] Ranged AI '{nearestHostile.name}' damaged player.", nearestHostile);
+                    Debug.Log($"[ProjectZone][Combat] Ranged AI '{hostile.name}' damaged player.", hostile);
             }
         }
 
@@ -148,7 +142,7 @@ namespace ProjectZone
             if (player == null)
                 return null;
 
-            EmeraldSystem[] systems = FindObjectsByType<EmeraldSystem>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            EmeraldSystem[] systems = FindObjectsByType<EmeraldSystem>(FindObjectsInactive.Exclude);
             EmeraldSystem best = null;
             float bestDist = float.MaxValue;
             Vector3 origin = player.transform.position;
@@ -186,7 +180,7 @@ namespace ProjectZone
 
         private static void RenameExampleHostiles()
         {
-            EmeraldSystem[] systems = FindObjectsByType<EmeraldSystem>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            EmeraldSystem[] systems = FindObjectsByType<EmeraldSystem>(FindObjectsInactive.Exclude);
             int rangedIndex = 1;
             for (int i = 0; i < systems.Length; i++)
             {
@@ -233,7 +227,7 @@ namespace ProjectZone
 
         private static bool HasMeleeHostileInScene()
         {
-            EmeraldSystem[] systems = FindObjectsByType<EmeraldSystem>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            EmeraldSystem[] systems = FindObjectsByType<EmeraldSystem>(FindObjectsInactive.Exclude);
             for (int i = 0; i < systems.Length; i++)
             {
                 if (LooksLikeMelee(systems[i]))

@@ -2,11 +2,29 @@
 
 Only verified work belongs here. Do not invent activity.
 
+## 2026-10-29 — Death and hit reactions verified
+
+**Kind:** feature  
+**Milestone:** M2 Emerald AI Integration  
+**Issue:** #12  
+**Public:** yes
+
+Play Mode confirmed AI hit reactions, AI death to 0 HP, HQ player death, and post-death AI damage ignore on `PZ_DamageAdapterTest`. Issue #12 closed. Remaining M2 item: package compatibility (#13).
+
+## 2026-10-29 — Ranged combat validation verified
+
+**Kind:** feature  
+**Milestone:** M2 Emerald AI Integration  
+**Issue:** #11  
+**Public:** yes
+
+Play Mode confirmed two-way ranged combat: player damages Emerald hostiles and ranged AI damages the HQ player through Project Zone adapters. Issue #11 closed. Melee hostile not present in the integration scene yet — re-check when one is added. Polymind SerializeReference idle-state warning is vendor-side.
+
 ## 2026-10-29 — Public hub copy cleaned; combat validation harness added
 
 **Kind:** note / feature  
 **Milestone:** M2 Emerald AI Integration  
-**Issue:** #11 (in progress)  
+**Issue:** #11  
 **Public:** yes
 
 Public Development Hub activity/devlog copy no longer references vendor demo/template naming. Added `EmeraldCombatLoopValidator` for melee/ranged combat checklist tracking under issue #11.

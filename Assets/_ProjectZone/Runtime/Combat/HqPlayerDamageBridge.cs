@@ -32,13 +32,19 @@ namespace ProjectZone
             SyncFromPlayer();
 
             if (_health != null)
+            {
                 _health.Respawn += HandleRespawn;
+                _health.Death += HandleHqDeath;
+            }
         }
 
         private void OnDestroy()
         {
-            if (_health != null)
-                _health.Respawn -= HandleRespawn;
+            if (_health == null)
+                return;
+
+            _health.Respawn -= HandleRespawn;
+            _health.Death -= HandleHqDeath;
         }
 
         public override void DamageCharacterController(int damageAmount, Transform attacker)
@@ -48,23 +54,35 @@ namespace ProjectZone
 
             if (_health != null && !_health.IsDead())
             {
-                _health.ReceiveDamage(damageAmount, new DamageArgs(DamageType.Blunt));
+                // Let HQ own lethal handling (PlayerDeathHandler). Pass attacker when available.
+                var args = new DamageArgs(DamageType.Blunt, null, transform.position, Vector3.zero);
+                _health.ReceiveDamage(damageAmount, in args);
                 SyncFromPlayer();
             }
-            else
+            else if (_health == null)
             {
                 Health = Mathf.Max(0, Health - damageAmount);
             }
 
             OnTakeDamage.Invoke();
 
-            if (Health <= 0)
+            // If HQ health is absent, fall back to Emerald bridge death.
+            if (_health == null && Health <= 0)
             {
                 if (_playerCollider != null)
                     _playerCollider.enabled = false;
 
                 OnDeath.Invoke();
             }
+        }
+
+        private void HandleHqDeath(in DamageArgs args)
+        {
+            SyncFromPlayer();
+            if (_playerCollider != null)
+                _playerCollider.enabled = false;
+
+            OnDeath.Invoke();
         }
 
         private void HandleRespawn()

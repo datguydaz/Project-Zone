@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T03:11:13.145Z",
-  "syncedAt": "2026-10-29T03:11:13.145Z",
-  "lastSyncAttemptAt": "2026-10-29T03:11:13.145Z",
+  "generatedAt": "2026-10-29T14:13:07.983Z",
+  "syncedAt": "2026-10-29T14:13:07.983Z",
+  "lastSyncAttemptAt": "2026-10-29T14:13:07.983Z",
   "syncStatus": "ok",
   "syncError": null,
   "syncSource": "github_api",
@@ -129,12 +129,12 @@
         {
           "id": "m2-r4",
           "title": "Melee and ranged combat validation",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m2-r5",
           "title": "Death and hit reaction testing",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m2-r6",
@@ -143,7 +143,7 @@
         }
       ],
       "blockers": [],
-      "lastUpdated": "2026-10-29T03:05:56Z",
+      "lastUpdated": "2026-10-29T14:12:51Z",
       "issueIds": [
         13,
         12,
@@ -152,11 +152,11 @@
         9,
         8
       ],
-      "progressPercent": 50,
+      "progressPercent": 83,
       "progressMode": "issue_based",
       "progressVerified": true,
-      "openCount": 3,
-      "closedCount": 3,
+      "openCount": 1,
+      "closedCount": 5,
       "blockedCount": 0
     },
     {
@@ -733,8 +733,8 @@
       "id": 6091680461,
       "number": 12,
       "title": "Death and hit reaction testing",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "ai",
@@ -744,16 +744,16 @@
       "milestoneId": "m2-emerald-ai-integration",
       "milestoneTitle": "Emerald AI Integration",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/12",
-      "updatedAt": "2026-10-29T02:48:48Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T14:12:51Z",
+      "closedAt": "2026-10-29T14:12:51Z",
       "isPublic": true
     },
     {
       "id": 6091680344,
       "number": 11,
       "title": "Melee and ranged combat validation",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "ai",
@@ -763,8 +763,8 @@
       "milestoneId": "m2-emerald-ai-integration",
       "milestoneTitle": "Emerald AI Integration",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/11",
-      "updatedAt": "2026-10-29T03:11:03Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T13:45:46Z",
+      "closedAt": "2026-10-29T13:45:46Z",
       "isPublic": true
     },
     {
@@ -954,6 +954,24 @@
     }
   ],
   "activity": [
+    {
+      "id": "act-death-hit-reactions",
+      "kind": "feature",
+      "title": "Death and hit reactions verified",
+      "summary": "Play Mode confirmed AI hit reactions, AI death, HQ player death, and post-death damage ignore. Issue #12 closed. Remaining M2 item: package compatibility (#13).",
+      "date": "2026-10-29T14:12:00.000Z",
+      "milestoneId": "m2-emerald-ai-integration",
+      "url": "https://github.com/datguydaz/Project-Zone/issues/12"
+    },
+    {
+      "id": "act-ranged-combat",
+      "kind": "feature",
+      "title": "Ranged combat validation verified",
+      "summary": "Two-way ranged combat confirmed: player damages Emerald hostiles and ranged AI damages the HQ FPS player. Issue #11 closed (melee deferred until a melee hostile is added).",
+      "date": "2026-10-29T13:45:00.000Z",
+      "milestoneId": "m2-emerald-ai-integration",
+      "url": "https://github.com/datguydaz/Project-Zone/issues/11"
+    },
     {
       "id": "act-detection-adapter",
       "kind": "feature",

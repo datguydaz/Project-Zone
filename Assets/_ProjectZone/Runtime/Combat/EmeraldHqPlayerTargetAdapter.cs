@@ -91,7 +91,7 @@ namespace ProjectZone
         private void BootstrapNearbyAi()
         {
             int characterLayer = 1 << LayerConstants.Character;
-            EmeraldSystem[] systems = FindObjectsByType<EmeraldSystem>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            EmeraldSystem[] systems = FindObjectsByType<EmeraldSystem>(FindObjectsInactive.Exclude);
 
             for (int i = 0; i < systems.Length; i++)
             {

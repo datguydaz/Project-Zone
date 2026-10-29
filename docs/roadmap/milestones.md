@@ -20,8 +20,8 @@ Authoritative **live** progress comes from GitHub Milestones + Issues after sync
 - HQ FPS to Emerald damage adapter — verified in play mode (#8)
 - Emerald to HQ FPS damage adapter — verified in play mode (#9)
 - Enemy detection and pursuit — verified in play mode (#10)
-- Melee and ranged combat validation — harness ready, awaiting Play Mode (#11)
-- Death and hit reaction testing — remaining (#12)
+- Melee and ranged combat validation — ranged verified in play mode (#11); melee deferred until a melee hostile is in the test scene
+- Death and hit reaction testing — verified in play mode (#12)
 - Package compatibility validation — remaining (#13)
 
 ## Milestone 3 — The Outskirts
