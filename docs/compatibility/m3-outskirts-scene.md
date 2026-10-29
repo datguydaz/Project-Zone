@@ -36,7 +36,7 @@ Player spawn: HQ `GameMode` prefab at Settlement approach `(0, 2.2, -8)`.
 
 NavMesh: `NavMesh Surface` on `Outskirts Region`. `OutskirtsNpcBootstrap` bakes on Play Mode start.
 
-NPCs (#19): under `Outskirts_NPCs` — settlement civilian NavMesh wanderer; Emerald hostiles at Checkpoint + Industrial (Example Summoned AI prefab). HQ target adapter wires automatically.
+NPCs (#19): under `Outskirts_NPCs` — settlement civilian NavMesh wanderer; Female Zombie melee hostiles at Checkpoint + Industrial (`PzZombieHostileBrain`). Optional Emerald ranged spawn remains available on bootstrap. HQ target adapter wires automatically.
 
 Inventory (#21–#26): `OutskirtsInventoryBootstrap` spawns `Outskirts_Inventory` (stash at SupplyShed, loot at Checkpoint/Industrial). See `docs/compatibility/m4-inventory-persistence.md`.
 

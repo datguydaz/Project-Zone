@@ -92,6 +92,35 @@ namespace ProjectZone
 
                 watch.LastHealth = health.Health;
             }
+
+            PzHostileHealth[] pzHealth =
+                FindObjectsByType<PzHostileHealth>(FindObjectsInactive.Exclude);
+
+            for (int i = 0; i < pzHealth.Length; i++)
+            {
+                PzHostileHealth health = pzHealth[i];
+                CombatWatch watch = health.GetComponent<CombatWatch>();
+                if (watch == null)
+                {
+                    watch = health.gameObject.AddComponent<CombatWatch>();
+                    watch.LastHealth = health.Health;
+                    continue;
+                }
+
+                if (health.Health < watch.LastHealth)
+                {
+                    _playerDamagedAi = true;
+                    if (_logChecklist)
+                    {
+                        Debug.Log(
+                            $"[ProjectZone][Combat] Player damaged zombie '{health.name}' " +
+                            $"({watch.LastHealth} → {health.Health}).",
+                            health);
+                    }
+                }
+
+                watch.LastHealth = health.Health;
+            }
         }
 
         private void HandlePlayerDamageReceived(float damage, in DamageArgs args)
@@ -109,6 +138,20 @@ namespace ProjectZone
 
         private void ClassifyIncomingAttack(Transform attacker)
         {
+            PzZombieHostileBrain zombie = null;
+            if (attacker != null)
+                zombie = attacker.GetComponentInParent<PzZombieHostileBrain>();
+            if (zombie == null)
+                zombie = FindNearestZombie();
+
+            if (zombie != null)
+            {
+                _meleeAiDamagedPlayer = true;
+                if (_logChecklist)
+                    Debug.Log($"[ProjectZone][Combat] Melee zombie '{zombie.name}' damaged player.", zombie);
+                return;
+            }
+
             EmeraldSystem hostile = null;
             if (attacker != null)
                 hostile = attacker.GetComponentInParent<EmeraldSystem>();
@@ -118,6 +161,13 @@ namespace ProjectZone
 
             if (hostile == null)
             {
+                // Zombie melee uses DamageArgs with null Source — treat nearby zombies as melee.
+                if (FindNearestZombie() != null)
+                {
+                    _meleeAiDamagedPlayer = true;
+                    return;
+                }
+
                 _rangedAiDamagedPlayer = true;
                 return;
             }
@@ -134,6 +184,36 @@ namespace ProjectZone
                 if (_logChecklist)
                     Debug.Log($"[ProjectZone][Combat] Ranged AI '{hostile.name}' damaged player.", hostile);
             }
+        }
+
+        private static PzZombieHostileBrain FindNearestZombie()
+        {
+            Player player = Player.AllPlayers.Count > 0 ? Player.AllPlayers[0] : null;
+            if (player == null)
+                return null;
+
+            PzZombieHostileBrain[] zombies =
+                FindObjectsByType<PzZombieHostileBrain>(FindObjectsInactive.Exclude);
+            PzZombieHostileBrain best = null;
+            float bestDist = float.MaxValue;
+            Vector3 origin = player.transform.position;
+
+            for (int i = 0; i < zombies.Length; i++)
+            {
+                PzZombieHostileBrain zombie = zombies[i];
+                if (zombie == null)
+                    continue;
+
+                float dist = (zombie.transform.position - origin).sqrMagnitude;
+                if (dist < bestDist)
+                {
+                    bestDist = dist;
+                    best = zombie;
+                }
+            }
+
+            // Only count as the attacker if within melee-ish range.
+            return best != null && bestDist <= 4f * 4f ? best : null;
         }
 
         private static EmeraldSystem FindNearestCombatAi()
@@ -227,6 +307,9 @@ namespace ProjectZone
 
         private static bool HasMeleeHostileInScene()
         {
+            if (FindObjectsByType<PzZombieHostileBrain>(FindObjectsInactive.Exclude).Length > 0)
+                return true;
+
             EmeraldSystem[] systems = FindObjectsByType<EmeraldSystem>(FindObjectsInactive.Exclude);
             for (int i = 0; i < systems.Length; i++)
             {

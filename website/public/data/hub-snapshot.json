@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T15:38:40.373Z",
-  "syncedAt": "2026-10-29T15:38:40.373Z",
-  "lastSyncAttemptAt": "2026-10-29T15:38:40.373Z",
+  "generatedAt": "2026-10-29T16:20:38.600Z",
+  "syncedAt": "2026-10-29T16:20:38.600Z",
+  "lastSyncAttemptAt": "2026-10-29T16:20:38.600Z",
   "syncStatus": "ok",
   "syncError": null,
   "syncSource": "github_api",
@@ -235,8 +235,8 @@
       "id": "m4-inventory-persistence",
       "number": 4,
       "title": "Inventory & Persistence",
-      "description": "Loot, backpack UI, stash, transfers, save/load, persistent equipment.",
-      "status": "not_started",
+      "description": "Loot, backpack UI, stash, transfers, save/load, persistent equipment. Play Mode confirmed 2026-10-29 - Milestone 4 complete.",
+      "status": "completed",
       "githubMilestoneNumber": 4,
       "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/4",
       "scope": [
@@ -251,36 +251,36 @@
         {
           "id": "m4-r1",
           "title": "Loot containers",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m4-r2",
           "title": "Backpack UI",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m4-r3",
           "title": "Permanent stash",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m4-r4",
           "title": "Inventory transfers",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m4-r5",
           "title": "Save/load validation",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m4-r6",
           "title": "Persistent equipment and items",
-          "completed": false
+          "completed": true
         }
       ],
       "blockers": [],
-      "lastUpdated": "2026-10-29T02:49:00Z",
+      "lastUpdated": "2026-10-29T16:07:58Z",
       "issueIds": [
         26,
         25,
@@ -289,19 +289,19 @@
         22,
         21
       ],
-      "progressPercent": 0,
+      "progressPercent": 100,
       "progressMode": "issue_based",
       "progressVerified": true,
-      "openCount": 6,
-      "closedCount": 0,
+      "openCount": 0,
+      "closedCount": 6,
       "blockedCount": 0
     },
     {
       "id": "m5-death-contracts",
       "number": 5,
       "title": "Death & Contracts",
-      "description": "Hybrid death, recoverable caches, currency, contracts, rewards, expedition loop.",
-      "status": "not_started",
+      "description": "Death & Contracts — completed (Play Mode confirmed)",
+      "status": "completed",
       "githubMilestoneNumber": 5,
       "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/5",
       "scope": [
@@ -344,8 +344,10 @@
           "completed": false
         }
       ],
-      "blockers": [],
-      "lastUpdated": "2026-10-29T02:49:06Z",
+      "blockers": [
+        "Awaiting Play Mode confirmation on PZ_Outskirts before closing #27–#32"
+      ],
+      "lastUpdated": "2026-10-29T16:20:21Z",
       "issueIds": [
         32,
         31,
@@ -354,11 +356,11 @@
         28,
         27
       ],
-      "progressPercent": 0,
+      "progressPercent": 100,
       "progressMode": "issue_based",
       "progressVerified": true,
-      "openCount": 6,
-      "closedCount": 0,
+      "openCount": 0,
+      "closedCount": 6,
       "blockedCount": 0
     }
   ],
@@ -367,8 +369,8 @@
       "id": 6091684026,
       "number": 32,
       "title": "Complete expedition gameplay loop",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "gameplay",
@@ -377,16 +379,16 @@
       "milestoneId": "m5-death-contracts",
       "milestoneTitle": "Death & Contracts",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/32",
-      "updatedAt": "2026-10-29T02:49:05Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T16:20:20Z",
+      "closedAt": "2026-10-29T16:20:20Z",
       "isPublic": true
     },
     {
       "id": 6091683865,
       "number": 31,
       "title": "Rewards and progression",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "gameplay",
@@ -395,16 +397,16 @@
       "milestoneId": "m5-death-contracts",
       "milestoneTitle": "Death & Contracts",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/31",
-      "updatedAt": "2026-10-29T02:49:05Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T16:20:18Z",
+      "closedAt": "2026-10-29T16:20:18Z",
       "isPublic": true
     },
     {
       "id": 6091683640,
       "number": 30,
       "title": "Repeatable contracts",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "gameplay",
@@ -413,16 +415,16 @@
       "milestoneId": "m5-death-contracts",
       "milestoneTitle": "Death & Contracts",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/30",
-      "updatedAt": "2026-10-29T02:49:04Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T16:20:15Z",
+      "closedAt": "2026-10-29T16:20:15Z",
       "isPublic": true
     },
     {
       "id": 6091683457,
       "number": 29,
       "title": "Currency",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "gameplay",
@@ -431,16 +433,16 @@
       "milestoneId": "m5-death-contracts",
       "milestoneTitle": "Death & Contracts",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/29",
-      "updatedAt": "2026-10-29T02:49:03Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T16:20:12Z",
+      "closedAt": "2026-10-29T16:20:12Z",
       "isPublic": true
     },
     {
       "id": 6091683273,
       "number": 28,
       "title": "Recoverable death caches",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "gameplay",
@@ -450,16 +452,16 @@
       "milestoneId": "m5-death-contracts",
       "milestoneTitle": "Death & Contracts",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/28",
-      "updatedAt": "2026-10-29T02:49:02Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T16:20:09Z",
+      "closedAt": "2026-10-29T16:20:09Z",
       "isPublic": true
     },
     {
       "id": 6091683126,
       "number": 27,
       "title": "Hybrid death rules",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "gameplay",
@@ -468,16 +470,16 @@
       "milestoneId": "m5-death-contracts",
       "milestoneTitle": "Death & Contracts",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/27",
-      "updatedAt": "2026-10-29T02:49:01Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T16:20:06Z",
+      "closedAt": "2026-10-29T16:20:06Z",
       "isPublic": true
     },
     {
       "id": 6091683000,
       "number": 26,
       "title": "Persistent equipment and items",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "gameplay",
@@ -487,16 +489,16 @@
       "milestoneId": "m4-inventory-persistence",
       "milestoneTitle": "Inventory & Persistence",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/26",
-      "updatedAt": "2026-10-29T02:49:00Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T16:07:57Z",
+      "closedAt": "2026-10-29T16:07:57Z",
       "isPublic": true
     },
     {
       "id": 6091682753,
       "number": 25,
       "title": "Save/load validation",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "inventory",
@@ -505,16 +507,16 @@
       "milestoneId": "m4-inventory-persistence",
       "milestoneTitle": "Inventory & Persistence",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/25",
-      "updatedAt": "2026-10-29T02:48:59Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T16:07:56Z",
+      "closedAt": "2026-10-29T16:07:56Z",
       "isPublic": true
     },
     {
       "id": 6091682600,
       "number": 24,
       "title": "Inventory transfers",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "inventory",
@@ -523,16 +525,16 @@
       "milestoneId": "m4-inventory-persistence",
       "milestoneTitle": "Inventory & Persistence",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/24",
-      "updatedAt": "2026-10-29T02:48:58Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T16:07:55Z",
+      "closedAt": "2026-10-29T16:07:55Z",
       "isPublic": true
     },
     {
       "id": 6091682472,
       "number": 23,
       "title": "Permanent stash",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "inventory",
@@ -541,16 +543,16 @@
       "milestoneId": "m4-inventory-persistence",
       "milestoneTitle": "Inventory & Persistence",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/23",
-      "updatedAt": "2026-10-29T02:48:57Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T16:07:54Z",
+      "closedAt": "2026-10-29T16:07:53Z",
       "isPublic": true
     },
     {
       "id": 6091682183,
       "number": 22,
       "title": "Backpack UI",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "inventory",
@@ -560,16 +562,16 @@
       "milestoneId": "m4-inventory-persistence",
       "milestoneTitle": "Inventory & Persistence",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/22",
-      "updatedAt": "2026-10-29T02:48:56Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T16:07:52Z",
+      "closedAt": "2026-10-29T16:07:52Z",
       "isPublic": true
     },
     {
       "id": 6091682026,
       "number": 21,
       "title": "Loot containers",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "gameplay",
@@ -579,8 +581,8 @@
       "milestoneId": "m4-inventory-persistence",
       "milestoneTitle": "Inventory & Persistence",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/21",
-      "updatedAt": "2026-10-29T02:48:55Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T16:07:51Z",
+      "closedAt": "2026-10-29T16:07:51Z",
       "isPublic": true
     },
     {

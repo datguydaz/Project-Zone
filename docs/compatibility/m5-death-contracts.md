@@ -28,4 +28,4 @@ Bootstrap: `OutskirtsExpeditionBootstrap` on `Outskirts Region`.
 4. Leave Settlement (leave green safe volume) with items in backpack; die (fall / AI) — backpack spills to orange **CACHE**; respawn; reclaim at cache or WatchPost **Lost & Found**.
 5. **F8** prints phase / credits / contract / deathCache.
 
-Leave #27–#32 open until this checklist is confirmed in Play Mode.
+Play Mode confirmed — #27–#32 closed with Milestone 5.

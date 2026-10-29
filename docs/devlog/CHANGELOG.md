@@ -2,6 +2,33 @@
 
 Only verified work belongs here. Do not invent activity.
 
+## 2026-10-29 — Female Zombie animation playback fixed
+
+**Kind:** fix  
+**Milestone:** M3 follow-up / combat greybox  
+**Issue:** Outskirts NPCs  
+**Public:** yes
+
+Replaced one-controller-per-clip swaps with a Playables-driven Idle/Walk/Run/Attack/Death clip driver (`PzZombieAnimDriver`). Play Mode confirmed; death clip held on last frame (vendor import had loopTime enabled).
+
+## 2026-10-29 — Female Zombie Outskirts hostiles wired
+
+**Kind:** feature  
+**Milestone:** M3 follow-up / combat greybox  
+**Issue:** #11 (melee scene content) / Outskirts NPCs  
+**Public:** yes
+
+`OutskirtsNpcBootstrap` now spawns Female Zombie melee hostiles (chase + HQ damage volume) at Checkpoint and Industrial. Full Emerald Animation Profile for this pack remains a follow-up.
+
+## 2026-10-29 — Milestone 5 completed (Death & Contracts)
+
+**Kind:** milestone  
+**Milestone:** M5 Death & Contracts  
+**Issue:** #27–#32  
+**Public:** yes
+
+Play Mode confirmed hybrid death, death caches, wallet, contracts/rewards, and expedition loop on `PZ_Outskirts`. Issues #27–#32 and Milestone 5 closed.
+
 ## 2026-10-29 — M5 death & contracts adapters implemented (Play Mode pending)
 
 **Kind:** feature  
@@ -9,7 +36,7 @@ Only verified work belongs here. Do not invent activity.
 **Issue:** #27–#32  
 **Public:** yes
 
-Implemented hybrid safe-zone death, recoverable death caches, wallet, Settlement contract board/rewards, and expedition loop validator on `PZ_Outskirts`. Play Mode confirmation still required before closing issues.
+Implemented hybrid safe-zone death, recoverable death caches, wallet, Settlement contract board/rewards, and expedition loop validator on `PZ_Outskirts`. Superseded by Milestone 5 completion entry above.
 
 ## 2026-10-29 — Milestone 4 completed (Inventory & Persistence)
 

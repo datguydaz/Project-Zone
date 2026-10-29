@@ -34,7 +34,7 @@ No Emerald or Polymind source changes are required for the verified combat loop.
 | HQ firearms damage Emerald AI | #8 | Confirmed |
 | Emerald damage reaches HQ player health | #9 | Confirmed |
 | Detection / pursuit of HQ player | #10 | Confirmed |
-| Two-way ranged combat loop | #11 | Confirmed (melee deferred — no melee hostile in test scene) |
+| Two-way ranged combat loop | #11 | Ranged confirmed; melee hostiles now in Outskirts (Female Zombie greybox) — re-verify in Play Mode |
 | AI hit reaction, AI death, player death, post-death ignore | #12 | Confirmed |
 
 ## Accepted vendor noise (non-blocking)

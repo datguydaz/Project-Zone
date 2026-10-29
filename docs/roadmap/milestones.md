@@ -20,7 +20,7 @@ Authoritative **live** progress comes from GitHub Milestones + Issues after sync
 - HQ FPS to Emerald damage adapter — verified in play mode (#8)
 - Emerald to HQ FPS damage adapter — verified in play mode (#9)
 - Enemy detection and pursuit — verified in play mode (#10)
-- Melee and ranged combat validation — ranged verified in play mode (#11); melee deferred until a melee hostile is in the test scene
+- Melee and ranged combat validation — ranged verified (#11); Female Zombie melee hostiles added on Outskirts (Play Mode re-check for melee checkbox)
 - Death and hit reaction testing — verified in play mode (#12)
 - Package compatibility validation — verified in play mode (#13)
 
@@ -48,10 +48,10 @@ Authoritative **live** progress comes from GitHub Milestones + Issues after sync
 
 ## Milestone 5 — Death & Contracts
 
-- **Status:** In Progress (implementation ready — awaiting Play Mode confirmation for #27–#32)
-- Hybrid death rules — safe zone vs expedition spill (#27; Play Mode pending)
-- Recoverable death caches — world marker + Settlement claim (#28; Play Mode pending)
-- Currency — profile wallet (#29; Play Mode pending)
-- Repeatable contracts — Settlement board (#30; Play Mode pending)
-- Rewards and progression — credits + reputation on turn-in (#31; Play Mode pending)
-- Complete expedition gameplay loop — session phases + F8 validator (#32; Play Mode pending)
+- **Status:** Completed (Play Mode confirmed)
+- Hybrid death rules — safe zone vs expedition spill (#27)
+- Recoverable death caches — world marker + Settlement claim (#28)
+- Currency — profile wallet (#29)
+- Repeatable contracts — Settlement board (#30)
+- Rewards and progression — credits + reputation on turn-in (#31)
+- Complete expedition gameplay loop — session phases + F8 validator (#32)
