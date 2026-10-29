@@ -2,6 +2,15 @@
 
 Only verified work belongs here. Do not invent activity.
 
+## 2026-10-29 — Public hub copy cleaned; combat validation harness added
+
+**Kind:** note / feature  
+**Milestone:** M2 Emerald AI Integration  
+**Issue:** #11 (in progress)  
+**Public:** yes
+
+Public Development Hub activity/devlog copy no longer references vendor demo/template naming. Added `EmeraldCombatLoopValidator` for melee/ranged combat checklist tracking under issue #11.
+
 ## 2026-10-29 — Enemy detection and pursuit verified
 
 **Kind:** feature  

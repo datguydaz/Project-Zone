@@ -20,7 +20,7 @@ Authoritative **live** progress comes from GitHub Milestones + Issues after sync
 - HQ FPS to Emerald damage adapter — verified in play mode (#8)
 - Emerald to HQ FPS damage adapter — verified in play mode (#9)
 - Enemy detection and pursuit — verified in play mode (#10)
-- Melee and ranged combat validation — remaining (#11)
+- Melee and ranged combat validation — harness ready, awaiting Play Mode (#11)
 - Death and hit reaction testing — remaining (#12)
 - Package compatibility validation — remaining (#13)
 

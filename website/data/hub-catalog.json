@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "catalogKind": "planning",
-  "updatedAt": "2026-10-29T03:00:00.000Z",
+  "updatedAt": "2026-10-29T04:10:00.000Z",
   "repository": {
     "owner": "datguydaz",
     "name": "Project-Zone",
@@ -12,7 +12,7 @@
     "title": "PROJECT ZONE",
     "tagline": "Independent Unity 6 open-zone FPS RPG",
     "phase": "Emerald AI Integration",
-    "description": "PROJECT ZONE is an independent Unity 6 URP open-zone FPS RPG. HQ FPS Weapons 2.0 handles player combat and movement. Emerald AI 2026 handles NPC behaviour. Custom adapters in Assets/_ProjectZone bridge the two frameworks.",
+    "description": "PROJECT ZONE is an independent Unity 6 URP open-zone FPS RPG. Explore a dangerous exclusion zone, fight hostiles, scavenge gear, complete contracts, and return to safety. Built with HQ FPS Weapons 2.0 and Emerald AI 2026, bridged by custom Project Zone adapters.",
     "engine": "Unity 6 · URP · C#"
   },
   "publicPolicy": {
@@ -60,14 +60,14 @@
       "id": "m1-unity-hqfps-foundation",
       "number": 1,
       "title": "Unity & HQ FPS Foundation",
-      "description": "Establish the Unity 6 URP project, integrate HQ FPS Weapons 2.0, validate movement and weapons on the Firing Range, and lock project isolation rules.",
+      "description": "Establish the Unity 6 URP project, integrate HQ FPS Weapons 2.0, validate player movement and weapons, and lock project isolation rules.",
       "status": "completed",
       "scope": [
         "Unity 6 project setup",
         "URP configuration",
         "HQ FPS Weapons 2.0 integration",
         "Weapon and movement validation",
-        "Firing Range testing",
+        "Foundation combat validation",
         "Git repository initialization",
         "Permanent Cursor project rule"
       ],
@@ -76,7 +76,7 @@
         { "id": "m1-r2", "title": "URP configuration", "completed": true, "verification": "developer_confirmed" },
         { "id": "m1-r3", "title": "HQ FPS Weapons 2.0 integration", "completed": true, "verification": "developer_confirmed" },
         { "id": "m1-r4", "title": "Weapon and movement validation", "completed": true, "verification": "developer_confirmed" },
-        { "id": "m1-r5", "title": "Firing Range testing", "completed": true, "verification": "developer_confirmed" },
+        { "id": "m1-r5", "title": "Foundation combat validation", "completed": true, "verification": "developer_confirmed" },
         { "id": "m1-r6", "title": "Git repository initialization", "completed": true, "verification": "developer_confirmed" },
         { "id": "m1-r7", "title": "Permanent Cursor project rule", "completed": true, "verification": "developer_confirmed" }
       ],
@@ -186,7 +186,7 @@
       "id": "act-detection-adapter",
       "kind": "feature",
       "title": "Enemy detection and pursuit verified",
-      "summary": "EmeraldHqPlayerTargetAdapter confirmed in Play Mode. HQ player is detected and pursued by Emerald AI. Issue #10 closed.",
+      "summary": "Hostile Emerald AI units now detect and pursue the HQ FPS player through Project Zone target adapters. Issue #10 closed.",
       "date": "2026-10-29T03:05:00.000Z",
       "milestoneId": "m2-emerald-ai-integration",
       "url": "https://github.com/datguydaz/Project-Zone/issues/10",
@@ -196,7 +196,7 @@
       "id": "act-m1-complete",
       "kind": "milestone",
       "title": "Milestone 1 completed",
-      "summary": "Unity 6 URP foundation, HQ FPS Weapons 2.0 integration, Firing Range validation, and permanent Cursor isolation rule confirmed by the developer.",
+      "summary": "Unity 6 URP foundation, HQ FPS Weapons 2.0 integration, player movement and weapon validation, and project isolation rules confirmed.",
       "date": "2026-03-25T00:00:00.000Z",
       "milestoneId": "m1-unity-hqfps-foundation",
       "url": null,
@@ -205,8 +205,8 @@
     {
       "id": "act-damage-adapters",
       "kind": "feature",
-      "title": "Damage adapters verified in play mode",
-      "summary": "HQ FPS to Emerald and Emerald to HQ FPS damage bridges confirmed working in PZ_DamageAdapterTest, including flesh surface hits and player damage events.",
+      "title": "Two-way combat damage bridges verified",
+      "summary": "Player firearms damage Emerald AI hostiles, and Emerald attacks damage the HQ FPS player through Project Zone combat adapters.",
       "date": "2026-03-26T00:00:00.000Z",
       "milestoneId": "m2-emerald-ai-integration",
       "url": null,
@@ -219,7 +219,7 @@
       "date": "2026-10-29",
       "title": "Enemy detection and pursuit verified",
       "kind": "feature",
-      "body": "Issue #10 closed after Play Mode confirmation. Emerald AIs detect and pursue the HQ FPS player via EmeraldHqPlayerTargetAdapter.",
+      "body": "Issue #10 closed after Play Mode confirmation. Emerald AI hostiles detect and pursue the HQ FPS player via Project Zone target adapters.",
       "milestoneId": "m2-emerald-ai-integration",
       "public": true,
       "screenshots": []
@@ -229,7 +229,7 @@
       "date": "2026-03-25",
       "title": "Milestone 1 — Unity & HQ FPS Foundation",
       "kind": "milestone",
-      "body": "Confirmed complete: Unity 6 URP project setup, HQ FPS Weapons 2.0 integration, weapon and movement validation on the Firing Range, Git repository initialization, and the permanent Cursor project isolation rule.",
+      "body": "Confirmed complete: Unity 6 URP project setup, HQ FPS Weapons 2.0 integration, player movement and weapon validation, Git repository initialization, and the permanent Cursor project isolation rule.",
       "milestoneId": "m1-unity-hqfps-foundation",
       "public": true,
       "screenshots": []
@@ -237,9 +237,9 @@
     {
       "id": "log-2026-03-26-damage",
       "date": "2026-03-26",
-      "title": "Damage bridge playtest confirmed",
+      "title": "Two-way combat damage bridges verified",
       "kind": "feature",
-      "body": "Milestone 2 damage adapters are functional. Player shots register on Emerald AI via Hitbox-layer HQ damage volumes with Flesh surface mapping. Emerald damage reaches the player through the HQ damage bridge. Remaining Milestone 2 work: broader combat validation, death/hit reactions, and package compatibility sign-off.",
+      "body": "Milestone 2 damage adapters are functional. Player shots register on Emerald AI hostiles, and Emerald attacks reach the HQ FPS player health system. Remaining work: melee/ranged combat validation, death/hit reactions, and package compatibility sign-off.",
       "milestoneId": "m2-emerald-ai-integration",
       "public": true,
       "screenshots": []

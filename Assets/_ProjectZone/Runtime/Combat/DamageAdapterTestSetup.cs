@@ -5,22 +5,25 @@ using UnityEngine;
 namespace ProjectZone
 {
     /// <summary>
-    /// Wires Milestone 2 combat/detection adapters in the damage-adapter test scene
-    /// and spawns the HQ player through the scene's game mode.
-    /// Issues: #8/#9 (damage adapters), #10 (detection/pursuit bootstrap).
+    /// Wires Milestone 2 combat/detection adapters in the integration test scene
+    /// and waits for the HQ player spawned by the scene game mode.
+    /// Issues: #8/#9 (damage), #10 (detection), #11 (combat loop validation).
     /// </summary>
     [DefaultExecutionOrder(-50)]
     public sealed class DamageAdapterTestSetup : MonoBehaviour
     {
-        private const string ExamplePlayerName = "Example Player";
+        private const string LegacyPlayerName = "Example Player";
         private const string DemoCameraName = "Main Camera";
 
         [SerializeField]
         private bool _logDetectionDiagnostics = true;
 
+        [SerializeField]
+        private bool _enableCombatValidation = true;
+
         private IEnumerator Start()
         {
-            DisableNamedObject(ExamplePlayerName);
+            DisableNamedObject(LegacyPlayerName);
             DisableNamedObject(DemoCameraName);
             AttachAiDamageReceivers();
 
@@ -60,6 +63,15 @@ namespace ProjectZone
                 targetAdapter = player.gameObject.AddComponent<EmeraldHqPlayerTargetAdapter>();
 
             targetAdapter.Configure(player, _logDetectionDiagnostics);
+
+            if (!_enableCombatValidation)
+                return;
+
+            EmeraldCombatLoopValidator validator = player.GetComponent<EmeraldCombatLoopValidator>();
+            if (validator == null)
+                validator = player.gameObject.AddComponent<EmeraldCombatLoopValidator>();
+
+            validator.BindPlayer(player);
         }
     }
 }
