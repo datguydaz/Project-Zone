@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T14:18:34.961Z",
-  "syncedAt": "2026-10-29T14:18:34.961Z",
-  "lastSyncAttemptAt": "2026-10-29T14:18:34.961Z",
+  "generatedAt": "2026-10-29T14:32:17.348Z",
+  "syncedAt": "2026-10-29T14:32:17.348Z",
+  "lastSyncAttemptAt": "2026-10-29T14:32:17.348Z",
   "syncStatus": "ok",
   "syncError": null,
   "syncSource": "github_api",
@@ -164,7 +164,7 @@
       "number": 3,
       "title": "The Outskirts",
       "description": "First playable region: settlement, checkpoint, industrial building, underground entrance, NPCs, atmosphere.",
-      "status": "not_started",
+      "status": "in_progress",
       "githubMilestoneNumber": 3,
       "githubMilestoneUrl": "https://github.com/datguydaz/Project-Zone/milestone/3",
       "scope": [
@@ -180,7 +180,7 @@
         {
           "id": "m3-r1",
           "title": "First playable region",
-          "completed": false
+          "completed": true
         },
         {
           "id": "m3-r2",
@@ -214,7 +214,7 @@
         }
       ],
       "blockers": [],
-      "lastUpdated": "2026-10-29T02:48:54Z",
+      "lastUpdated": "2026-10-29T14:32:04Z",
       "issueIds": [
         20,
         19,
@@ -224,11 +224,11 @@
         15,
         14
       ],
-      "progressPercent": 0,
+      "progressPercent": 14,
       "progressMode": "issue_based",
       "progressVerified": true,
-      "openCount": 7,
-      "closedCount": 0,
+      "openCount": 6,
+      "closedCount": 1,
       "blockedCount": 0
     },
     {
@@ -696,8 +696,8 @@
       "id": 6091680819,
       "number": 14,
       "title": "First playable region layout",
-      "state": "open",
-      "status": "open",
+      "state": "closed",
+      "status": "completed",
       "labels": [
         "milestone",
         "world",
@@ -706,8 +706,8 @@
       "milestoneId": "m3-the-outskirts",
       "milestoneTitle": "The Outskirts",
       "htmlUrl": "https://github.com/datguydaz/Project-Zone/issues/14",
-      "updatedAt": "2026-10-29T02:48:49Z",
-      "closedAt": null,
+      "updatedAt": "2026-10-29T14:32:04Z",
+      "closedAt": "2026-10-29T14:32:04Z",
       "isPublic": true
     },
     {
@@ -954,6 +954,15 @@
     }
   ],
   "activity": [
+    {
+      "id": "act-outskirts-greybox",
+      "kind": "feature",
+      "title": "Outskirts region greybox verified",
+      "summary": "Play Mode confirmed PZ_Outskirts walkable greybox (Settlement, Checkpoint, Industrial, UndergroundEntrance). Issue #14 closed.",
+      "date": "2026-10-29T14:31:00.000Z",
+      "milestoneId": "m3-the-outskirts",
+      "url": "https://github.com/datguydaz/Project-Zone/issues/14"
+    },
     {
       "id": "act-m2-package-compat",
       "kind": "milestone",

@@ -2,6 +2,60 @@
 
 Only verified work belongs here. Do not invent activity.
 
+## 2026-10-29 — Outskirts NPCs, navigation, and atmosphere
+
+**Kind:** feature / milestone  
+**Milestone:** M3 The Outskirts  
+**Issue:** #19 / #20  
+**Public:** yes
+
+Added `OutskirtsNpcBootstrap` (NavMesh bake, settlement civilian NavMesh placeholder, Emerald hostiles at Checkpoint/Industrial, HQ target adapter wiring) and `OutskirtsAtmosphereBootstrap` (dusk sun, linear fog, URP color/vignette volume, dust particles, ambient audio hook). Greybox/art polish remains later. Awaiting Play Mode confirm to close #19/#20 and Milestone 3.
+
+## 2026-10-29 — Underground entrance greybox verified
+
+**Kind:** feature  
+**Milestone:** M3 The Outskirts  
+**Issue:** #18  
+**Public:** yes
+
+Play Mode confirmed underground entrance greybox in `PZ_Outskirts` (ramp, bunker/hatch, tunnel stub, transition marker). Issue #18 closed. Real underground load and art pass later.
+
+## 2026-10-29 — Industrial building greybox verified
+
+**Kind:** feature  
+**Milestone:** M3 The Outskirts  
+**Issue:** #17  
+**Public:** yes
+
+Play Mode confirmed industrial greybox in `PZ_Outskirts` (warehouse bay, dock, tanks, north gate). Issue #17 closed. Greybox stands in for a later art/prop pass.
+
+## 2026-10-29 — Abandoned checkpoint greybox verified
+
+**Kind:** feature  
+**Milestone:** M3 The Outskirts  
+**Issue:** #16  
+**Public:** yes
+
+Play Mode confirmed abandoned checkpoint greybox in `PZ_Outskirts` (road lane, ruined gate, booth, barriers/cover). Issue #16 closed. Greybox stands in for a later art/prop pass.
+
+## 2026-10-29 — Safe settlement greybox verified
+
+**Kind:** feature  
+**Milestone:** M3 The Outskirts  
+**Issue:** #15  
+**Public:** yes
+
+Play Mode confirmed safe settlement hub in `PZ_Outskirts` (perimeter, east gate, courtyard, habs, shed, watch post, SafeZoneVolume). Issue #15 closed. Greybox stands in for a later art/prop pass.
+
+## 2026-10-29 — Outskirts region greybox verified
+
+**Kind:** feature  
+**Milestone:** M3 The Outskirts  
+**Issue:** #14  
+**Public:** yes
+
+Play Mode confirmed `PZ_Outskirts` greybox: HQ GameMode spawn and walkable Settlement → Checkpoint → Industrial → UndergroundEntrance layout. Issue #14 closed.
+
 ## 2026-10-29 — Package compatibility signed off; M2 complete
 
 **Kind:** feature / milestone  
