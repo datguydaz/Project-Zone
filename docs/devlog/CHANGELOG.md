@@ -2,6 +2,15 @@
 
 Only verified work belongs here. Do not invent activity.
 
+## 2026-10-29 — M5 death & contracts adapters implemented (Play Mode pending)
+
+**Kind:** feature  
+**Milestone:** M5 Death & Contracts  
+**Issue:** #27–#32  
+**Public:** yes
+
+Implemented hybrid safe-zone death, recoverable death caches, wallet, Settlement contract board/rewards, and expedition loop validator on `PZ_Outskirts`. Play Mode confirmation still required before closing issues.
+
 ## 2026-10-29 — Milestone 4 completed (Inventory & Persistence)
 
 **Kind:** milestone  

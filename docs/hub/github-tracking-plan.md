@@ -25,7 +25,7 @@ For the private repo, hub sync publishes only issues labeled `public` (plus non-
 | 2 | Emerald AI Integration | open | In Progress |
 | 3 | The Outskirts | open | Not Started |
 | 4 | Inventory & Persistence | closed | Completed |
-| 5 | Death & Contracts | open | Not Started |
+| 5 | Death & Contracts | open | In Progress |
 
 ## Issues
 

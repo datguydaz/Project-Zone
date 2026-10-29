@@ -161,7 +161,7 @@
       "number": 5,
       "title": "Death & Contracts",
       "description": "Complete the expedition loop with hybrid death rules, recoverable caches, currency, repeatable contracts, and progression rewards.",
-      "status": "not_started",
+      "status": "in_progress",
       "scope": [
         "Hybrid death rules",
         "Recoverable death caches",
@@ -171,14 +171,14 @@
         "Complete expedition gameplay loop"
       ],
       "requirements": [
-        { "id": "m5-r1", "title": "Hybrid death rules", "completed": false, "verification": "unverified" },
-        { "id": "m5-r2", "title": "Recoverable death caches", "completed": false, "verification": "unverified" },
-        { "id": "m5-r3", "title": "Currency", "completed": false, "verification": "unverified" },
-        { "id": "m5-r4", "title": "Repeatable contracts", "completed": false, "verification": "unverified" },
-        { "id": "m5-r5", "title": "Rewards and progression", "completed": false, "verification": "unverified" },
-        { "id": "m5-r6", "title": "Complete expedition gameplay loop", "completed": false, "verification": "unverified" }
+        { "id": "m5-r1", "title": "Hybrid death rules", "completed": false, "verification": "implementation_ready" },
+        { "id": "m5-r2", "title": "Recoverable death caches", "completed": false, "verification": "implementation_ready" },
+        { "id": "m5-r3", "title": "Currency", "completed": false, "verification": "implementation_ready" },
+        { "id": "m5-r4", "title": "Repeatable contracts", "completed": false, "verification": "implementation_ready" },
+        { "id": "m5-r5", "title": "Rewards and progression", "completed": false, "verification": "implementation_ready" },
+        { "id": "m5-r6", "title": "Complete expedition gameplay loop", "completed": false, "verification": "implementation_ready" }
       ],
-      "blockers": []
+      "blockers": ["Awaiting Play Mode confirmation on PZ_Outskirts before closing #27–#32"]
     }
   ],
   "activity": [

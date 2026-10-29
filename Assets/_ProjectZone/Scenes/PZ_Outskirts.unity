@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 200006}
   - component: {fileID: 200007}
   - component: {fileID: 200008}
+  - component: {fileID: 200009}
   m_Layer: 0
   m_Name: Outskirts Region
   m_TagString: Untagged
@@ -396,6 +397,22 @@ MonoBehaviour:
   _ammoCount: 48
   _selectHolsterSlot: 1
   _grantOnStart: 1
+--- !u!114 &200009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c2d3e4f5a6478899aabbccddeeff5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnOnStart: 1
+  _ensureServices: 1
+  _ensureValidator: 1
+  _builtContentVersion: 0
 --- !u!1001 &300001
 PrefabInstance:
   m_ObjectHideFlags: 0

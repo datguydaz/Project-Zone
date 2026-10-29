@@ -239,13 +239,14 @@ namespace ProjectZone
             go.AddComponent<SaveableObject>();
         }
 
-        private static GameObject CreateInteractableMarker(
+        /// <summary>Shared greybox interactable marker for inventory / death / contracts terminals.</summary>
+        public static GameObject CreateInteractableMarker(
             Transform parent,
             string objectName,
             Vector3 worldPosition,
             Vector3 scale,
             Color color,
-            string beaconLabel)
+            string beaconLabel = null)
         {
             // Root stays unscaled so HQ prompt CenterOffset maps cleanly to world (scaled
             // primitives skew Interactable.Awake bounds → prompt floats away from the object).
