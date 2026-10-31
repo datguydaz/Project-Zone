@@ -177,6 +177,13 @@ namespace ProjectZone
 
             [Range(0.05f, 1f)]
             public float IndoorSunMultiplier = 0.3f;
+
+            [Header("Weather (#58 — light rain A/B only)")]
+            [Tooltip("Off = no weather. LightRain = camera-local streaks for FPS A/B. No wetness/decals.")]
+            public PzWeatherMode WeatherMode = PzWeatherMode.Off;
+
+            [Range(0f, 1f)]
+            public float RainIntensity = 0.55f;
         }
 
         [System.Serializable]

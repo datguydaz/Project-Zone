@@ -2,6 +2,14 @@
 
 Only verified work belongs here. Do not invent activity.
 
+## 2026-10-31 — Lightweight weather A/B prototype (#58)
+
+**Kind:** atmosphere / performance  
+**Milestone:** M7  
+**Public:** yes
+
+Added optional camera-local `LightRain` via `PzWeatherDirector` (Settings → Atmosphere → Weather Mode). Evaluation doc `docs/environment/WEATHER_EVAL.md`. Issue #58 stays open until Off vs Rain FPS A/B decision (accept/defer/reject).
+
 ## 2026-10-31 — Indoor/outdoor atmosphere transitions (#57)
 
 **Kind:** atmosphere  

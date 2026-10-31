@@ -22,7 +22,8 @@
 | #55 | Primary foliage workflow | **Closed** — ~280 FPS with foliage under HAZE Overcast |
 | #56 | Ambient audio zones | **Closed** — Outdoor ↔ Settlement confirmed |
 | #57 | Indoor/outdoor atmosphere transitions | **Closed** — Outdoor ↔ Sheltered contrast confirmed |
-| #58–#60 | Weather / storytelling / checkpoint | Open |
+| #58 | Lightweight weather eval | **In progress** — LightRain A/B prototype; need FPS numbers |
+| #59–#60 | Storytelling / checkpoint | Open |
 
 ## Shipped (agents)
 
@@ -36,4 +37,5 @@
 ## Needs developer
 
 - #53: optional Night Play glance, then close
-- Next: #58 lightweight weather eval (await approval)
+- #58: `PzWeatherDirector` LightRain toggle — Play A/B FPS then accept/defer/reject
+- Next after #58 decision: #59 storytelling (partially shipped) / #60 checkpoint

@@ -86,6 +86,7 @@ namespace ProjectZone
             if (_ensureAmbientAudio)
                 PzAmbientAudioDirector.EnsureInScene(transform);
             PzAtmosphereTransitionDirector.EnsureInScene(transform);
+            PzWeatherDirector.EnsureInScene(transform);
             if (_ensureDustHints)
                 EnsureDustHints();
         }

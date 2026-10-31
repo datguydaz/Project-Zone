@@ -289,8 +289,8 @@ namespace ProjectZone.Editor
         private void DrawAtmosphereTab()
         {
             DrawPropertyPanel("_atmosphere", "Atmosphere",
-                "Day/Night + HAZE (#54) + post FX. Space transitions (#57): Outdoor / Sheltered / Indoor " +
-                "lerp haze, ambient, exposure, sun — tune under Space transitions.");
+                "Day/Night + HAZE (#54) + post FX. Space transitions (#57). " +
+                "Weather (#58): set Weather Mode = LightRain for FPS A/B (Off vs rain); note Editor FPS.");
 
             GUILayout.Space(10f);
             PzSettingsGui.DrawSection("Space transitions (#57)");
