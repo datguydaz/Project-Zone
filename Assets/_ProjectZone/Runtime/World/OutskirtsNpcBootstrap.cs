@@ -18,20 +18,20 @@ namespace ProjectZone
     {
         private const string RootName = "Outskirts_NPCs";
         private const string DefaultZombiePrefabPath =
-            "Assets/ZombieFemaleAnimations/Prefabs/FemaleZombie.prefab";
+            "Assets/04_Monsters/ZombieFemaleAnimations/Prefabs/FemaleZombie.prefab";
         private const string DefaultEmeraldRangedPrefabPath =
-            "Assets/Emerald AI/Demo/Demo Source/Demo Abilities/Ability Source/Other/Example Summoned AI 1.prefab";
+            "Assets/01_System/Emerald AI/Demo/Demo Source/Demo Abilities/Ability Source/Other/Example Summoned AI 1.prefab";
 
         private const string IdleFbxPath =
-            "Assets/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Idle01.FBX";
+            "Assets/04_Monsters/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Idle01.FBX";
         private const string WalkFbxPath =
-            "Assets/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Walk01Forward.FBX";
+            "Assets/04_Monsters/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Walk01Forward.FBX";
         private const string RunFbxPath =
-            "Assets/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Run01ForwardInPlace.FBX";
+            "Assets/04_Monsters/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Run01ForwardInPlace.FBX";
         private const string AttackFbxPath =
-            "Assets/ZombieFemaleAnimations/Art/Animations/ZombieFemale_AttackInPlace01.FBX";
+            "Assets/04_Monsters/ZombieFemaleAnimations/Art/Animations/ZombieFemale_AttackInPlace01.FBX";
         private const string DeathFbxPath =
-            "Assets/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Death01.FBX";
+            "Assets/04_Monsters/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Death01.FBX";
 
         [SerializeField]
         private GameObject _zombiePrefab;
@@ -69,6 +69,7 @@ namespace ProjectZone
         private void Start()
         {
             ResolvePrefabs();
+            ApplyWorldFlagsFromSettings();
 
             if (_bakeNavMeshOnStart)
                 BakeNavMesh();
@@ -89,6 +90,8 @@ namespace ProjectZone
 
         private void ResolvePrefabs()
         {
+            ApplyAssetRefsFromSettings();
+
 #if UNITY_EDITOR
             if (_zombiePrefab == null)
             {
@@ -115,6 +118,43 @@ namespace ProjectZone
             if (_zombieDeathClip == null)
                 _zombieDeathClip = LoadClip(DeathFbxPath, "ZombieFemale_Death01");
 #endif
+        }
+
+        private void ApplyAssetRefsFromSettings()
+        {
+            PzProjectSettings settings = PzProjectSettings.Get();
+            if (settings == null)
+                return;
+
+            PzProjectSettings.ZombieSettings zombies = settings.Zombies;
+
+            if (_zombiePrefab == null && zombies.FemaleZombiePrefab != null)
+                _zombiePrefab = zombies.FemaleZombiePrefab;
+            if (_emeraldRangedPrefab == null && zombies.EmeraldRangedFallbackPrefab != null)
+                _emeraldRangedPrefab = zombies.EmeraldRangedFallbackPrefab;
+
+            if (_zombieIdleClip == null && zombies.IdleClip != null)
+                _zombieIdleClip = zombies.IdleClip;
+            if (_zombieWalkClip == null && zombies.WalkClip != null)
+                _zombieWalkClip = zombies.WalkClip;
+            if (_zombieRunClip == null && zombies.RunClip != null)
+                _zombieRunClip = zombies.RunClip;
+            if (_zombieAttackClip == null && zombies.AttackClip != null)
+                _zombieAttackClip = zombies.AttackClip;
+            if (_zombieDeathClip == null && zombies.DeathClip != null)
+                _zombieDeathClip = zombies.DeathClip;
+        }
+
+        private void ApplyWorldFlagsFromSettings()
+        {
+            PzProjectSettings.WorldSettings world = PzProjectSettings.Get()?.World;
+            if (world == null)
+                return;
+
+            _spawnOnStart = world.SpawnNpcsOnStart;
+            _bakeNavMeshOnStart = world.BakeNavMeshOnStart;
+            _wirePlayerTargetAdapter = world.WirePlayerTargetAdapter;
+            _spawnEmeraldRangedAtIndustrial = world.SpawnEmeraldRangedAtIndustrial;
         }
 
 #if UNITY_EDITOR

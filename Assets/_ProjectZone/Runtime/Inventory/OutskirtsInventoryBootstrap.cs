@@ -18,7 +18,7 @@ namespace ProjectZone
         private const string StashName = "Stash_Settlement_Courtyard";
         private const int ContentVersion = 2; // bump when marker layout / prompt anchors change
         private const string DefaultLootTablePath =
-            "Assets/PolymindGames/FPSCore/Data/Inventory/LootTables/FPS_WeaponsAndAmmo.asset";
+            "Assets/01_System/PolymindGames/FPSCore/Data/Inventory/LootTables/FPS_WeaponsAndAmmo.asset";
         private const string LevelDefinitionPath =
             "Assets/_ProjectZone/Data/PZ_Outskirts_LevelDefinition.asset";
 
@@ -71,6 +71,9 @@ namespace ProjectZone
 
             if (GetComponent<PzPlayerStartingLoadout>() == null)
                 gameObject.AddComponent<PzPlayerStartingLoadout>();
+
+            if (GetComponent<PzForceClothedArms>() == null)
+                gameObject.AddComponent<PzForceClothedArms>();
         }
 
 #if UNITY_EDITOR

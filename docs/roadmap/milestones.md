@@ -39,30 +39,30 @@ Authoritative **live** progress comes from GitHub Milestones + Issues after sync
 
 ## Milestone 5.5 — Technical Foundation & Asset Readiness
 
-- **Status:** Findings ready — awaiting developer acceptance / M6 approval
-- **Gate:** Stop for approval before M6
+- **Status:** Completed (accepted 2026-10-30)
 - Report: `docs/milestones/m5_5-findings-report.md`
-- Issues #33–#40 remain open until you confirm acceptance (docs alone ≠ close)
-- Audit scenes/packages/custom systems
-- Region/scene-loading architecture proposal
-- Asset import conventions + registry
-- Lighting/terrain/weather strategy
-- Performance targets + profiling procedure (measurements still pending)
-- Emerald multi-region readiness
-- Git LFS / save versioning / licensing audit
-- Technical decision log + roadmap sync
-- M1–M5 verification matrix
+- GitHub issues #33–#40 closed; milestone closed
+- Follow-ups outside M5.5: BASELINE.md reference PC, optional FPS measure (PERF−), explicit M6 approve
+- Delivered: audit notes, asset registry, pipeline standards, world/AI/persistence drafts, backup policy, verification matrix, hub tracking
 
 ## Milestone 6 — World Architecture & Environment Pipeline
 
-- **Status:** Planned
-- Settlement, checkpoint, industrial, underground production layout
-- Modular env standards, LOD/culling, NavMesh, persistence, traversal benchmarks
+- **Status:** Completed (2026-10-30)
+- Progress: `docs/milestones/m6-progress.md`
+- Issues #41–#50 closed (#49 deferred to M13)
+- **Reorder (2026-10-30):** Outskirts **environment art dress** is deferred until **after M7**. Greybox + zone roots stay; dense prop/foliage dress is not a M6/M7 blocker.
 
 ## Milestone 7 — Atmosphere, Lighting & Audio
 
-- **Status:** Planned
-- Unified lighting, day/night, HAZE vs simple fog, foliage workflow, audio zones, atmosphere checkpoint
+- **Status:** In Progress (started 2026-10-30) — before environment art dress
+- Progress: `docs/milestones/m7-progress.md`
+- Strategy: `docs/architecture/LIGHTING_WEATHER_STRATEGY.md`
+- Closed: #51–#52, #54–#57 (HAZE, foliage, audio, space transitions)
+- Open: #53 Night (optional)
+- Next: #58 weather eval (await approval)
+- Remaining: #53 (optional), #58–#60
+- **Order:** lock look/feel on greybox → then resume Outskirts environment art
+- GitHub milestone: `7 — Atmosphere, Lighting & Audio`
 
 ## Milestone 8 — Living World & Dynamic Encounters
 

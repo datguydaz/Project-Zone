@@ -1,8 +1,9 @@
 # M5.5 Findings Report
 
 **Date:** 2026-10-29  
+**Accepted:** 2026-10-30 (developer)  
 **Milestone:** 5.5 — Technical Foundation & Asset Readiness  
-**Gate:** Stop — do not begin M6 without approval  
+**Gate:** M5.5 accepted. Do not begin M6 without explicit approval.
 
 ## What was done
 
@@ -37,7 +38,7 @@ See `docs/verification/M1-M5_VERIFICATION_MATRIX.md`.
 | --- | --- | --- |
 | No measured FPS | Critical | Targets documented only |
 | Huge untracked/imported vendor tree | Critical | Prefer registry-driven productionizing; LFS gaps |
-| Name clashes / vendor Unity 6 APIs | Medium | ALP `LevelManager`; Toby `GetEntityId` patch |
+| Name clashes / vendor Unity 6 APIs | Medium | ALP `LevelManager` namespaced; Toby `GetEntityId` patch |
 | Single-scene only | Medium | Multi-region untested |
 | Fantasy packs present | Medium | Marked Excluded — do not use |
 
@@ -55,23 +56,18 @@ See `docs/verification/M1-M5_VERIFICATION_MATRIX.md`.
 | Technical audit | Done (static) |
 | Asset registry | Seeded |
 | Performance baseline procedure | Done; **measurements pending** |
-| World architecture proposal | Draft for approval |
-| Asset pipeline standards | Draft for approval |
+| World architecture proposal | Draft — accepted with M5.5 |
+| Asset pipeline standards | Draft — accepted with M5.5 |
 | AI readiness | Done |
 | Persistence assessment | Done |
 | Decision log | Updated |
 | Verification matrix M1–M5 | Done |
-| GitHub + hub tracking | Live (local snapshot synced; Pages via Actions on push) |
+| GitHub + hub tracking | Live |
+| Developer acceptance | **Accepted 2026-10-30** (issues #33–#40 closed) |
 
-## Acceptance vs remaining developer actions
+## Follow-ups (not M5.5 blockers)
 
-M5.5 **documentation/tracking** is complete enough to gate M6.  
-Still required for full acceptance sign-off:
-
-1. Approve pipeline standards + registry statuses.  
-2. Fill reference PC in `docs/performance/BASELINE.md`.  
-3. Optional: first standalone baseline.  
-4. Choose loading approach (single-scene through M7 vs early additive underground).  
-5. Explicit **approve M6** to start environment productionizing.
-
-**Issues #33–#40 remain open** until you confirm the above (agents must not close them solely because docs exist).
+1. Fill reference PC in `docs/performance/BASELINE.md`.
+2. Optional: first standalone FPS baseline (PERF−).
+3. Choose loading approach when starting M6 (single-scene through M7 vs early additive underground).
+4. Explicit **approve M6** to start environment productionizing.

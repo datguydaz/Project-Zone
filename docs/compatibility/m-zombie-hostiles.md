@@ -1,6 +1,6 @@
 # Female Zombie hostiles (Outskirts)
 
-**Pack:** `Assets/ZombieFemaleAnimations/` (FemaleZombie prefab + per-clip animator controllers)  
+**Pack:** `Assets/04_Monsters/ZombieFemaleAnimations/` (FemaleZombie prefab + per-clip animator controllers)  
 **Scene:** `PZ_Outskirts` via `OutskirtsNpcBootstrap`
 
 ## Approach

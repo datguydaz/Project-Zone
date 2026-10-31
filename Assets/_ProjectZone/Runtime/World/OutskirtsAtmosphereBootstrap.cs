@@ -1,20 +1,38 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.Rendering.Universal;
 
 namespace ProjectZone
 {
     /// <summary>
-    /// Milestone 3 / issue #20 — lighting, fog, and ambient atmosphere for The Outskirts.
+    /// Outskirts atmosphere entry — applies the active M7 lighting profile on enable.
     /// </summary>
     [DefaultExecutionOrder(-40)]
     [DisallowMultipleComponent]
     public sealed class OutskirtsAtmosphereBootstrap : MonoBehaviour
     {
-        private const string RootName = "Outskirts_Atmosphere";
+        private const string OvercastDayResource = "Atmosphere/PZ_Lighting_OvercastDay";
+        private const string NightResource = "Atmosphere/PZ_Lighting_Night";
 
         [SerializeField]
         private bool _applyOnEnable = true;
+
+        [SerializeField]
+        private PzLightingPresetId _activePreset = PzLightingPresetId.OvercastDay;
+
+        [SerializeField]
+        private PzLightingProfile _overcastDay;
+
+        [SerializeField]
+        private PzLightingProfile _night;
+
+        [SerializeField]
+        private bool _ensureAmbientAudio = true;
+
+        [SerializeField]
+        private bool _ensureDustHints = true;
+
+        public PzLightingPresetId ActivePreset => _activePreset;
 
         private void OnEnable()
         {
@@ -22,143 +40,109 @@ namespace ProjectZone
                 ApplyAtmosphere();
         }
 
+        private void Start()
+        {
+            // HQFPS player camera often spawns after atmosphere OnEnable — re-push CAS/volume.
+            if (Application.isPlaying)
+                StartCoroutine(ReapplyAfterPlayerCamera());
+        }
+
+        private IEnumerator ReapplyAfterPlayerCamera()
+        {
+            yield return null;
+            yield return null;
+            // EnsureHqfpsPostVolume runs inside Apply — binds Polymind ActiveVolume for pause FX.
+            ApplyAtmosphere();
+
+            // Player camera / UI may appear a moment later — one more push after player exists.
+            float elapsed = 0f;
+            while (elapsed < 4f && PolymindGames.Player.AllPlayers.Count == 0)
+            {
+                elapsed += Time.unscaledDeltaTime;
+                yield return null;
+            }
+
+            yield return null;
+            ApplyAtmosphere();
+        }
+
         [ContextMenu("Apply Outskirts Atmosphere")]
         public void ApplyAtmosphere()
         {
-            ApplyRenderSettings();
-            EnsureSun();
-            EnsureVolume();
-            EnsureAmbientAudio();
-            EnsureDustHints();
-        }
-
-        private static void ApplyRenderSettings()
-        {
-            RenderSettings.fog = true;
-            RenderSettings.fogMode = FogMode.Linear;
-            RenderSettings.fogColor = new Color(0.48f, 0.52f, 0.55f);
-            RenderSettings.fogStartDistance = 25f;
-            RenderSettings.fogEndDistance = 140f;
-            RenderSettings.ambientMode = AmbientMode.Trilight;
-            RenderSettings.ambientSkyColor = new Color(0.42f, 0.46f, 0.52f);
-            RenderSettings.ambientEquatorColor = new Color(0.28f, 0.3f, 0.32f);
-            RenderSettings.ambientGroundColor = new Color(0.12f, 0.11f, 0.1f);
-            RenderSettings.ambientIntensity = 1f;
-            RenderSettings.subtractiveShadowColor = new Color(0.3f, 0.28f, 0.32f);
-        }
-
-        private void EnsureSun()
-        {
-            Light sun = null;
-            Light[] lights = FindObjectsByType<Light>(FindObjectsInactive.Exclude);
-            for (int i = 0; i < lights.Length; i++)
+            ResolveProfiles();
+            SyncActivePresetFromSettings();
+            PzLightingProfile profile = GetActiveProfile();
+            if (profile == null)
             {
-                if (lights[i].type == LightType.Directional)
-                {
-                    sun = lights[i];
-                    break;
-                }
-            }
-
-            if (sun == null)
-            {
-                var go = new GameObject("Directional Light");
-                go.transform.SetParent(transform, false);
-                sun = go.AddComponent<Light>();
-                sun.type = LightType.Directional;
-            }
-
-            sun.color = new Color(1f, 0.82f, 0.65f);
-            sun.intensity = 0.95f;
-            sun.shadows = LightShadows.Soft;
-            sun.transform.rotation = Quaternion.Euler(28f, -35f, 0f);
-            RenderSettings.sun = sun;
-        }
-
-        private void EnsureVolume()
-        {
-            Transform existing = transform.Find(RootName);
-            GameObject root;
-            if (existing != null)
-            {
-                root = existing.gameObject;
+                Debug.LogWarning(
+                    "[ProjectZone][M7] No lighting profile in Resources/Atmosphere — auto-sync should create them on Editor load.",
+                    this);
             }
             else
             {
-                root = new GameObject(RootName);
-                root.transform.SetParent(transform, false);
+                PzLightingApplicator.Apply(profile, transform);
             }
 
-            Volume volume = root.GetComponent<Volume>();
-            if (volume == null)
-                volume = root.AddComponent<Volume>();
-
-            volume.isGlobal = true;
-            volume.priority = 10f;
-
-            if (volume.profile == null)
-                volume.profile = ScriptableObject.CreateInstance<VolumeProfile>();
-
-            if (!volume.profile.TryGet(out ColorAdjustments color))
-                color = volume.profile.Add<ColorAdjustments>(true);
-
-            color.active = true;
-            color.postExposure.overrideState = true;
-            color.postExposure.value = -0.15f;
-            color.contrast.overrideState = true;
-            color.contrast.value = 8f;
-            color.colorFilter.overrideState = true;
-            color.colorFilter.value = new Color(1f, 0.95f, 0.88f);
-
-            if (!volume.profile.TryGet(out Vignette vignette))
-                vignette = volume.profile.Add<Vignette>(true);
-
-            vignette.active = true;
-            vignette.intensity.overrideState = true;
-            vignette.intensity.value = 0.22f;
-            vignette.smoothness.overrideState = true;
-            vignette.smoothness.value = 0.45f;
-
-            if (!volume.profile.TryGet(out WhiteBalance whiteBalance))
-                whiteBalance = volume.profile.Add<WhiteBalance>(true);
-
-            whiteBalance.active = true;
-            whiteBalance.temperature.overrideState = true;
-            whiteBalance.temperature.value = 8f;
+            if (_ensureAmbientAudio)
+                PzAmbientAudioDirector.EnsureInScene(transform);
+            PzAtmosphereTransitionDirector.EnsureInScene(transform);
+            if (_ensureDustHints)
+                EnsureDustHints();
         }
 
-        private void EnsureAmbientAudio()
+        private void SyncActivePresetFromSettings()
         {
-            Transform root = transform.Find(RootName);
-            if (root == null)
+            PzProjectSettings settings = PzProjectSettings.Get();
+            if (settings?.Atmosphere == null)
                 return;
 
-            Transform audioTransform = root.Find("AmbientAudio");
-            GameObject audioGo;
-            if (audioTransform != null)
-            {
-                audioGo = audioTransform.gameObject;
-            }
-            else
-            {
-                audioGo = new GameObject("AmbientAudio");
-                audioGo.transform.SetParent(root, false);
-            }
+            _activePreset = settings.Atmosphere.ActivePreset;
+        }
 
-            AudioSource source = audioGo.GetComponent<AudioSource>();
-            if (source == null)
-                source = audioGo.AddComponent<AudioSource>();
+        [ContextMenu("Apply Overcast Day")]
+        public void ApplyOvercastDay()
+        {
+            _activePreset = PzLightingPresetId.OvercastDay;
+            ApplyAtmosphere();
+        }
 
-            source.loop = true;
-            source.playOnAwake = false;
-            source.spatialBlend = 0f;
-            source.volume = 0.25f;
-            // Clip intentionally unset — assign an Outskirts bed when audio assets exist.
+        [ContextMenu("Apply Night")]
+        public void ApplyNight()
+        {
+            _activePreset = PzLightingPresetId.Night;
+            ApplyAtmosphere();
+        }
+
+        public void SetPreset(PzLightingPresetId preset, bool apply = true)
+        {
+            _activePreset = preset;
+            if (apply)
+                ApplyAtmosphere();
+        }
+
+        public PzLightingProfile GetActiveProfile()
+        {
+            return _activePreset switch
+            {
+                PzLightingPresetId.Night => _night != null ? _night : _overcastDay,
+                _ => _overcastDay
+            };
+        }
+
+        private void ResolveProfiles()
+        {
+            // Always prefer Resources so Editor auto-sync (code → asset) wins over stale refs.
+            PzLightingProfile day = Resources.Load<PzLightingProfile>(OvercastDayResource);
+            PzLightingProfile night = Resources.Load<PzLightingProfile>(NightResource);
+            if (day != null)
+                _overcastDay = day;
+            if (night != null)
+                _night = night;
         }
 
         private void EnsureDustHints()
         {
-            Transform root = transform.Find(RootName);
+            Transform root = transform.Find(PzLightingApplicator.VolumeChildName);
             if (root == null)
                 return;
 

@@ -10,8 +10,8 @@
 |---|---|---|---|
 | Engine | Unity 6 (`6000.6.7f1`) | `ProjectSettings/ProjectVersion.txt` | URP project |
 | Render pipeline | URP `17.6.0` | `Packages/manifest.json` | Matches Unity 6 URP |
-| FPS | HQ FPS Weapons 2.0 (PolymindGames) | `Assets/PolymindGames/` (`FPSCore` + `HQFPS`) | Vendor asset; do not edit for adapters |
-| AI | Emerald AI (2024/2026 asset line in project) | `Assets/Emerald AI/` | Wiki shortcut still labeled 2024; project rule names Emerald AI 2026 |
+| FPS | HQ FPS Weapons 2.0 (PolymindGames) | `Assets/01_System/PolymindGames/` (`FPSCore` + `HQFPS`) | Vendor asset; do not edit for adapters |
+| AI | Emerald AI (2024/2026 asset line in project) | `Assets/01_System/Emerald AI/` | Wiki shortcut still labeled 2024; project rule names Emerald AI 2026 |
 | Project adapters | Project Zone combat bridges | `Assets/_ProjectZone/Runtime/Combat/` | Prefer adapters over vendor edits |
 
 ## Integration approach

@@ -6,7 +6,7 @@
 
 1. No major Asset Store/Fab imports without written approval.
 2. Prefer extracting production prefabs into controlled usage; do not keep vendor demos in playable scenes.
-3. One primary foliage workflow; one primary fog approach after benchmark.
+3. One primary foliage workflow (Toby + Prefab Paint, #55); one primary fog (HAZE, #54).
 4. URP materials only in production content; convert via SRP converter when needed, then audit shaders.
 
 ## Folder conventions
@@ -15,8 +15,10 @@
 | --- | --- |
 | `Assets/_ProjectZone/` | All custom game code, production scenes, PZ-authored content |
 | `Assets/_ProjectZone/Scenes/` | Playable scenes only |
-| `Assets/<Vendor>/` | Immutable vendor packs (prefer adapters over edits) |
+| `Assets/01_System/` … `Assets/08_Tools/` | Categorized vendor packs (see `FOLDER_LAYOUT.md`) |
+| `Assets/<Category>/<Vendor>/` | Immutable vendor packs under a category (prefer adapters over edits) |
 | `docs/assets/ASSET_REGISTRY.md` | Approval + risk tracking |
+| `docs/assets/FOLDER_LAYOUT.md` | Category map and move rules |
 
 ## Production scene policy
 

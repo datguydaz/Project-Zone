@@ -17,7 +17,7 @@ namespace ProjectZone.Editor
         private const string ScenePath = "Assets/_ProjectZone/Scenes/PZ_Outskirts.unity";
         private const string LevelDefinitionPath = "Assets/_ProjectZone/Data/PZ_Outskirts_LevelDefinition.asset";
         private const string LootTablePath =
-            "Assets/PolymindGames/FPSCore/Data/Inventory/LootTables/FPS_WeaponsAndAmmo.asset";
+            "Assets/01_System/PolymindGames/FPSCore/Data/Inventory/LootTables/FPS_WeaponsAndAmmo.asset";
 
         [MenuItem("Project Zone/Inventory/Setup Outskirts Inventory & Persistence")]
         public static void SetupFromMenu()

@@ -15,11 +15,11 @@ namespace ProjectZone.Editor
         private const string OutputDir = "Assets/_ProjectZone/Art/Animators";
         private const string OutputPath = OutputDir + "/PZ_FemaleZombie.controller";
 
-        private const string IdleFbx = "Assets/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Idle01.FBX";
-        private const string WalkFbx = "Assets/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Walk01Forward.FBX";
-        private const string RunFbx = "Assets/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Run01ForwardInPlace.FBX";
-        private const string AttackFbx = "Assets/ZombieFemaleAnimations/Art/Animations/ZombieFemale_AttackInPlace01.FBX";
-        private const string DeathFbx = "Assets/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Death01.FBX";
+        private const string IdleFbx = "Assets/04_Monsters/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Idle01.FBX";
+        private const string WalkFbx = "Assets/04_Monsters/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Walk01Forward.FBX";
+        private const string RunFbx = "Assets/04_Monsters/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Run01ForwardInPlace.FBX";
+        private const string AttackFbx = "Assets/04_Monsters/ZombieFemaleAnimations/Art/Animations/ZombieFemale_AttackInPlace01.FBX";
+        private const string DeathFbx = "Assets/04_Monsters/ZombieFemaleAnimations/Art/Animations/ZombieFemale_Death01.FBX";
 
         static PzFemaleZombieAnimatorBuilder()
         {

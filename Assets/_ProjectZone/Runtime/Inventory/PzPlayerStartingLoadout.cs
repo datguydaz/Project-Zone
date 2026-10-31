@@ -20,7 +20,7 @@ namespace ProjectZone
         private const string HolsterName = "Holster";
         private const string BackpackName = "Backpack";
         private const string DefaultPickupPath =
-            "Assets/PolymindGames/HQFPS/Prefabs/ItemPickups/HQFPS_Pickup_M1911.prefab";
+            "Assets/01_System/PolymindGames/HQFPS/Prefabs/ItemPickups/HQFPS_Pickup_M1911.prefab";
 
         [SerializeField]
         private ItemDefinition _m1911Item;
@@ -42,6 +42,7 @@ namespace ProjectZone
 
         private void Start()
         {
+            ApplyProjectSettings();
             if (_grantOnStart)
                 StartCoroutine(GrantWhenPlayerReady());
         }
@@ -50,8 +51,22 @@ namespace ProjectZone
         private void OnValidate() => ResolveAssets();
 #endif
 
+        private void ApplyProjectSettings()
+        {
+            PzProjectSettings.PlayerSettings player = PzProjectSettings.Get()?.Player;
+            if (player == null)
+                return;
+
+            _grantOnStart = player.GiveStartingPistol;
+
+            if (_m1911Pickup == null && player.StartingWeaponPickupPrefab != null)
+                _m1911Pickup = player.StartingWeaponPickupPrefab.GetComponent<ItemPickup>();
+        }
+
         private void ResolveAssets()
         {
+            ApplyProjectSettings();
+
 #if UNITY_EDITOR
             if (_m1911Pickup == null)
             {

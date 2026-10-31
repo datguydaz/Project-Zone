@@ -92,8 +92,8 @@ namespace ProjectZone
 
         private static void TryHqSave()
         {
-            // Fully qualify — ALP Rustic Environment also defines a global LevelManager.
-            PolymindGames.LevelManager hqLevels = PolymindGames.LevelManager.Instance;
+            // global:: — ALP Rustic also had a LevelManager; keep HQ resolution unambiguous.
+            global::PolymindGames.LevelManager hqLevels = global::PolymindGames.LevelManager.Instance;
             if (hqLevels == null)
             {
                 Debug.LogWarning("[ProjectZone][Inventory] LevelManager missing — cannot HQ save.");

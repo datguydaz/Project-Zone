@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3abfc7dfa6ce11e4183347f7c1f7660f, type: 3}
+  m_Name: PZ_Lighting_Night
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectZone.PzLightingProfile
+  _presetId: 1
+  _displayName: Zone Night
+  _notes: "Zone Night v2 (#53): cold moonlit murk \u2014 dark Stalzone night, but near geometry and ground still read (not pure black void). Combat ~40 m."
+  _fogEnabled: 1
+  _fogMode: 1
+  _fogColor: {r: 0.14, g: 0.16, b: 0.2, a: 1}
+  _fogStart: 10
+  _fogEnd: 80
+  _ambientMode: 1
+  _ambientSky: {r: 0.16, g: 0.19, b: 0.24, a: 1}
+  _ambientEquator: {r: 0.11, g: 0.12, b: 0.14, a: 1}
+  _ambientGround: {r: 0.06, g: 0.06, b: 0.07, a: 1}
+  _ambientIntensity: 1.15
+  _sunColor: {r: 0.6, g: 0.7, b: 0.9, a: 1}
+  _sunIntensity: 0.42
+  _sunEuler: {x: 22, y: 155, z: 0}
+  _sunShadows: 2
+  _shadowStrength: 0.65
+  _postExposure: 0.05
+  _contrast: 12
+  _saturation: -28
+  _colorFilter: {r: 0.8, g: 0.86, b: 0.96, a: 1}
+  _vignette: 0.24
+  _whiteBalanceTemp: -12
+  _filmGrain: 0.2
+  _bloomIntensity: 0.1
+  _chromaticAberration: 0.02
+  _sharpness: 0.5
+  _shadowsStart: 0.12
+  _highlights: -0.05

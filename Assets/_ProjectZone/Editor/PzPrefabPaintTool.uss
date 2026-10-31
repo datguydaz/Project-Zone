@@ -1,0 +1,232 @@
+/* PROJECT ZONE Prefab Paint — dark tactical editor UI */
+
+:root {
+    --pz-bg: #14181c;
+    --pz-panel: #1c2228;
+    --pz-panel-2: #232a32;
+    --pz-stroke: #2e3842;
+    --pz-text: #e8eef2;
+    --pz-muted: #8b9aab;
+    --pz-accent: #c4a35a;
+    --pz-accent-dim: #8a7340;
+    --pz-ok: #5fad7a;
+    --pz-danger: #c45c4a;
+    --pz-radius: 8px;
+}
+
+.pz-root {
+    flex-grow: 1;
+    background-color: var(--pz-bg);
+    padding: 12px;
+    color: var(--pz-text);
+    font-size: 12px;
+}
+
+.pz-header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    background-color: var(--pz-panel);
+    border-radius: var(--pz-radius);
+    border-left-width: 3px;
+    border-left-color: var(--pz-accent);
+}
+
+.pz-title {
+    font-size: 15px;
+    -unity-font-style: bold;
+    color: var(--pz-text);
+    flex-grow: 1;
+}
+
+.pz-badge {
+    padding: 3px 8px;
+    background-color: var(--pz-accent-dim);
+    border-radius: 10px;
+    color: var(--pz-text);
+    font-size: 10px;
+    -unity-font-style: bold;
+}
+
+.pz-hint {
+    color: var(--pz-muted);
+    margin-bottom: 10px;
+    white-space: normal;
+}
+
+.pz-card {
+    background-color: var(--pz-panel);
+    border-radius: var(--pz-radius);
+    border-width: 1px;
+    border-color: var(--pz-stroke);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.pz-card-title {
+    -unity-font-style: bold;
+    color: var(--pz-accent);
+    margin-bottom: 8px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+.pz-row {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.pz-row > Label {
+    min-width: 110px;
+    color: var(--pz-muted);
+}
+
+.pz-toggle {
+    margin-bottom: 4px;
+}
+
+.pz-drop {
+    height: 72px;
+    margin-bottom: 8px;
+    border-radius: var(--pz-radius);
+    border-width: 1px;
+    border-color: var(--pz-accent-dim);
+    background-color: var(--pz-panel-2);
+    align-items: center;
+    justify-content: center;
+    unity-text-align: middle-center;
+}
+
+.pz-drop--hot {
+    border-color: var(--pz-accent);
+    background-color: #2a3328;
+}
+
+.pz-drop-title {
+    -unity-font-style: bold;
+    color: var(--pz-text);
+    font-size: 12px;
+}
+
+.pz-drop-sub {
+    color: var(--pz-muted);
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.pz-status {
+    color: var(--pz-ok);
+    margin-bottom: 8px;
+    min-height: 16px;
+}
+
+.pz-toolbar {
+    flex-direction: row;
+    margin-bottom: 8px;
+}
+
+.pz-toolbar > .unity-button {
+    flex-grow: 1;
+    margin-right: 4px;
+    height: 26px;
+}
+
+.pz-scroll {
+    flex-grow: 1;
+    min-height: 180px;
+}
+
+.pz-cat {
+    background-color: var(--pz-panel-2);
+    border-radius: 6px;
+    margin-bottom: 8px;
+    border-width: 1px;
+    border-color: var(--pz-stroke);
+    overflow: hidden;
+}
+
+.pz-cat-header {
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: var(--pz-panel);
+}
+
+.pz-cat-header:hover {
+    background-color: #2a323c;
+}
+
+.pz-cat-name {
+    -unity-font-style: bold;
+    flex-grow: 1;
+    color: var(--pz-text);
+}
+
+.pz-cat-count {
+    color: var(--pz-muted);
+    font-size: 10px;
+    margin-right: 6px;
+}
+
+.pz-cat-body {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 8px;
+}
+
+.pz-thumb {
+    width: 92px;
+    height: 118px;
+    margin: 4px;
+    padding: 6px;
+    background-color: var(--pz-bg);
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: var(--pz-stroke);
+}
+
+.pz-thumb--on {
+    border-color: var(--pz-ok);
+    background-color: #18241c;
+}
+
+.pz-thumb-img {
+    width: 78px;
+    height: 78px;
+    background-color: #0e1216;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+.pz-thumb-name {
+    font-size: 9px;
+    color: var(--pz-text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 2px;
+}
+
+.pz-thumb-footer {
+    flex-direction: row;
+    align-items: center;
+}
+
+.pz-thumb-footer > .unity-button {
+    width: 20px;
+    height: 18px;
+    margin-left: 2px;
+    padding: 0;
+    font-size: 10px;
+}
+
+.pz-footer {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top-width: 1px;
+    border-top-color: var(--pz-stroke);
+    color: var(--pz-muted);
+    font-size: 10px;
+}

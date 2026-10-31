@@ -1,6 +1,6 @@
-# World & Scene Architecture (M5.5 proposal)
+# World & Scene Architecture
 
-**Status:** Proposal — requires approval before M6 implementation.  
+**Status:** M6 Phase A — approved (developer started M6 2026-10-30).  
 **Current production scenes:** `PZ_Outskirts.unity`, `PZ_DamageAdapterTest.unity` (combat sandbox).
 
 ## Goals
@@ -10,37 +10,46 @@
 - Persist inventory/stash/contracts/wallet across loads (HQ + PZ adapters).
 - Co-op-ready later without networking packages now.
 
-## Recommended approach
+## Loading strategy
 
-### Production content
-
-- Keep gameplay scenes under `Assets/_ProjectZone/Scenes/`.
-- Build locations as modular prefab kits / greybox zones first, then dress with **approved** extracted prefabs.
-- Never parent entire vendor demo scenes into `PZ_Outskirts`.
-
-### Loading strategy (proposal)
-
-1. **Phase A (M6):** Single primary Outskirts scene with streaming-friendly structure (zones as root objects); optional additive underground stub when player approaches entrance.
+1. **Phase A (M6–M7):** Single primary Outskirts scene with streaming-friendly zone roots; underground stays an in-scene stub + transition volume.
 2. **Phase B (M13):** Region additive loads (`Settlement`, `FieldNorth`, `Industrial`, `Underground`) with a thin bootstrap scene holding player + managers.
-3. Persist via existing HQ `SceneSaveHandler` / `LevelManager` + PZ profile files (`pz_wallet`, stash, snapshots). Version keys documented under persistence audit.
+3. Persist via existing HQ `SceneSaveHandler` / `LevelManager` + PZ profile files (`pz_wallet`, stash, snapshots).
 
-### Zone map (Outskirts)
+## Zone map (Outskirts)
 
-| Zone | Role | Asset preference |
-| --- | --- | --- |
-| Settlement | Safe hub, stash, contracts | ALP / Post Soviet / Russian Buildings |
-| Checkpoint | Contested mid | Abandoned Road + modular props |
-| Industrial | Combat/loot | Hivemind industrial / Abandoned Depot |
-| Underground | Verticality / risk | Abandoned World tunnels / Sewers (selective) |
+| Zone | Role | Hierarchy | Asset preference |
+| --- | --- | --- | --- |
+| Settlement | Safe hub, stash, contracts | `Zone_Settlement` + `PzZoneMarker` | ALP / Post Soviet / Russian Buildings |
+| Checkpoint | Contested mid | `Zone_Checkpoint` | Abandoned Road + modular props |
+| Industrial | Combat/loot | `Zone_Industrial` | Hivemind industrial / Abandoned Depot |
+| Underground | Entrance stub (Phase A) | `Zone_UndergroundEntrance` | Abandoned World tunnels (selective later) |
 
-## AI / NavMesh
+Standards: `docs/environment/MODULAR_STANDARDS.md`.
 
-- Bake NavMesh per loaded scene/region.
+## NavMesh / transitions (#48)
+
+- Bake `NavMeshSurface` on the Outskirts root after greybox/art changes.
+- Menu: `OutskirtsNpcBootstrap` context → Bake Outskirts NavMesh.
+- Agents stay in the loaded Outskirts scene for Phase A (no region unload yet).
+- Transition volume `UndergroundTransitionMarker` reserves a future additive load point — do not wire SceneManager load until Phase B.
+
+## Persistence across regions (#49)
+
+Phase A (single scene): existing HQ save + PZ stash/wallet/snapshots already cover Outskirts.
+
+When Phase B starts:
+
+- Keep player + managers in bootstrap scene.
+- Save before unload; restore containers after additive load.
+- Version keys: document any new zone-scoped ids under persistence audit.
+
+## AI
+
 - Emerald agents only active inside activation radius (formalize M8).
 - Female Zombie greybox remains until Emerald Animation Profile approved.
 
-## Open decisions for approval
+## Open decisions (carry to M7)
 
-1. Stay single-scene Outskirts through M7, or start additive underground in M6?
-2. Primary foliage: Toby Fredson vs lighter mesh foliage?
-3. Primary fog: HAZE vs URP/simple volume fog after benchmark?
+1. Primary foliage: **Locked** — Toby + Prefab Paint (`docs/environment/FOLIAGE_WORKFLOW.md`). Density Play confirm still open on #55.
+2. Primary fog: **Locked** — HAZE volumetric (#54); SimpleLinear fallback.

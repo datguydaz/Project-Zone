@@ -16,7 +16,7 @@ namespace ProjectZone.Editor
     public static class OutskirtsSceneBuilder
     {
         private const string ScenePath = "Assets/_ProjectZone/Scenes/PZ_Outskirts.unity";
-        private const string GameModePrefabPath = "Assets/PolymindGames/HQFPS/Prefabs/Core/HQFPS_GameMode.prefab";
+        private const string GameModePrefabPath = "Assets/01_System/PolymindGames/HQFPS/Prefabs/Core/HQFPS_GameMode.prefab";
 
         [MenuItem("Project Zone/Scenes/Build Outskirts Region Scene")]
         public static void BuildFromMenu() => Build();

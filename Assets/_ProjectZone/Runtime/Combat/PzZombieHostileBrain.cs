@@ -61,6 +61,8 @@ namespace ProjectZone
 
         private void Awake()
         {
+            ApplyProjectSettingsTuning();
+
             _agent = GetComponent<NavMeshAgent>();
             _health = GetComponent<PzHostileHealth>();
             _animator = GetComponentInChildren<Animator>();
@@ -76,6 +78,32 @@ namespace ProjectZone
 
             if (_health != null)
                 _health.Died += HandleDeath;
+        }
+
+        private void ApplyProjectSettingsTuning()
+        {
+            PzProjectSettings.ZombieSettings z = PzProjectSettings.Get()?.Zombies;
+            if (z == null)
+                return;
+
+            _detectRange = z.DetectRange;
+            _meleeRange = z.MeleeRange;
+            _meleeDamage = z.MeleeDamage;
+            _meleeCooldown = z.MeleeCooldown;
+            _walkSpeed = z.WalkSpeed;
+            _runSpeed = z.RunSpeed;
+            _runDistance = z.RunDistance;
+
+            if (_idleClip == null && z.IdleClip != null)
+                _idleClip = z.IdleClip;
+            if (_walkClip == null && z.WalkClip != null)
+                _walkClip = z.WalkClip;
+            if (_runClip == null && z.RunClip != null)
+                _runClip = z.RunClip;
+            if (_attackClip == null && z.AttackClip != null)
+                _attackClip = z.AttackClip;
+            if (_deathClip == null && z.DeathClip != null)
+                _deathClip = z.DeathClip;
         }
 
         private void OnDestroy()
